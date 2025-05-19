@@ -1,0 +1,664 @@
+\begin{theindex}
+
+  \item {actionReferences}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{61}
+  \item {ActivationIntervalSeconds}
+    \subitem {CurseVR.VoiceControl.Models.VADParameters}, 
+		\hyperpage{37}
+  \item {ActivationRateThreshold}
+    \subitem {CurseVR.VoiceControl.Models.VADParameters}, 
+		\hyperpage{37}
+  \item {ActiveVolumeThreshold}
+    \subitem {CurseVR.VoiceControl.Models.VADParameters}, 
+		\hyperpage{38}
+  \item {AddSamples}
+    \subitem {CurseVR.VoiceControl.VAD.AudioClipBuffer}, \hyperpage{12}
+  \item {ApplyNoiseGate}
+    \subitem {CurseVR.VoiceControl.Utils.AudioUtils}, \hyperpage{16}
+  \item {Assets/Scripts/VoiceControl/Core/IVoiceCommandService.cs}, 
+		\hyperpage{69}
+  \item {Assets/Scripts/VoiceControl/Editor/VoiceInputManagerEditor.cs}, 
+		\hyperpage{70}
+  \item {Assets/Scripts/VoiceControl/Input/VoiceInputManager.cs}, 
+		\hyperpage{71}
+  \item {Assets/Scripts/VoiceControl/Models/VADParameters.cs}, 
+		\hyperpage{74}
+  \item {Assets/Scripts/VoiceControl/Models/VoiceCommandData.cs}, 
+		\hyperpage{74, 75}
+  \item {Assets/Scripts/VoiceControl/Models/VoiceServiceConfig.cs}, 
+		\hyperpage{75}
+  \item {Assets/Scripts/VoiceControl/README.md}, \hyperpage{76}
+  \item {Assets/Scripts/VoiceControl/Services/VoiceCommandService.cs}, 
+		\hyperpage{76}
+  \item {Assets/Scripts/VoiceControl/Test/MockVoiceControlTest.cs}, 
+		\hyperpage{78}
+  \item {Assets/Scripts/VoiceControl/Utils/AudioUtils.cs}, 
+		\hyperpage{83}
+  \item {Assets/Scripts/VoiceControl/VAD/AudioClipBuffer.cs}, 
+		\hyperpage{84}
+  \item {Assets/Scripts/VoiceControl/VAD/IVoiceActivityDetector.cs}, 
+		\hyperpage{85, 86}
+  \item {Assets/Scripts/VoiceControl/VAD/UnityMicrophoneProxy.cs}, 
+		\hyperpage{86}
+  \item {Assets/Scripts/VoiceControl/VAD/VoiceActivityDetector.cs}, 
+		\hyperpage{87}
+  \item {audioBuffer}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{61}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{45}
+  \item {AudioClip}
+    \subitem {CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}, 
+		\hyperpage{36}
+  \item {audioClip}
+    \subitem {CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}, 
+		\hyperpage{36}
+  \item {AudioClipBuffer}
+    \subitem {CurseVR.VoiceControl.VAD.AudioClipBuffer}, \hyperpage{12}
+  \item {AudioClipToBytes}
+    \subitem {CurseVR.VoiceControl.Utils.AudioUtils}, \hyperpage{16}
+  \item {audioVolume}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{30}
+
+  \indexspace
+
+  \item {buffer}
+    \subitem {CurseVR.VoiceControl.VAD.AudioClipBuffer}, \hyperpage{15}
+  \item {BufferSize}
+    \subitem {CurseVR.VoiceControl.Models.VADParameters}, 
+		\hyperpage{38}
+    \subitem {CurseVR.VoiceControl.Models.VoiceServiceConfig}, 
+		\hyperpage{66}
+  \item {BytesToAudioClip}
+    \subitem {CurseVR.VoiceControl.Utils.AudioUtils}, \hyperpage{16}
+
+  \indexspace
+
+  \item {CalculateRMSVolume}
+    \subitem {CurseVR.VoiceControl.Utils.AudioUtils}, \hyperpage{16}
+  \item {CalculateVolume}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{42}
+  \item {Channels}
+    \subitem {CurseVR.VoiceControl.Models.VoiceServiceConfig}, 
+		\hyperpage{66}
+  \item {channels}
+    \subitem {CurseVR.VoiceControl.VAD.AudioClipBuffer}, \hyperpage{15}
+  \item {CleanupVoiceService}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{25}
+  \item {ClientId}
+    \subitem {CurseVR.VoiceControl.Models.VoiceServiceConfig}, 
+		\hyperpage{66}
+  \item {CommandType}
+    \subitem {CurseVR.VoiceControl.Models.VoiceCommandData}, 
+		\hyperpage{48}
+  \item {Confidence}
+    \subitem {CurseVR.VoiceControl.Models.VoiceCommandData}, 
+		\hyperpage{48}
+  \item {config}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{55}
+  \item {ConnectAsync}
+    \subitem {CurseVR.VoiceControl.Core.IVoiceCommandService}, 
+		\hyperpage{20}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{51}
+  \item {CreateAndEmitAudioClip}
+    \subitem {CurseVR.VoiceControl.VAD.AudioClipBuffer}, \hyperpage{13}
+  \item {CurseVR}, \hyperpage{9}
+  \item {CurseVR.VoiceControl}, \hyperpage{9}
+  \item {CurseVR.VoiceControl.Core}, \hyperpage{9}
+  \item {CurseVR.VoiceControl.Core.IVoiceCommandService}, 
+		\hyperpage{19}
+    \subitem {ConnectAsync}, \hyperpage{20}
+    \subitem {DisconnectAsync}, \hyperpage{20}
+    \subitem {InitializeAsync}, \hyperpage{21}
+    \subitem {IsConnected}, \hyperpage{22}
+    \subitem {OnCommandRecognized}, \hyperpage{23}
+    \subitem {OnConnectionStatusChanged}, \hyperpage{23}
+    \subitem {SendAudioDataAsync}, \hyperpage{22}
+  \item {CurseVR.VoiceControl.Editor}, \hyperpage{9}
+  \item {CurseVR.VoiceControl.Editor.VoiceInputManagerEditor}, 
+		\hyperpage{63}
+    \subitem {OnInspectorGUI}, \hyperpage{64}
+    \subitem {showDebugSettings}, \hyperpage{65}
+    \subitem {showServiceConfig}, \hyperpage{65}
+    \subitem {showVADSettings}, \hyperpage{65}
+    \subitem {TestMicrophone}, \hyperpage{64}
+    \subitem {TestWebSocketConnection}, \hyperpage{64}
+  \item {CurseVR.VoiceControl.Input}, \hyperpage{10}
+  \item {CurseVR.VoiceControl.Input.VoiceInputManager}, \hyperpage{56}
+    \subitem {actionReferences}, \hyperpage{61}
+    \subitem {audioBuffer}, \hyperpage{61}
+    \subitem {debugAudioSource}, \hyperpage{61}
+    \subitem {HandleConnectionStatus}, \hyperpage{57}
+    \subitem {HandleVoiceCommand}, \hyperpage{57}
+    \subitem {HandleVoiceInactive}, \hyperpage{58}
+    \subitem {InitializeInputActions}, \hyperpage{58}
+    \subitem {InitializeVAD}, \hyperpage{59}
+    \subitem {InitializeVoiceService}, \hyperpage{59}
+    \subitem {inputActions}, \hyperpage{61}
+    \subitem {isProcessingVoice}, \hyperpage{61}
+    \subitem {micProxy}, \hyperpage{62}
+    \subitem {OnDestroy}, \hyperpage{60}
+    \subitem {serviceConfig}, \hyperpage{62}
+    \subitem {Start}, \hyperpage{60}
+    \subitem {ToggleAction}, \hyperpage{60}
+    \subitem {Update}, \hyperpage{61}
+    \subitem {vad}, \hyperpage{62}
+    \subitem {vadParameters}, \hyperpage{62}
+    \subitem {voiceService}, \hyperpage{62}
+  \item {CurseVR.VoiceControl.Models}, \hyperpage{10}
+  \item {CurseVR.VoiceControl.Models.VADParameters}, \hyperpage{37}
+    \subitem {ActivationIntervalSeconds}, \hyperpage{37}
+    \subitem {ActivationRateThreshold}, \hyperpage{37}
+    \subitem {ActiveVolumeThreshold}, \hyperpage{38}
+    \subitem {BufferSize}, \hyperpage{38}
+    \subitem {InactivationIntervalSeconds}, \hyperpage{38}
+    \subitem {InactivationRateThreshold}, \hyperpage{38}
+    \subitem {MaxActiveDurationSeconds}, \hyperpage{39}
+    \subitem {MaxQueueingTimeSeconds}, \hyperpage{39}
+    \subitem {MinQueueingTimeSeconds}, \hyperpage{39}
+  \item {CurseVR.VoiceControl.Models.VoiceCommandData}, \hyperpage{47}
+    \subitem {CommandType}, \hyperpage{48}
+    \subitem {Confidence}, \hyperpage{48}
+    \subitem {Parameters}, \hyperpage{48}
+    \subitem {RawText}, \hyperpage{48}
+    \subitem {Timestamp}, \hyperpage{49}
+    \subitem {VoiceCommandData}, \hyperpage{48}
+  \item {CurseVR.VoiceControl.Models.VoiceServiceConfig}, 
+		\hyperpage{65}
+    \subitem {BufferSize}, \hyperpage{66}
+    \subitem {Channels}, \hyperpage{66}
+    \subitem {ClientId}, \hyperpage{66}
+    \subitem {MaxReconnectAttempts}, \hyperpage{66}
+    \subitem {ReconnectDelayMs}, \hyperpage{67}
+    \subitem {SampleRate}, \hyperpage{67}
+    \subitem {WebSocketUrl}, \hyperpage{67}
+  \item {CurseVR.VoiceControl.Services}, \hyperpage{10}
+  \item {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{49}
+    \subitem {config}, \hyperpage{55}
+    \subitem {ConnectAsync}, \hyperpage{51}
+    \subitem {DisconnectAsync}, \hyperpage{51}
+    \subitem {InitializeAsync}, \hyperpage{52}
+    \subitem {IsConnected}, \hyperpage{55}
+    \subitem {isInitialized}, \hyperpage{55}
+    \subitem {OnCommandRecognized}, \hyperpage{55}
+    \subitem {OnConnectionStatusChanged}, \hyperpage{55}
+    \subitem {OnDestroy}, \hyperpage{53}
+    \subitem {ProcessWebSocketMessage}, \hyperpage{53}
+    \subitem {reconnectAttempts}, \hyperpage{55}
+    \subitem {SendAudioDataAsync}, \hyperpage{53}
+    \subitem {TryReconnect}, \hyperpage{54}
+    \subitem {Update}, \hyperpage{54}
+    \subitem {webSocket}, \hyperpage{55}
+  \item {CurseVR.VoiceControl.Test}, \hyperpage{10}
+  \item {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{23}
+    \subitem {audioVolume}, \hyperpage{30}
+    \subitem {CleanupVoiceService}, \hyperpage{25}
+    \subitem {debugAudio}, \hyperpage{30}
+    \subitem {debugInput}, \hyperpage{30}
+    \subitem {defaultMaterial}, \hyperpage{30}
+    \subitem {DeselectObject}, \hyperpage{25}
+    \subitem {HandleInteraction}, \hyperpage{25}
+    \subitem {HandleVoiceCommand}, \hyperpage{26}
+    \subitem {highlightMaterial}, \hyperpage{31}
+    \subitem {InitializeVoiceService}, \hyperpage{26}
+    \subitem {interactableLayer}, \hyperpage{31}
+    \subitem {interactAction}, \hyperpage{31}
+    \subitem {interactKey}, \hyperpage{31}
+    \subitem {isProcessing}, \hyperpage{31}
+    \subitem {isQuitting}, \hyperpage{31}
+    \subitem {mainCamera}, \hyperpage{31}
+    \subitem {MonitorAudioPlayback}, \hyperpage{27}
+    \subitem {moveDistance}, \hyperpage{31}
+    \subitem {MoveObjectRight}, \hyperpage{27}
+    \subitem {offlineMode}, \hyperpage{32}
+    \subitem {offlineModeDelay}, \hyperpage{32}
+    \subitem {OnApplicationQuit}, \hyperpage{28}
+    \subitem {OnDestroy}, \hyperpage{28}
+    \subitem {OnDisable}, \hyperpage{28}
+    \subitem {OnEnable}, \hyperpage{28}
+    \subitem {originalMaterial}, \hyperpage{32}
+    \subitem {playAudioOnSelect}, \hyperpage{32}
+    \subitem {ProcessMockVoiceCommand}, \hyperpage{29}
+    \subitem {selectedObject}, \hyperpage{32}
+    \subitem {SelectObject}, \hyperpage{29}
+    \subitem {Start}, \hyperpage{29}
+    \subitem {testVoiceClip}, \hyperpage{32}
+    \subitem {Update}, \hyperpage{30}
+    \subitem {voiceAudioSource}, \hyperpage{32}
+    \subitem {voiceService}, \hyperpage{32}
+  \item {CurseVR.VoiceControl.Utils}, \hyperpage{10}
+  \item {CurseVR.VoiceControl.Utils.AudioUtils}, \hyperpage{16}
+    \subitem {ApplyNoiseGate}, \hyperpage{16}
+    \subitem {AudioClipToBytes}, \hyperpage{16}
+    \subitem {BytesToAudioClip}, \hyperpage{16}
+    \subitem {CalculateRMSVolume}, \hyperpage{16}
+  \item {CurseVR.VoiceControl.VAD}, \hyperpage{10}
+  \item {CurseVR.VoiceControl.VAD.AudioClipBuffer}, \hyperpage{11}
+    \subitem {AddSamples}, \hyperpage{12}
+    \subitem {AudioClipBuffer}, \hyperpage{12}
+    \subitem {buffer}, \hyperpage{15}
+    \subitem {channels}, \hyperpage{15}
+    \subitem {CreateAndEmitAudioClip}, \hyperpage{13}
+    \subitem {Flush}, \hyperpage{13}
+    \subitem {frequency}, \hyperpage{15}
+    \subitem {isFull}, \hyperpage{15}
+    \subitem {OnBufferFilled}, \hyperpage{15}
+    \subitem {Reset}, \hyperpage{14}
+    \subitem {writePosition}, \hyperpage{15}
+  \item {CurseVR.VoiceControl.VAD.IVoiceActivityDetector}, 
+		\hyperpage{17}
+    \subitem {IsActive}, \hyperpage{18}
+    \subitem {OnVoiceActivityChanged}, \hyperpage{19}
+    \subitem {Update}, \hyperpage{18}
+  \item {CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}, \hyperpage{33}
+    \subitem {AudioClip}, \hyperpage{36}
+    \subitem {audioClip}, \hyperpage{36}
+    \subitem {deviceName}, \hyperpage{36}
+    \subitem {Dispose}, \hyperpage{35}
+    \subitem {frequency}, \hyperpage{36}
+    \subitem {InitializeMicrophone}, \hyperpage{35}
+    \subitem {SampleRate}, \hyperpage{36}
+    \subitem {sampleRate}, \hyperpage{36}
+    \subitem {UnityMicrophoneProxy}, \hyperpage{34}
+  \item {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{40}
+    \subitem {audioBuffer}, \hyperpage{45}
+    \subitem {CalculateVolume}, \hyperpage{42}
+    \subitem {Dispose}, \hyperpage{42}
+    \subitem {GetSamplesToRead}, \hyperpage{42}
+    \subitem {IsActive}, \hyperpage{46}
+    \subitem {isActive}, \hyperpage{45}
+    \subitem {lastActiveTime}, \hyperpage{45}
+    \subitem {lastInactiveTime}, \hyperpage{46}
+    \subitem {lastReadPosition}, \hyperpage{46}
+    \subitem {micProxy}, \hyperpage{46}
+    \subitem {OnVoiceActivityChanged}, \hyperpage{47}
+    \subitem {parameters}, \hyperpage{46}
+    \subitem {ProcessAudioData}, \hyperpage{44}
+    \subitem {sampleBuffer}, \hyperpage{46}
+    \subitem {Update}, \hyperpage{45}
+    \subitem {VoiceActivityDetector}, \hyperpage{41}
+
+  \indexspace
+
+  \item {debugAudio}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{30}
+  \item {debugAudioSource}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{61}
+  \item {debugInput}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{30}
+  \item {defaultMaterial}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{30}
+  \item {DeselectObject}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{25}
+  \item {deviceName}
+    \subitem {CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}, 
+		\hyperpage{36}
+  \item {DisconnectAsync}
+    \subitem {CurseVR.VoiceControl.Core.IVoiceCommandService}, 
+		\hyperpage{20}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{51}
+  \item {Dispose}
+    \subitem {CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}, 
+		\hyperpage{35}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{42}
+
+  \indexspace
+
+  \item {Flush}
+    \subitem {CurseVR.VoiceControl.VAD.AudioClipBuffer}, \hyperpage{13}
+  \item {frequency}
+    \subitem {CurseVR.VoiceControl.VAD.AudioClipBuffer}, \hyperpage{15}
+    \subitem {CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}, 
+		\hyperpage{36}
+
+  \indexspace
+
+  \item {GetSamplesToRead}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{42}
+
+  \indexspace
+
+  \item {HandleConnectionStatus}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{57}
+  \item {HandleInteraction}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{25}
+  \item {HandleVoiceCommand}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{57}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{26}
+  \item {HandleVoiceInactive}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{58}
+  \item {highlightMaterial}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{31}
+
+  \indexspace
+
+  \item {InactivationIntervalSeconds}
+    \subitem {CurseVR.VoiceControl.Models.VADParameters}, 
+		\hyperpage{38}
+  \item {InactivationRateThreshold}
+    \subitem {CurseVR.VoiceControl.Models.VADParameters}, 
+		\hyperpage{38}
+  \item {InitializeAsync}
+    \subitem {CurseVR.VoiceControl.Core.IVoiceCommandService}, 
+		\hyperpage{21}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{52}
+  \item {InitializeInputActions}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{58}
+  \item {InitializeMicrophone}
+    \subitem {CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}, 
+		\hyperpage{35}
+  \item {InitializeVAD}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{59}
+  \item {InitializeVoiceService}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{59}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{26}
+  \item {inputActions}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{61}
+  \item {interactableLayer}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{31}
+  \item {interactAction}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{31}
+  \item {interactKey}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{31}
+  \item {IsActive}
+    \subitem {CurseVR.VoiceControl.VAD.IVoiceActivityDetector}, 
+		\hyperpage{18}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{46}
+  \item {isActive}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{45}
+  \item {IsConnected}
+    \subitem {CurseVR.VoiceControl.Core.IVoiceCommandService}, 
+		\hyperpage{22}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{55}
+  \item {isFull}
+    \subitem {CurseVR.VoiceControl.VAD.AudioClipBuffer}, \hyperpage{15}
+  \item {isInitialized}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{55}
+  \item {isProcessing}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{31}
+  \item {isProcessingVoice}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{61}
+  \item {isQuitting}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{31}
+
+  \indexspace
+
+  \item {lastActiveTime}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{45}
+  \item {lastInactiveTime}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{46}
+  \item {lastReadPosition}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{46}
+
+  \indexspace
+
+  \item {mainCamera}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{31}
+  \item {MaxActiveDurationSeconds}
+    \subitem {CurseVR.VoiceControl.Models.VADParameters}, 
+		\hyperpage{39}
+  \item {MaxQueueingTimeSeconds}
+    \subitem {CurseVR.VoiceControl.Models.VADParameters}, 
+		\hyperpage{39}
+  \item {MaxReconnectAttempts}
+    \subitem {CurseVR.VoiceControl.Models.VoiceServiceConfig}, 
+		\hyperpage{66}
+  \item {micProxy}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{62}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{46}
+  \item {MinQueueingTimeSeconds}
+    \subitem {CurseVR.VoiceControl.Models.VADParameters}, 
+		\hyperpage{39}
+  \item {MonitorAudioPlayback}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{27}
+  \item {moveDistance}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{31}
+  \item {MoveObjectRight}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{27}
+
+  \indexspace
+
+  \item {offlineMode}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{32}
+  \item {offlineModeDelay}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{32}
+  \item {OnApplicationQuit}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{28}
+  \item {OnBufferFilled}
+    \subitem {CurseVR.VoiceControl.VAD.AudioClipBuffer}, \hyperpage{15}
+  \item {OnCommandRecognized}
+    \subitem {CurseVR.VoiceControl.Core.IVoiceCommandService}, 
+		\hyperpage{23}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{55}
+  \item {OnConnectionStatusChanged}
+    \subitem {CurseVR.VoiceControl.Core.IVoiceCommandService}, 
+		\hyperpage{23}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{55}
+  \item {OnDestroy}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{60}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{53}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{28}
+  \item {OnDisable}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{28}
+  \item {OnEnable}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{28}
+  \item {OnInspectorGUI}
+    \subitem {CurseVR.VoiceControl.Editor.VoiceInputManagerEditor}, 
+		\hyperpage{64}
+  \item {OnVoiceActivityChanged}
+    \subitem {CurseVR.VoiceControl.VAD.IVoiceActivityDetector}, 
+		\hyperpage{19}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{47}
+  \item {originalMaterial}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{32}
+
+  \indexspace
+
+  \item {Parameters}
+    \subitem {CurseVR.VoiceControl.Models.VoiceCommandData}, 
+		\hyperpage{48}
+  \item {parameters}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{46}
+  \item {playAudioOnSelect}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{32}
+  \item {ProcessAudioData}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{44}
+  \item {ProcessMockVoiceCommand}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{29}
+  \item {ProcessWebSocketMessage}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{53}
+
+  \indexspace
+
+  \item {RawText}
+    \subitem {CurseVR.VoiceControl.Models.VoiceCommandData}, 
+		\hyperpage{48}
+  \item {reconnectAttempts}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{55}
+  \item {ReconnectDelayMs}
+    \subitem {CurseVR.VoiceControl.Models.VoiceServiceConfig}, 
+		\hyperpage{67}
+  \item {Reset}
+    \subitem {CurseVR.VoiceControl.VAD.AudioClipBuffer}, \hyperpage{14}
+
+  \indexspace
+
+  \item {sampleBuffer}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{46}
+  \item {SampleRate}
+    \subitem {CurseVR.VoiceControl.Models.VoiceServiceConfig}, 
+		\hyperpage{67}
+    \subitem {CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}, 
+		\hyperpage{36}
+  \item {sampleRate}
+    \subitem {CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}, 
+		\hyperpage{36}
+  \item {selectedObject}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{32}
+  \item {SelectObject}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{29}
+  \item {SendAudioDataAsync}
+    \subitem {CurseVR.VoiceControl.Core.IVoiceCommandService}, 
+		\hyperpage{22}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{53}
+  \item {serviceConfig}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{62}
+  \item {showDebugSettings}
+    \subitem {CurseVR.VoiceControl.Editor.VoiceInputManagerEditor}, 
+		\hyperpage{65}
+  \item {showServiceConfig}
+    \subitem {CurseVR.VoiceControl.Editor.VoiceInputManagerEditor}, 
+		\hyperpage{65}
+  \item {showVADSettings}
+    \subitem {CurseVR.VoiceControl.Editor.VoiceInputManagerEditor}, 
+		\hyperpage{65}
+  \item {Start}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{60}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{29}
+
+  \indexspace
+
+  \item {TestMicrophone}
+    \subitem {CurseVR.VoiceControl.Editor.VoiceInputManagerEditor}, 
+		\hyperpage{64}
+  \item {testVoiceClip}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{32}
+  \item {TestWebSocketConnection}
+    \subitem {CurseVR.VoiceControl.Editor.VoiceInputManagerEditor}, 
+		\hyperpage{64}
+  \item {Timestamp}
+    \subitem {CurseVR.VoiceControl.Models.VoiceCommandData}, 
+		\hyperpage{49}
+  \item {ToggleAction}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{60}
+  \item {TryReconnect}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{54}
+
+  \indexspace
+
+  \item {UnityMicrophoneProxy}
+    \subitem {CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}, 
+		\hyperpage{34}
+  \item {Update}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{61}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{54}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{30}
+    \subitem {CurseVR.VoiceControl.VAD.IVoiceActivityDetector}, 
+		\hyperpage{18}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{45}
+
+  \indexspace
+
+  \item {vad}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{62}
+  \item {vadParameters}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{62}
+  \item {VoiceActivityDetector}
+    \subitem {CurseVR.VoiceControl.VAD.VoiceActivityDetector}, 
+		\hyperpage{41}
+  \item {voiceAudioSource}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{32}
+  \item {VoiceCommandData}
+    \subitem {CurseVR.VoiceControl.Models.VoiceCommandData}, 
+		\hyperpage{48}
+  \item {voiceService}
+    \subitem {CurseVR.VoiceControl.Input.VoiceInputManager}, 
+		\hyperpage{62}
+    \subitem {CurseVR.VoiceControl.Test.MockVoiceControlTest}, 
+		\hyperpage{32}
+
+  \indexspace
+
+  \item {webSocket}
+    \subitem {CurseVR.VoiceControl.Services.VoiceCommandService}, 
+		\hyperpage{55}
+  \item {WebSocketUrl}
+    \subitem {CurseVR.VoiceControl.Models.VoiceServiceConfig}, 
+		\hyperpage{67}
+  \item {writePosition}
+    \subitem {CurseVR.VoiceControl.VAD.AudioClipBuffer}, \hyperpage{15}
+
+\end{theindex}
