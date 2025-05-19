@@ -1,0 +1,30 @@
+\doxysection{IVoice\+Command\+Service.\+cs}
+\hypertarget{_i_voice_command_service_8cs_source}{}\label{_i_voice_command_service_8cs_source}\index{Assets/Scripts/VoiceControl/Core/IVoiceCommandService.cs@{Assets/Scripts/VoiceControl/Core/IVoiceCommandService.cs}}
+\mbox{\hyperlink{_i_voice_command_service_8cs}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_curse_v_r_1_1_voice_control_1_1_models}{CurseVR.VoiceControl.Models}};}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00006}\mbox{\hyperlink{namespace_curse_v_r}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_curse_v_r_1_1_voice_control_1_1_core}{CurseVR.VoiceControl.Core}}}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00015}\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{interface\ }\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service}{IVoiceCommandService}}}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00024}\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a1a8ee4676a6a8d4bd0b9f2f9acce9e7c}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ Action<VoiceCommandData>\ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a1a8ee4676a6a8d4bd0b9f2f9acce9e7c}{OnCommandRecognized}};}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00033}\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_ab04876bd796cfcf91988814e46b246a6}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{event}\ Action<bool>\ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_ab04876bd796cfcf91988814e46b246a6}{OnConnectionStatusChanged}};}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00042}\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a0221f4905643e44be550094718c04da3}{00042}}\ \ \ \ \ \ \ \ \ Task\ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a0221f4905643e44be550094718c04da3}{InitializeAsync}}(\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config}{VoiceServiceConfig}}\ config);}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00054}\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_af48f8081e7a229bccbf9754121f897b3}{00054}}\ \ \ \ \ \ \ \ \ Task\ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_af48f8081e7a229bccbf9754121f897b3}{SendAudioDataAsync}}(\textcolor{keywordtype}{byte}[]\ audioData);}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00065}\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_aade3ada212e9186ccf705cd2fe3466de}{00065}}\ \ \ \ \ \ \ \ \ Task\ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_aade3ada212e9186ccf705cd2fe3466de}{ConnectAsync}}();}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00075}\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a45cd69b61ab9734443b10ca4d421b10a}{00075}}\ \ \ \ \ \ \ \ \ Task\ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a45cd69b61ab9734443b10ca4d421b10a}{DisconnectAsync}}();}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00084}\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a749565509d576006b81c61b6dc8e1273}{00084}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a749565509d576006b81c61b6dc8e1273}{IsConnected}}\ \{\ \textcolor{keyword}{get};\ \}}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_i_voice_command_service_8cs_source_l00086}00086\ \}}
+
+\end{DoxyCode}

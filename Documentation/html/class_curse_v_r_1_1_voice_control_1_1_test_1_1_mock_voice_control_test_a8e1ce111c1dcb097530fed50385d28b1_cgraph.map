@@ -1,0 +1,14 @@
+<map id="CurseVR.VoiceControl.Test.MockVoiceControlTest.SelectObject" name="CurseVR.VoiceControl.Test.MockVoiceControlTest.SelectObject">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,237,48"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#a0ff5e3b1c3fd40ef81b5d6da46bc00fe" title=" " alt="" coords="1152,5,1397,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,18,285,16,515,12,694,12,1104,20,1136,21,1136,26,1104,25,694,17,515,17,285,21,237,23"/>
+<area shape="rect" id="Node000003" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#a0b5613db351c0f3a577c59a5f93b8e95" title=" " alt="" coords="285,31,521,89"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,38,269,42,269,47,237,43"/>
+<area shape="rect" id="Node000004" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#a4b898eeceba47a3eca449da5a9e7a946" title=" " alt="" coords="571,31,800,89"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="522,57,555,57,555,63,522,63"/>
+<area shape="rect" id="Node000006" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#ac0081dfadab2be0fe3dca2925cfc6552" title=" " alt="" coords="569,113,801,172"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="506,87,569,106,567,111,505,93"/>
+<area shape="rect" id="Node000005" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#aeaadda9dff70da9971438ded532b0336" title=" " alt="" coords="849,35,1104,77"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="800,56,833,55,834,61,800,61"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="1104,41,1136,38,1136,43,1105,46"/>
+</map>

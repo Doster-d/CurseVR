@@ -1,0 +1,864 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CourseVR: Класс CurseVR.VoiceControl.Input.VoiceInputManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">CourseVR<span id="projectnumber">&#160;0.1.0</span>
+   </div>
+   <div id="projectbrief">Voice Controlled VR System</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс CurseVR.VoiceControl.Input.VoiceInputManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Manages voice input and integrates with Unity's <a class="el" href="namespace_curse_v_r_1_1_voice_control_1_1_input.html">Input</a> System.  
+ <a href="#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:CurseVR.VoiceControl.Input.VoiceInputManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager__inherit__graph.png" border="0" usemap="#a_curse_v_r_8_voice_control_8_input_8_voice_input_manager_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_curse_v_r_8_voice_control_8_input_8_voice_input_manager_inherit__map" id="a_curse_v_r_8_voice_control_8_input_8_voice_input_manager_inherit__map">
+<area shape="rect" title="Manages voice input and integrates with Unity&#39;s Input System." alt="" coords="5,80,193,123"/>
+<area shape="rect" title=" " alt="" coords="44,5,154,32"/>
+<area shape="poly" title=" " alt="" coords="102,48,102,80,96,80,96,48"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса CurseVR.VoiceControl.Input.VoiceInputManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager__coll__graph.png" border="0" usemap="#a_curse_v_r_8_voice_control_8_input_8_voice_input_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="a_curse_v_r_8_voice_control_8_input_8_voice_input_manager_coll__map" id="a_curse_v_r_8_voice_control_8_input_8_voice_input_manager_coll__map">
+<area shape="rect" title="Manages voice input and integrates with Unity&#39;s Input System." alt="" coords="482,189,670,232"/>
+<area shape="rect" title=" " alt="" coords="189,5,298,32"/>
+<area shape="poly" title=" " alt="" coords="314,32,345,41,405,63,460,95,516,142,558,187,554,191,512,146,457,100,403,68,343,47,313,37"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html" title="Parameters for the Voice Activity Detection (VAD) system." alt="" coords="143,56,344,99"/>
+<area shape="poly" title=" " alt="" coords="326,102,345,108,403,126,459,147,538,187,536,191,457,152,401,131,344,113,324,107"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config.html" title="Configuration settings for the voice command service." alt="" coords="143,123,344,165"/>
+<area shape="poly" title=" " alt="" coords="360,165,482,189,481,195,359,170"/>
+<area shape="rect" href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html" title="Interface for voice activity detection functionality." alt="" coords="151,189,337,232"/>
+<area shape="poly" title=" " alt="" coords="352,208,482,208,482,213,352,213"/>
+<area shape="rect" title=" " alt="" coords="5,232,94,259"/>
+<area shape="poly" title=" " alt="" coords="109,232,150,225,151,230,109,237"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html" title="Provides an abstraction over Unity&#39;s Microphone API for simplified access to audio input." alt="" coords="151,256,337,299"/>
+<area shape="poly" title=" " alt="" coords="110,252,151,259,150,265,109,258"/>
+<area shape="poly" title=" " alt="" coords="351,253,481,227,482,232,352,258"/>
+<area shape="rect" href="interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service.html" title="Interface for the voice command service that handles communication with the ASR API." alt="" coords="151,323,337,365"/>
+<area shape="poly" title=" " alt="" coords="335,315,457,271,537,230,539,235,459,276,337,320"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer.html" title="Buffers audio samples and creates AudioClips when the buffer is filled or flushed." alt="" coords="151,389,337,432"/>
+<area shape="poly" title=" " alt="" coords="327,381,343,375,403,354,427,343,457,325,513,277,555,231,559,234,517,281,460,329,430,347,405,359,345,380,328,386"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a7851da47a53fd2c22dc0cf7dacbc32f4" id="r_a7851da47a53fd2c22dc0cf7dacbc32f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7851da47a53fd2c22dc0cf7dacbc32f4">Start</a> ()</td></tr>
+<tr class="separator:a7851da47a53fd2c22dc0cf7dacbc32f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab54635819786a6cf94e7e84abf70167f" id="r_ab54635819786a6cf94e7e84abf70167f"><td class="memItemLeft" align="right" valign="top">async void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab54635819786a6cf94e7e84abf70167f">InitializeVoiceService</a> ()</td></tr>
+<tr class="separator:ab54635819786a6cf94e7e84abf70167f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d366c9bd4832eb21847d3e85ed7e9f" id="r_a93d366c9bd4832eb21847d3e85ed7e9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93d366c9bd4832eb21847d3e85ed7e9f">InitializeVAD</a> ()</td></tr>
+<tr class="separator:a93d366c9bd4832eb21847d3e85ed7e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ae0ff24ee97dfc3afedba48042fb54" id="r_a07ae0ff24ee97dfc3afedba48042fb54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07ae0ff24ee97dfc3afedba48042fb54">InitializeInputActions</a> ()</td></tr>
+<tr class="separator:a07ae0ff24ee97dfc3afedba48042fb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e1ed176c785124f130398775b549f81" id="r_a0e1ed176c785124f130398775b549f81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e1ed176c785124f130398775b549f81">HandleVoiceInactive</a> (AudioClip clip)</td></tr>
+<tr class="separator:a0e1ed176c785124f130398775b549f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a873fa9edee5669632e1bf555a975cc3a" id="r_a873fa9edee5669632e1bf555a975cc3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a873fa9edee5669632e1bf555a975cc3a">HandleVoiceCommand</a> (<a class="el" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html">VoiceCommandData</a> commandData)</td></tr>
+<tr class="separator:a873fa9edee5669632e1bf555a975cc3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52bed871e3469c5de2b0183a1c840768" id="r_a52bed871e3469c5de2b0183a1c840768"><td class="memItemLeft" align="right" valign="top">System.Collections.IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52bed871e3469c5de2b0183a1c840768">ToggleAction</a> (InputAction action)</td></tr>
+<tr class="separator:a52bed871e3469c5de2b0183a1c840768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa552ce4cdaade1bd3bc43cc8540f7e14" id="r_aa552ce4cdaade1bd3bc43cc8540f7e14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa552ce4cdaade1bd3bc43cc8540f7e14">HandleConnectionStatus</a> (bool isConnected)</td></tr>
+<tr class="separator:aa552ce4cdaade1bd3bc43cc8540f7e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6e497d828dcda31ade84854eafa523" id="r_a9e6e497d828dcda31ade84854eafa523"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e6e497d828dcda31ade84854eafa523">Update</a> ()</td></tr>
+<tr class="separator:a9e6e497d828dcda31ade84854eafa523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a354993c2e76a0a84c8097c6eb162ae1f" id="r_a354993c2e76a0a84c8097c6eb162ae1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a354993c2e76a0a84c8097c6eb162ae1f">OnDestroy</a> ()</td></tr>
+<tr class="separator:a354993c2e76a0a84c8097c6eb162ae1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a2fd64dfc34d79375438bb1e69204d230" id="r_a2fd64dfc34d79375438bb1e69204d230"><td class="memItemLeft" align="right" valign="top">InputActionAsset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fd64dfc34d79375438bb1e69204d230">inputActions</a></td></tr>
+<tr class="separator:a2fd64dfc34d79375438bb1e69204d230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af760e2fd7caf8ef507b5e3b9f3d65092" id="r_af760e2fd7caf8ef507b5e3b9f3d65092"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html">VADParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af760e2fd7caf8ef507b5e3b9f3d65092">vadParameters</a></td></tr>
+<tr class="separator:af760e2fd7caf8ef507b5e3b9f3d65092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9cb5abbc7bf028f3ac2d88d2362a3e5" id="r_ae9cb5abbc7bf028f3ac2d88d2362a3e5"><td class="memItemLeft" align="right" valign="top">AudioSource&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9cb5abbc7bf028f3ac2d88d2362a3e5">debugAudioSource</a></td></tr>
+<tr class="separator:ae9cb5abbc7bf028f3ac2d88d2362a3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88df95baf900cb468478134c2c6dee22" id="r_a88df95baf900cb468478134c2c6dee22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config.html">VoiceServiceConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88df95baf900cb468478134c2c6dee22">serviceConfig</a></td></tr>
+<tr class="separator:a88df95baf900cb468478134c2c6dee22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb30bb0b4e374e60c3b9bdc3ef5141d5" id="r_aeb30bb0b4e374e60c3b9bdc3ef5141d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html">IVoiceActivityDetector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb30bb0b4e374e60c3b9bdc3ef5141d5">vad</a></td></tr>
+<tr class="separator:aeb30bb0b4e374e60c3b9bdc3ef5141d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5eaebfd4dc463e08f42811af81071b9" id="r_ad5eaebfd4dc463e08f42811af81071b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html">UnityMicrophoneProxy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5eaebfd4dc463e08f42811af81071b9">micProxy</a></td></tr>
+<tr class="separator:ad5eaebfd4dc463e08f42811af81071b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac3cfae0318051d3c9e58a358716e866" id="r_aac3cfae0318051d3c9e58a358716e866"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service.html">IVoiceCommandService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac3cfae0318051d3c9e58a358716e866">voiceService</a></td></tr>
+<tr class="separator:aac3cfae0318051d3c9e58a358716e866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba0bb45936346d007c3bc47ac2aa76e6" id="r_aba0bb45936346d007c3bc47ac2aa76e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer.html">AudioClipBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba0bb45936346d007c3bc47ac2aa76e6">audioBuffer</a></td></tr>
+<tr class="separator:aba0bb45936346d007c3bc47ac2aa76e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e0e4ba62d8fb26849b5acc2c198c8e0" id="r_a0e0e4ba62d8fb26849b5acc2c198c8e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e0e4ba62d8fb26849b5acc2c198c8e0">isProcessingVoice</a></td></tr>
+<tr class="separator:a0e0e4ba62d8fb26849b5acc2c198c8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace3f3994e62ba3b841a6ff82fd90c82c" id="r_ace3f3994e62ba3b841a6ff82fd90c82c"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, InputActionReference &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace3f3994e62ba3b841a6ff82fd90c82c">actionReferences</a> = new Dictionary&lt;string, InputActionReference&gt;()</td></tr>
+<tr class="separator:ace3f3994e62ba3b841a6ff82fd90c82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Manages voice input and integrates with Unity's <a class="el" href="namespace_curse_v_r_1_1_voice_control_1_1_input.html">Input</a> System. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00016">16</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="aa552ce4cdaade1bd3bc43cc8540f7e14" name="aa552ce4cdaade1bd3bc43cc8540f7e14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa552ce4cdaade1bd3bc43cc8540f7e14">&#9670;&#160;</a></span>HandleConnectionStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CurseVR.VoiceControl.Input.VoiceInputManager.HandleConnectionStatus </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isConnected</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00152">152</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aa552ce4cdaade1bd3bc43cc8540f7e14_icgraph.png" border="0" usemap="#aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aa552ce4cdaade1bd3bc43cc8540f7e14_icgraph" alt=""/></div>
+<map name="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aa552ce4cdaade1bd3bc43cc8540f7e14_icgraph" id="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aa552ce4cdaade1bd3bc43cc8540f7e14_icgraph">
+<area shape="rect" title=" " alt="" coords="505,5,746,64"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#ab54635819786a6cf94e7e84abf70167f" title=" " alt="" coords="241,5,457,64"/>
+<area shape="poly" title=" " alt="" coords="489,37,457,37,457,32,489,32"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a7851da47a53fd2c22dc0cf7dacbc32f4" title=" " alt="" coords="5,13,193,56"/>
+<area shape="poly" title=" " alt="" coords="225,37,193,37,193,32,225,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a873fa9edee5669632e1bf555a975cc3a" name="a873fa9edee5669632e1bf555a975cc3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a873fa9edee5669632e1bf555a975cc3a">&#9670;&#160;</a></span>HandleVoiceCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CurseVR.VoiceControl.Input.VoiceInputManager.HandleVoiceCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html">VoiceCommandData</a></td>          <td class="paramname"><span class="paramname"><em>commandData</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00114">114</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a_cgraph.png" border="0" usemap="#aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a_cgraph" alt=""/></div>
+<map name="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a_cgraph" id="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,274,48"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a52bed871e3469c5de2b0183a1c840768" title=" " alt="" coords="322,5,533,48"/>
+<area shape="poly" title=" " alt="" coords="274,24,306,24,306,29,274,29"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a_icgraph.png" border="0" usemap="#aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a_icgraph" alt=""/></div>
+<map name="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a_icgraph" id="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a_icgraph">
+<area shape="rect" title=" " alt="" coords="505,13,773,56"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#ab54635819786a6cf94e7e84abf70167f" title=" " alt="" coords="241,5,457,64"/>
+<area shape="poly" title=" " alt="" coords="489,37,458,37,458,32,489,32"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a7851da47a53fd2c22dc0cf7dacbc32f4" title=" " alt="" coords="5,13,193,56"/>
+<area shape="poly" title=" " alt="" coords="225,37,193,37,193,32,225,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0e1ed176c785124f130398775b549f81" name="a0e1ed176c785124f130398775b549f81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e1ed176c785124f130398775b549f81">&#9670;&#160;</a></span>HandleVoiceInactive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CurseVR.VoiceControl.Input.VoiceInputManager.HandleVoiceInactive </td>
+          <td>(</td>
+          <td class="paramtype">AudioClip</td>          <td class="paramname"><span class="paramname"><em>clip</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00086">86</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e1ed176c785124f130398775b549f81_icgraph.png" border="0" usemap="#aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e1ed176c785124f130398775b549f81_icgraph" alt=""/></div>
+<map name="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e1ed176c785124f130398775b549f81_icgraph" id="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e1ed176c785124f130398775b549f81_icgraph">
+<area shape="rect" title=" " alt="" coords="499,5,751,48"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a93d366c9bd4832eb21847d3e85ed7e9f" title=" " alt="" coords="241,5,451,48"/>
+<area shape="poly" title=" " alt="" coords="483,29,451,29,451,24,483,24"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a7851da47a53fd2c22dc0cf7dacbc32f4" title=" " alt="" coords="5,5,193,48"/>
+<area shape="poly" title=" " alt="" coords="225,29,193,29,193,24,225,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a07ae0ff24ee97dfc3afedba48042fb54" name="a07ae0ff24ee97dfc3afedba48042fb54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ae0ff24ee97dfc3afedba48042fb54">&#9670;&#160;</a></span>InitializeInputActions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CurseVR.VoiceControl.Input.VoiceInputManager.InitializeInputActions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00069">69</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a07ae0ff24ee97dfc3afedba48042fb54_icgraph.png" border="0" usemap="#aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a07ae0ff24ee97dfc3afedba48042fb54_icgraph" alt=""/></div>
+<map name="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a07ae0ff24ee97dfc3afedba48042fb54_icgraph" id="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a07ae0ff24ee97dfc3afedba48042fb54_icgraph">
+<area shape="rect" title=" " alt="" coords="241,5,452,64"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a7851da47a53fd2c22dc0cf7dacbc32f4" title=" " alt="" coords="5,13,193,56"/>
+<area shape="poly" title=" " alt="" coords="225,37,193,37,193,32,225,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a93d366c9bd4832eb21847d3e85ed7e9f" name="a93d366c9bd4832eb21847d3e85ed7e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93d366c9bd4832eb21847d3e85ed7e9f">&#9670;&#160;</a></span>InitializeVAD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CurseVR.VoiceControl.Input.VoiceInputManager.InitializeVAD </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00049">49</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f_cgraph.png" border="0" usemap="#aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f_cgraph" alt=""/></div>
+<map name="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f_cgraph" id="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,216,48"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a0e1ed176c785124f130398775b549f81" title=" " alt="" coords="264,5,516,48"/>
+<area shape="poly" title=" " alt="" coords="216,24,248,24,248,29,216,29"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f_icgraph.png" border="0" usemap="#aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f_icgraph" alt=""/></div>
+<map name="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f_icgraph" id="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f_icgraph">
+<area shape="rect" title=" " alt="" coords="241,5,451,48"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a7851da47a53fd2c22dc0cf7dacbc32f4" title=" " alt="" coords="5,5,193,48"/>
+<area shape="poly" title=" " alt="" coords="225,29,193,29,193,24,225,24"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab54635819786a6cf94e7e84abf70167f" name="ab54635819786a6cf94e7e84abf70167f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab54635819786a6cf94e7e84abf70167f">&#9670;&#160;</a></span>InitializeVoiceService()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async void CurseVR.VoiceControl.Input.VoiceInputManager.InitializeVoiceService </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00039">39</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f_cgraph.png" border="0" usemap="#aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f_cgraph" alt=""/></div>
+<map name="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f_cgraph" id="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,43,222,101"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#aa552ce4cdaade1bd3bc43cc8540f7e14" title=" " alt="" coords="283,5,525,64"/>
+<area shape="poly" title=" " alt="" coords="222,55,267,50,268,55,222,61"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a873fa9edee5669632e1bf555a975cc3a" title=" " alt="" coords="270,88,538,131"/>
+<area shape="poly" title=" " alt="" coords="222,83,255,87,254,93,222,89"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a52bed871e3469c5de2b0183a1c840768" title=" " alt="" coords="586,88,797,131"/>
+<area shape="poly" title=" " alt="" coords="539,107,570,107,570,112,539,112"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f_icgraph.png" border="0" usemap="#aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f_icgraph" alt=""/></div>
+<map name="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f_icgraph" id="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f_icgraph">
+<area shape="rect" title=" " alt="" coords="241,5,457,64"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a7851da47a53fd2c22dc0cf7dacbc32f4" title=" " alt="" coords="5,13,193,56"/>
+<area shape="poly" title=" " alt="" coords="225,37,193,37,193,32,225,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a354993c2e76a0a84c8097c6eb162ae1f" name="a354993c2e76a0a84c8097c6eb162ae1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354993c2e76a0a84c8097c6eb162ae1f">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CurseVR.VoiceControl.Input.VoiceInputManager.OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00163">163</a></p>
+
+</div>
+</div>
+<a id="a7851da47a53fd2c22dc0cf7dacbc32f4" name="a7851da47a53fd2c22dc0cf7dacbc32f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7851da47a53fd2c22dc0cf7dacbc32f4">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CurseVR.VoiceControl.Input.VoiceInputManager.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00032">32</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a7851da47a53fd2c22dc0cf7dacbc32f4_cgraph.png" border="0" usemap="#aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a7851da47a53fd2c22dc0cf7dacbc32f4_cgraph" alt=""/></div>
+<map name="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a7851da47a53fd2c22dc0cf7dacbc32f4_cgraph" id="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a7851da47a53fd2c22dc0cf7dacbc32f4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,88,193,131"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a07ae0ff24ee97dfc3afedba48042fb54" title=" " alt="" coords="243,5,455,64"/>
+<area shape="poly" title=" " alt="" coords="172,85,234,66,235,71,174,90"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a93d366c9bd4832eb21847d3e85ed7e9f" title=" " alt="" coords="244,88,454,131"/>
+<area shape="poly" title=" " alt="" coords="193,107,228,107,228,112,193,112"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#ab54635819786a6cf94e7e84abf70167f" title=" " alt="" coords="241,155,457,213"/>
+<area shape="poly" title=" " alt="" coords="174,129,235,147,234,152,172,134"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a0e1ed176c785124f130398775b549f81" title=" " alt="" coords="513,88,765,131"/>
+<area shape="poly" title=" " alt="" coords="454,107,497,107,497,112,454,112"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#aa552ce4cdaade1bd3bc43cc8540f7e14" title=" " alt="" coords="519,155,760,213"/>
+<area shape="poly" title=" " alt="" coords="457,181,503,181,503,187,457,187"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a873fa9edee5669632e1bf555a975cc3a" title=" " alt="" coords="505,237,773,280"/>
+<area shape="poly" title=" " alt="" coords="458,210,506,223,535,230,534,236,504,228,457,215"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a52bed871e3469c5de2b0183a1c840768" title=" " alt="" coords="821,237,1033,280"/>
+<area shape="poly" title=" " alt="" coords="774,256,806,256,806,261,774,261"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a52bed871e3469c5de2b0183a1c840768" name="a52bed871e3469c5de2b0183a1c840768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52bed871e3469c5de2b0183a1c840768">&#9670;&#160;</a></span>ToggleAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">System.Collections.IEnumerator CurseVR.VoiceControl.Input.VoiceInputManager.ToggleAction </td>
+          <td>(</td>
+          <td class="paramtype">InputAction</td>          <td class="paramname"><span class="paramname"><em>action</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00141">141</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a52bed871e3469c5de2b0183a1c840768_icgraph.png" border="0" usemap="#aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a52bed871e3469c5de2b0183a1c840768_icgraph" alt=""/></div>
+<map name="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a52bed871e3469c5de2b0183a1c840768_icgraph" id="aclass_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a52bed871e3469c5de2b0183a1c840768_icgraph">
+<area shape="rect" title=" " alt="" coords="821,13,1033,56"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a873fa9edee5669632e1bf555a975cc3a" title=" " alt="" coords="505,13,773,56"/>
+<area shape="poly" title=" " alt="" coords="806,37,774,37,774,32,806,32"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#ab54635819786a6cf94e7e84abf70167f" title=" " alt="" coords="241,5,457,64"/>
+<area shape="poly" title=" " alt="" coords="489,37,458,37,458,32,489,32"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a7851da47a53fd2c22dc0cf7dacbc32f4" title=" " alt="" coords="5,13,193,56"/>
+<area shape="poly" title=" " alt="" coords="225,37,193,37,193,32,225,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9e6e497d828dcda31ade84854eafa523" name="a9e6e497d828dcda31ade84854eafa523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6e497d828dcda31ade84854eafa523">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CurseVR.VoiceControl.Input.VoiceInputManager.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00158">158</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ace3f3994e62ba3b841a6ff82fd90c82c" name="ace3f3994e62ba3b841a6ff82fd90c82c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace3f3994e62ba3b841a6ff82fd90c82c">&#9670;&#160;</a></span>actionReferences</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, InputActionReference&gt; CurseVR.VoiceControl.Input.VoiceInputManager.actionReferences = new Dictionary&lt;string, InputActionReference&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00030">30</a></p>
+
+</div>
+</div>
+<a id="aba0bb45936346d007c3bc47ac2aa76e6" name="aba0bb45936346d007c3bc47ac2aa76e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba0bb45936346d007c3bc47ac2aa76e6">&#9670;&#160;</a></span>audioBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer.html">AudioClipBuffer</a> CurseVR.VoiceControl.Input.VoiceInputManager.audioBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00026">26</a></p>
+
+</div>
+</div>
+<a id="ae9cb5abbc7bf028f3ac2d88d2362a3e5" name="ae9cb5abbc7bf028f3ac2d88d2362a3e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9cb5abbc7bf028f3ac2d88d2362a3e5">&#9670;&#160;</a></span>debugAudioSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioSource CurseVR.VoiceControl.Input.VoiceInputManager.debugAudioSource</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00020">20</a></p>
+
+</div>
+</div>
+<a id="a2fd64dfc34d79375438bb1e69204d230" name="a2fd64dfc34d79375438bb1e69204d230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fd64dfc34d79375438bb1e69204d230">&#9670;&#160;</a></span>inputActions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">InputActionAsset CurseVR.VoiceControl.Input.VoiceInputManager.inputActions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00018">18</a></p>
+
+</div>
+</div>
+<a id="a0e0e4ba62d8fb26849b5acc2c198c8e0" name="a0e0e4ba62d8fb26849b5acc2c198c8e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e0e4ba62d8fb26849b5acc2c198c8e0">&#9670;&#160;</a></span>isProcessingVoice</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CurseVR.VoiceControl.Input.VoiceInputManager.isProcessingVoice</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00027">27</a></p>
+
+</div>
+</div>
+<a id="ad5eaebfd4dc463e08f42811af81071b9" name="ad5eaebfd4dc463e08f42811af81071b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5eaebfd4dc463e08f42811af81071b9">&#9670;&#160;</a></span>micProxy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html">UnityMicrophoneProxy</a> CurseVR.VoiceControl.Input.VoiceInputManager.micProxy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00024">24</a></p>
+
+</div>
+</div>
+<a id="a88df95baf900cb468478134c2c6dee22" name="a88df95baf900cb468478134c2c6dee22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88df95baf900cb468478134c2c6dee22">&#9670;&#160;</a></span>serviceConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config.html">VoiceServiceConfig</a> CurseVR.VoiceControl.Input.VoiceInputManager.serviceConfig</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00021">21</a></p>
+
+</div>
+</div>
+<a id="aeb30bb0b4e374e60c3b9bdc3ef5141d5" name="aeb30bb0b4e374e60c3b9bdc3ef5141d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb30bb0b4e374e60c3b9bdc3ef5141d5">&#9670;&#160;</a></span>vad</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html">IVoiceActivityDetector</a> CurseVR.VoiceControl.Input.VoiceInputManager.vad</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00023">23</a></p>
+
+</div>
+</div>
+<a id="af760e2fd7caf8ef507b5e3b9f3d65092" name="af760e2fd7caf8ef507b5e3b9f3d65092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af760e2fd7caf8ef507b5e3b9f3d65092">&#9670;&#160;</a></span>vadParameters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html">VADParameters</a> CurseVR.VoiceControl.Input.VoiceInputManager.vadParameters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00019">19</a></p>
+
+</div>
+</div>
+<a id="aac3cfae0318051d3c9e58a358716e866" name="aac3cfae0318051d3c9e58a358716e866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac3cfae0318051d3c9e58a358716e866">&#9670;&#160;</a></span>voiceService</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service.html">IVoiceCommandService</a> CurseVR.VoiceControl.Input.VoiceInputManager.voiceService</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a> строка <a class="el" href="_voice_input_manager_8cs_source.html#l00025">25</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>Assets/Scripts/VoiceControl/Input/<a class="el" href="_voice_input_manager_8cs_source.html">VoiceInputManager.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_curse_v_r.html">CurseVR</a></li><li class="navelem"><a class="el" href="namespace_curse_v_r_1_1_voice_control.html">VoiceControl</a></li><li class="navelem"><a class="el" href="namespace_curse_v_r_1_1_voice_control_1_1_input.html">Input</a></li><li class="navelem"><a class="el" href="class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html">VoiceInputManager</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

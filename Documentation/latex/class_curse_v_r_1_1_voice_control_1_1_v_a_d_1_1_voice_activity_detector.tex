@@ -1,0 +1,394 @@
+\doxysection{Класс Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector}
+\hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector}{}\label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+
+
+Implements voice activity detection by analyzing microphone input volume.  
+
+
+
+
+Граф наследования\+:Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_af92bec5dfc47ce7887dd0312e2c5a055}{Voice\+Activity\+Detector}} (\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy}{Unity\+Microphone\+Proxy}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a9b1dadf5671525e04217ec8fd0dd5508}{mic\+Proxy}}, \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}{Audio\+Clip\+Buffer}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_af5eff85023dbf73e20ccaf15ed33a18b}{audio\+Buffer}}, \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters}{VADParameters}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a3f00b8001ed29a2eb451b92fe7a5e20d}{parameters}})
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector}{Voice\+Activity\+Detector} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a6bdb992a5b4a9b188e43bc67d19e89a7}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the voice activity detection state.
+
+This method should be called regularly (typically once per frame) to process new audio data from the microphone and update the activity state. It handles reading new microphone data, analyzing volume levels, and triggering state change events when appropriate.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a4c1b43c50e5da2afea274f5554104238}{Dispose}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a2a82e185f04691518c9f123563b5f4bd}{Is\+Active}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether voice activity is currently detected.
+
+True when voice is active, false when silent \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{События}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ bool $>$ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a3165ff740fa42f21edba317a295e63d2}{On\+Voice\+Activity\+Changed}}
+\end{DoxyCompactItemize}
+\doxysubsection*{События унаследованные от \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector}{Curse\+VR.\+Voice\+Control.\+VAD.\+IVoice\+Activity\+Detector}}}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ bool $>$ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_a8c9f594a1732c1cdbdd07684c8ec8af5}{On\+Voice\+Activity\+Changed}}
+\begin{DoxyCompactList}\small\item\em Event triggered when voice activity state changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_af6f095bf284464666a17901eb4808ceb}{Get\+Samples\+To\+Read}} (int current\+Position)
+\begin{DoxyCompactList}\small\item\em Calculates how many new audio samples should be read from the microphone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a63dac2cc33a0dc7ba77f744e9c21f8de}{Process\+Audio\+Data}} (float\mbox{[}$\,$\mbox{]} samples, int sample\+Count)
+\begin{DoxyCompactList}\small\item\em Processes a batch of audio data to detect voice activity. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a55afa36e452f899cd00ee7bf5ca05cfd}{Calculate\+Volume}} (float\mbox{[}$\,$\mbox{]} samples, int sample\+Count)
+\begin{DoxyCompactList}\small\item\em Calculates the Root Mean Square (RMS) volume level of an audio sample batch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy}{Unity\+Microphone\+Proxy}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a9b1dadf5671525e04217ec8fd0dd5508}{mic\+Proxy}}
+\item 
+readonly \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}{Audio\+Clip\+Buffer}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_af5eff85023dbf73e20ccaf15ed33a18b}{audio\+Buffer}}
+\item 
+readonly \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters}{VADParameters}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a3f00b8001ed29a2eb451b92fe7a5e20d}{parameters}}
+\item 
+readonly float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a7a3ffd4638d95ac4c459de3a834c21c2}{sample\+Buffer}}
+\item 
+float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a8ce7eab0e8863481f28b5893653fa8d4}{last\+Active\+Time}}
+\item 
+float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_ae41c5deb9fe80024c6696ed0f40f3c16}{last\+Inactive\+Time}}
+\item 
+bool \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a7ee4688fb38bdc2c74259921cf14d7d2}{is\+Active}}
+\item 
+int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_acd20e67cd0ba8fd1df3b652b532fb896}{last\+Read\+Position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Implements voice activity detection by analyzing microphone input volume. 
+
+This class monitors audio input from a microphone to detect when a user starts and stops speaking. It uses volume thresholds and timing parameters to determine state transitions and prevent rapid toggling between active and inactive states. When voice activity is detected, audio data is captured and stored in a buffer for further processing. 
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00016}{16}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_af92bec5dfc47ce7887dd0312e2c5a055}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!VoiceActivityDetector@{VoiceActivityDetector}}
+\index{VoiceActivityDetector@{VoiceActivityDetector}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{VoiceActivityDetector()}{VoiceActivityDetector()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_af92bec5dfc47ce7887dd0312e2c5a055} 
+Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+Voice\+Activity\+Detector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy}{Unity\+Microphone\+Proxy}}}]{mic\+Proxy}{, }\item[{\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}{Audio\+Clip\+Buffer}}}]{audio\+Buffer}{, }\item[{\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters}{VADParameters}}}]{parameters}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxylink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector}{Voice\+Activity\+Detector} class. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em mic\+Proxy} & Proxy for the Unity microphone system\\
+\hline
+{\em audio\+Buffer} & Buffer to store captured audio samples\\
+\hline
+{\em parameters} & Configuration parameters for voice activity detection\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Argument\+Null\+Exception} & Thrown if any parameter is null\\
+\hline
+\end{DoxyExceptions}
+
+
+The constructor initializes internal state and prepares the detector for processing. Initial timestamps are set to ensure proper debouncing at startup. 
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00045}{45}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a55afa36e452f899cd00ee7bf5ca05cfd}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!CalculateVolume@{CalculateVolume}}
+\index{CalculateVolume@{CalculateVolume}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{CalculateVolume()}{CalculateVolume()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a55afa36e452f899cd00ee7bf5ca05cfd} 
+float Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+Calculate\+Volume (\begin{DoxyParamCaption}\item[{float\mbox{[}$\,$\mbox{]}}]{samples}{, }\item[{int}]{sample\+Count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculates the Root Mean Square (RMS) volume level of an audio sample batch. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em samples} & Array of audio samples\\
+\hline
+{\em sample\+Count} & Number of samples to analyze\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+RMS volume level, typically between 0 and 1
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00142}{142}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a55afa36e452f899cd00ee7bf5ca05cfd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a4c1b43c50e5da2afea274f5554104238}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a4c1b43c50e5da2afea274f5554104238} 
+void Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00154}{154}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_af6f095bf284464666a17901eb4808ceb}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!GetSamplesToRead@{GetSamplesToRead}}
+\index{GetSamplesToRead@{GetSamplesToRead}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{GetSamplesToRead()}{GetSamplesToRead()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_af6f095bf284464666a17901eb4808ceb} 
+int Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+Get\+Samples\+To\+Read (\begin{DoxyParamCaption}\item[{int}]{current\+Position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calculates how many new audio samples should be read from the microphone. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em current\+Position} & Current position in the microphone buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Number of samples to read
+\end{DoxyReturn}
+
+
+Handles the circular buffer wrapping that occurs in Unity\textquotesingle{}s microphone system. 
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00083}{83}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_af6f095bf284464666a17901eb4808ceb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a63dac2cc33a0dc7ba77f744e9c21f8de}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!ProcessAudioData@{ProcessAudioData}}
+\index{ProcessAudioData@{ProcessAudioData}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{ProcessAudioData()}{ProcessAudioData()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a63dac2cc33a0dc7ba77f744e9c21f8de} 
+void Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+Process\+Audio\+Data (\begin{DoxyParamCaption}\item[{float\mbox{[}$\,$\mbox{]}}]{samples}{, }\item[{int}]{sample\+Count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Processes a batch of audio data to detect voice activity. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em samples} & Array of audio samples\\
+\hline
+{\em sample\+Count} & Number of samples to process\\
+\hline
+\end{DoxyParams}
+
+
+This method analyzes volume levels to determine if voice is active, handles state transitions with appropriate timing intervals, and stores active audio in the buffer for later processing. 
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00103}{103}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a63dac2cc33a0dc7ba77f744e9c21f8de_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a63dac2cc33a0dc7ba77f744e9c21f8de_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a6bdb992a5b4a9b188e43bc67d19e89a7}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!Update@{Update}}
+\index{Update@{Update}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a6bdb992a5b4a9b188e43bc67d19e89a7} 
+void Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Updates the voice activity detection state.
+
+This method should be called regularly (typically once per frame) to process new audio data from the microphone and update the activity state. It handles reading new microphone data, analyzing volume levels, and triggering state change events when appropriate.  
+
+
+
+Замещает \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_a20511f7e032a201a0c82fb111b351c55}{Curse\+VR.\+Voice\+Control.\+VAD.\+IVoice\+Activity\+Detector}}.
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00057}{57}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a6bdb992a5b4a9b188e43bc67d19e89a7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_af5eff85023dbf73e20ccaf15ed33a18b}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!audioBuffer@{audioBuffer}}
+\index{audioBuffer@{audioBuffer}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{audioBuffer}{audioBuffer}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_af5eff85023dbf73e20ccaf15ed33a18b} 
+readonly \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}{Audio\+Clip\+Buffer}} Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+audio\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00019}{19}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a7ee4688fb38bdc2c74259921cf14d7d2}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!isActive@{isActive}}
+\index{isActive@{isActive}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{isActive}{isActive}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a7ee4688fb38bdc2c74259921cf14d7d2} 
+bool Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+is\+Active\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00025}{25}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a8ce7eab0e8863481f28b5893653fa8d4}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!lastActiveTime@{lastActiveTime}}
+\index{lastActiveTime@{lastActiveTime}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{lastActiveTime}{lastActiveTime}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a8ce7eab0e8863481f28b5893653fa8d4} 
+float Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+last\+Active\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00023}{23}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_ae41c5deb9fe80024c6696ed0f40f3c16}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!lastInactiveTime@{lastInactiveTime}}
+\index{lastInactiveTime@{lastInactiveTime}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{lastInactiveTime}{lastInactiveTime}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_ae41c5deb9fe80024c6696ed0f40f3c16} 
+float Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+last\+Inactive\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00024}{24}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_acd20e67cd0ba8fd1df3b652b532fb896}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!lastReadPosition@{lastReadPosition}}
+\index{lastReadPosition@{lastReadPosition}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{lastReadPosition}{lastReadPosition}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_acd20e67cd0ba8fd1df3b652b532fb896} 
+int Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+last\+Read\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00026}{26}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a9b1dadf5671525e04217ec8fd0dd5508}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!micProxy@{micProxy}}
+\index{micProxy@{micProxy}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{micProxy}{micProxy}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a9b1dadf5671525e04217ec8fd0dd5508} 
+readonly \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy}{Unity\+Microphone\+Proxy}} Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+mic\+Proxy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00018}{18}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a3f00b8001ed29a2eb451b92fe7a5e20d}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!parameters@{parameters}}
+\index{parameters@{parameters}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{parameters}{parameters}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a3f00b8001ed29a2eb451b92fe7a5e20d} 
+readonly \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters}{VADParameters}} Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+parameters\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00020}{20}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a7a3ffd4638d95ac4c459de3a834c21c2}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!sampleBuffer@{sampleBuffer}}
+\index{sampleBuffer@{sampleBuffer}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{sampleBuffer}{sampleBuffer}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a7a3ffd4638d95ac4c459de3a834c21c2} 
+readonly float \mbox{[}$\,$\mbox{]} Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+sample\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00021}{21}}
+
+
+
+\doxysubsection{Полный список свойств}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a2a82e185f04691518c9f123563b5f4bd}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{IsActive}{IsActive}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a2a82e185f04691518c9f123563b5f4bd} 
+bool Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+Is\+Active\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether voice activity is currently detected.
+
+True when voice is active, false when silent 
+
+
+
+Замещает \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_af6ab64e34c104a3cd9c98a74bfa3ec3a}{Curse\+VR.\+Voice\+Control.\+VAD.\+IVoice\+Activity\+Detector}}.
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00029}{29}}
+
+
+
+\doxysubsection{Cобытия}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a3165ff740fa42f21edba317a295e63d2}\index{CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}!OnVoiceActivityChanged@{OnVoiceActivityChanged}}
+\index{OnVoiceActivityChanged@{OnVoiceActivityChanged}!CurseVR.VoiceControl.VAD.VoiceActivityDetector@{CurseVR.VoiceControl.VAD.VoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{OnVoiceActivityChanged}{OnVoiceActivityChanged}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a3165ff740fa42f21edba317a295e63d2} 
+Action$<$bool$>$ Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector.\+On\+Voice\+Activity\+Changed}
+
+
+
+
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_activity_detector_8cs_source}{Voice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_voice_activity_detector_8cs_source_l00032}{32}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Voice\+Control/\+VAD/\mbox{\hyperlink{_voice_activity_detector_8cs}{Voice\+Activity\+Detector.\+cs}}\end{DoxyCompactItemize}

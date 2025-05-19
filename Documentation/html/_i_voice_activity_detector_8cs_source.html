@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CourseVR: Исходный файл Assets/Scripts/VoiceControl/VAD/IVoiceActivityDetector.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">CourseVR<span id="projectnumber">&#160;0.1.0</span>
+   </div>
+   <div id="projectbrief">Voice Controlled VR System</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_i_voice_activity_detector_8cs_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">IVoiceActivityDetector.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_i_voice_activity_detector_8cs.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_curse_v_r_1_1_voice_control_1_1_v_a_d.html">CurseVR.VoiceControl.VAD</a></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html">   14</a></span>    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html">IVoiceActivityDetector</a> : IDisposable</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html#af6ab64e34c104a3cd9c98a74bfa3ec3a">   20</a></span>        <span class="keywordtype">bool</span> <a class="code hl_property" href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html#af6ab64e34c104a3cd9c98a74bfa3ec3a">IsActive</a> { <span class="keyword">get</span>; }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html#a8c9f594a1732c1cdbdd07684c8ec8af5">   30</a></span>        <span class="keyword">event</span> Action&lt;bool&gt; <a class="code hl_event" href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html#a8c9f594a1732c1cdbdd07684c8ec8af5">OnVoiceActivityChanged</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html#a20511f7e032a201a0c82fb111b351c55">   41</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html#a20511f7e032a201a0c82fb111b351c55">Update</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>} </div>
+<div class="ttc" id="ainterface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_html"><div class="ttname"><a href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html">CurseVR.VoiceControl.VAD.IVoiceActivityDetector</a></div><div class="ttdoc">Interface for voice activity detection functionality.</div><div class="ttdef"><b>Определения</b> <a href="#l00014">IVoiceActivityDetector.cs:15</a></div></div>
+<div class="ttc" id="ainterface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_html_a20511f7e032a201a0c82fb111b351c55"><div class="ttname"><a href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html#a20511f7e032a201a0c82fb111b351c55">CurseVR.VoiceControl.VAD.IVoiceActivityDetector.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Updates the voice activity detection state.</div></div>
+<div class="ttc" id="ainterface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_html_a8c9f594a1732c1cdbdd07684c8ec8af5"><div class="ttname"><a href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html#a8c9f594a1732c1cdbdd07684c8ec8af5">CurseVR.VoiceControl.VAD.IVoiceActivityDetector.OnVoiceActivityChanged</a></div><div class="ttdeci">Action&lt; bool &gt; OnVoiceActivityChanged</div><div class="ttdoc">Event triggered when voice activity state changes.</div><div class="ttdef"><b>Определения</b> <a href="#l00030">IVoiceActivityDetector.cs:30</a></div></div>
+<div class="ttc" id="ainterface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_html_af6ab64e34c104a3cd9c98a74bfa3ec3a"><div class="ttname"><a href="interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html#af6ab64e34c104a3cd9c98a74bfa3ec3a">CurseVR.VoiceControl.VAD.IVoiceActivityDetector.IsActive</a></div><div class="ttdeci">bool IsActive</div><div class="ttdoc">Gets a value indicating whether voice activity is currently detected.</div><div class="ttdef"><b>Определения</b> <a href="#l00020">IVoiceActivityDetector.cs:20</a></div></div>
+<div class="ttc" id="anamespace_curse_v_r_1_1_voice_control_1_1_v_a_d_html"><div class="ttname"><a href="namespace_curse_v_r_1_1_voice_control_1_1_v_a_d.html">CurseVR.VoiceControl.VAD</a></div><div class="ttdef"><b>Определения</b> <a href="_audio_clip_buffer_8cs_source.html#l00004">AudioClipBuffer.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_f13b41af88cf68434578284aaf699e39.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_a828ca451fcb4c74efeb238708675644.html">VoiceControl</a></li><li class="navelem"><a class="el" href="dir_9b95463337b13917dbb108fe0036abc1.html">VAD</a></li><li class="navelem"><a class="el" href="_i_voice_activity_detector_8cs.html">IVoiceActivityDetector.cs</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

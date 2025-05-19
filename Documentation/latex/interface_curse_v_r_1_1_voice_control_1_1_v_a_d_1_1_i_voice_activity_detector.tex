@@ -1,0 +1,109 @@
+\doxysection{Интерфейс Curse\+VR.\+Voice\+Control.\+VAD.\+IVoice\+Activity\+Detector}
+\hypertarget{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector}{}\label{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector}\index{CurseVR.VoiceControl.VAD.IVoiceActivityDetector@{CurseVR.VoiceControl.VAD.IVoiceActivityDetector}}
+
+
+Interface for voice activity detection functionality.  
+
+
+
+
+Граф наследования\+:Curse\+VR.\+Voice\+Control.\+VAD.\+IVoice\+Activity\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Curse\+VR.\+Voice\+Control.\+VAD.\+IVoice\+Activity\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_a20511f7e032a201a0c82fb111b351c55}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the voice activity detection state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_af6ab64e34c104a3cd9c98a74bfa3ec3a}{Is\+Active}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether voice activity is currently detected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{События}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ bool $>$ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_a8c9f594a1732c1cdbdd07684c8ec8af5}{On\+Voice\+Activity\+Changed}}
+\begin{DoxyCompactList}\small\item\em Event triggered when voice activity state changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Interface for voice activity detection functionality. 
+
+This interface defines the contract for components that detect when a user is speaking by analyzing audio input. Implementations should handle microphone data processing and determine speaking/silence transitions based on volume thresholds and timing parameters. 
+
+См. определение в файле \mbox{\hyperlink{_i_voice_activity_detector_8cs_source}{IVoice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_i_voice_activity_detector_8cs_source_l00014}{14}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_a20511f7e032a201a0c82fb111b351c55}\index{CurseVR.VoiceControl.VAD.IVoiceActivityDetector@{CurseVR.VoiceControl.VAD.IVoiceActivityDetector}!Update@{Update}}
+\index{Update@{Update}!CurseVR.VoiceControl.VAD.IVoiceActivityDetector@{CurseVR.VoiceControl.VAD.IVoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_a20511f7e032a201a0c82fb111b351c55} 
+void Curse\+VR.\+Voice\+Control.\+VAD.\+IVoice\+Activity\+Detector.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Updates the voice activity detection state. 
+
+This method should be called regularly (typically once per frame) to process new audio data from the microphone and update the activity state. It handles reading new microphone data, analyzing volume levels, and triggering state change events when appropriate. 
+
+Замещается в \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a6bdb992a5b4a9b188e43bc67d19e89a7}{Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector}}.
+
+
+
+\doxysubsection{Полный список свойств}
+\Hypertarget{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_af6ab64e34c104a3cd9c98a74bfa3ec3a}\index{CurseVR.VoiceControl.VAD.IVoiceActivityDetector@{CurseVR.VoiceControl.VAD.IVoiceActivityDetector}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!CurseVR.VoiceControl.VAD.IVoiceActivityDetector@{CurseVR.VoiceControl.VAD.IVoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{IsActive}{IsActive}}
+{\footnotesize\ttfamily \label{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_af6ab64e34c104a3cd9c98a74bfa3ec3a} 
+bool Curse\+VR.\+Voice\+Control.\+VAD.\+IVoice\+Activity\+Detector.\+Is\+Active\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether voice activity is currently detected. 
+
+True when voice is active, false when silent
+
+Замещается в \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector_a2a82e185f04691518c9f123563b5f4bd}{Curse\+VR.\+Voice\+Control.\+VAD.\+Voice\+Activity\+Detector}}.
+
+
+
+См. определение в файле \mbox{\hyperlink{_i_voice_activity_detector_8cs_source}{IVoice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_i_voice_activity_detector_8cs_source_l00020}{20}}
+
+
+
+\doxysubsection{Cобытия}
+\Hypertarget{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_a8c9f594a1732c1cdbdd07684c8ec8af5}\index{CurseVR.VoiceControl.VAD.IVoiceActivityDetector@{CurseVR.VoiceControl.VAD.IVoiceActivityDetector}!OnVoiceActivityChanged@{OnVoiceActivityChanged}}
+\index{OnVoiceActivityChanged@{OnVoiceActivityChanged}!CurseVR.VoiceControl.VAD.IVoiceActivityDetector@{CurseVR.VoiceControl.VAD.IVoiceActivityDetector}}
+\doxysubsubsection{\texorpdfstring{OnVoiceActivityChanged}{OnVoiceActivityChanged}}
+{\footnotesize\ttfamily \label{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector_a8c9f594a1732c1cdbdd07684c8ec8af5} 
+Action$<$bool$>$ Curse\+VR.\+Voice\+Control.\+VAD.\+IVoice\+Activity\+Detector.\+On\+Voice\+Activity\+Changed}
+
+
+
+Event triggered when voice activity state changes. 
+
+The boolean parameter indicates the new state\+: true when voice becomes active, false when voice becomes inactive. Subscribers can use this to start/stop recording or processing audio based on detected speech. 
+
+См. определение в файле \mbox{\hyperlink{_i_voice_activity_detector_8cs_source}{IVoice\+Activity\+Detector.\+cs}} строка \mbox{\hyperlink{_i_voice_activity_detector_8cs_source_l00030}{30}}
+
+
+
+Объявления и описания членов интерфейса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Voice\+Control/\+VAD/\mbox{\hyperlink{_i_voice_activity_detector_8cs}{IVoice\+Activity\+Detector.\+cs}}\end{DoxyCompactItemize}

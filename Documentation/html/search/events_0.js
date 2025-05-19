@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['onbufferfilled_0',['OnBufferFilled',['../class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer.html#a423b59e3afd64d9b664b06887d140bbb',1,'CurseVR::VoiceControl::VAD::AudioClipBuffer']]],
+  ['oncommandrecognized_1',['OnCommandRecognized',['../interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service.html#a1a8ee4676a6a8d4bd0b9f2f9acce9e7c',1,'CurseVR.VoiceControl.Core.IVoiceCommandService.OnCommandRecognized'],['../class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service.html#ab45e3c4f64d454a2564211bb3c3f0a39',1,'CurseVR.VoiceControl.Services.VoiceCommandService.OnCommandRecognized']]],
+  ['onconnectionstatuschanged_2',['OnConnectionStatusChanged',['../interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service.html#ab04876bd796cfcf91988814e46b246a6',1,'CurseVR.VoiceControl.Core.IVoiceCommandService.OnConnectionStatusChanged'],['../class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service.html#a547c9788d427265cfefadcf2cffefe44',1,'CurseVR.VoiceControl.Services.VoiceCommandService.OnConnectionStatusChanged']]],
+  ['onvoiceactivitychanged_3',['OnVoiceActivityChanged',['../interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html#a8c9f594a1732c1cdbdd07684c8ec8af5',1,'CurseVR.VoiceControl.VAD.IVoiceActivityDetector.OnVoiceActivityChanged'],['../class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector.html#a3165ff740fa42f21edba317a295e63d2',1,'CurseVR.VoiceControl.VAD.VoiceActivityDetector.OnVoiceActivityChanged']]]
+];

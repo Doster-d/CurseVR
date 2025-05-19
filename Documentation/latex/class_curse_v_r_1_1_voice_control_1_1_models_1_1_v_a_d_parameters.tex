@@ -1,0 +1,171 @@
+\doxysection{Класс Curse\+VR.\+Voice\+Control.\+Models.\+VADParameters}
+\hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters}{}\label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters}\index{CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}}
+
+
+Parameters for the Voice Activity Detection (\doxylink{namespace_curse_v_r_1_1_voice_control_1_1_v_a_d}{VAD}) system.  
+
+
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a0bfb942b71b8de13aca8dfeb770bed99}{Buffer\+Size}} = 2048
+\begin{DoxyCompactList}\small\item\em Size of the audio buffer in samples. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_ad9e02bb5ee9c60b1136b6b88844b22e0}{Max\+Active\+Duration\+Seconds}} = 10f
+\begin{DoxyCompactList}\small\item\em Maximum duration of continuous voice activity in seconds. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_ab99b48a19d6cc1503a1ba86eb6c0f0fa}{Max\+Queueing\+Time\+Seconds}} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em Maximum time to queue audio data before processing in seconds. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a032b638f666cdaad05ad25005dce8899}{Min\+Queueing\+Time\+Seconds}} = 0.\+05f
+\begin{DoxyCompactList}\small\item\em Minimum time to queue audio data before processing in seconds. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a9aaf3bdbb5df9c9bc80b4432b8761f48}{Active\+Volume\+Threshold}} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em Volume threshold for voice activity detection. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a9063d3e1dbaefc3c0e322f90f1d9e1dd}{Activation\+Rate\+Threshold}} = 0.\+6f
+\begin{DoxyCompactList}\small\item\em Rate threshold for activation. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_ac14bc9fe71dd1c4191cfb25509ae89b1}{Inactivation\+Rate\+Threshold}} = 0.\+4f
+\begin{DoxyCompactList}\small\item\em Rate threshold for inactivation. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a04f3b0989da0209bf64adb785a90adc8}{Activation\+Interval\+Seconds}} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em Time interval for activation check in seconds. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a4b76517d3aa003512c1173cc2582071b}{Inactivation\+Interval\+Seconds}} = 0.\+3f
+\begin{DoxyCompactList}\small\item\em Time interval for inactivation check in seconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Parameters for the Voice Activity Detection (\doxylink{namespace_curse_v_r_1_1_voice_control_1_1_v_a_d}{VAD}) system. 
+
+This class contains all configuration parameters for the voice activity detection system. It controls audio buffer sizes, thresholds for detecting when speech begins and ends, timing parameters, and other settings that affect \doxylink{namespace_curse_v_r_1_1_voice_control_1_1_v_a_d}{VAD} sensitivity and responsiveness. These values can be adjusted in the Unity Inspector to fine-\/tune voice detection for different environments and microphones. 
+
+См. определение в файле \mbox{\hyperlink{_v_a_d_parameters_8cs_source}{VADParameters.\+cs}} строка \mbox{\hyperlink{_v_a_d_parameters_8cs_source_l00016}{16}}
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a04f3b0989da0209bf64adb785a90adc8}\index{CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}!ActivationIntervalSeconds@{ActivationIntervalSeconds}}
+\index{ActivationIntervalSeconds@{ActivationIntervalSeconds}!CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}}
+\doxysubsubsection{\texorpdfstring{ActivationIntervalSeconds}{ActivationIntervalSeconds}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a04f3b0989da0209bf64adb785a90adc8} 
+float Curse\+VR.\+Voice\+Control.\+Models.\+VADParameters.\+Activation\+Interval\+Seconds = 0.\+1f}
+
+
+
+Time interval for activation check in seconds. 
+
+The minimum time that must elapse between voice activation events. This prevents rapid toggling of the active state due to fluctuating audio levels near the threshold. 
+
+См. определение в файле \mbox{\hyperlink{_v_a_d_parameters_8cs_source}{VADParameters.\+cs}} строка \mbox{\hyperlink{_v_a_d_parameters_8cs_source_l00111}{111}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a9063d3e1dbaefc3c0e322f90f1d9e1dd}\index{CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}!ActivationRateThreshold@{ActivationRateThreshold}}
+\index{ActivationRateThreshold@{ActivationRateThreshold}!CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}}
+\doxysubsubsection{\texorpdfstring{ActivationRateThreshold}{ActivationRateThreshold}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a9063d3e1dbaefc3c0e322f90f1d9e1dd} 
+float Curse\+VR.\+Voice\+Control.\+Models.\+VADParameters.\+Activation\+Rate\+Threshold = 0.\+6f}
+
+
+
+Rate threshold for activation. 
+
+The proportion of audio frames that must exceed the volume threshold within a detection window to trigger voice activation. Higher values make activation more resistant to brief spikes in volume. 
+
+См. определение в файле \mbox{\hyperlink{_v_a_d_parameters_8cs_source}{VADParameters.\+cs}} строка \mbox{\hyperlink{_v_a_d_parameters_8cs_source_l00088}{88}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a9aaf3bdbb5df9c9bc80b4432b8761f48}\index{CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}!ActiveVolumeThreshold@{ActiveVolumeThreshold}}
+\index{ActiveVolumeThreshold@{ActiveVolumeThreshold}!CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}}
+\doxysubsubsection{\texorpdfstring{ActiveVolumeThreshold}{ActiveVolumeThreshold}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a9aaf3bdbb5df9c9bc80b4432b8761f48} 
+float Curse\+VR.\+Voice\+Control.\+Models.\+VADParameters.\+Active\+Volume\+Threshold = 0.\+1f}
+
+
+
+Volume threshold for voice activity detection. 
+
+The RMS (Root Mean Square) volume level that must be exceeded for audio to be considered speech rather than background noise. Higher values require louder speech but reduce false activations. This should be calibrated based on the microphone and ambient noise levels. 
+
+См. определение в файле \mbox{\hyperlink{_v_a_d_parameters_8cs_source}{VADParameters.\+cs}} строка \mbox{\hyperlink{_v_a_d_parameters_8cs_source_l00076}{76}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a0bfb942b71b8de13aca8dfeb770bed99}\index{CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}!BufferSize@{BufferSize}}
+\index{BufferSize@{BufferSize}!CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}}
+\doxysubsubsection{\texorpdfstring{BufferSize}{BufferSize}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a0bfb942b71b8de13aca8dfeb770bed99} 
+int Curse\+VR.\+Voice\+Control.\+Models.\+VADParameters.\+Buffer\+Size = 2048}
+
+
+
+Size of the audio buffer in samples. 
+
+Determines how much audio data is processed at once. Larger values may improve detection accuracy but increase latency. At typical speech sample rates (16k\+Hz), a value of 2048 represents about 128ms of audio. 
+
+См. определение в файле \mbox{\hyperlink{_v_a_d_parameters_8cs_source}{VADParameters.\+cs}} строка \mbox{\hyperlink{_v_a_d_parameters_8cs_source_l00028}{28}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a4b76517d3aa003512c1173cc2582071b}\index{CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}!InactivationIntervalSeconds@{InactivationIntervalSeconds}}
+\index{InactivationIntervalSeconds@{InactivationIntervalSeconds}!CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}}
+\doxysubsubsection{\texorpdfstring{InactivationIntervalSeconds}{InactivationIntervalSeconds}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a4b76517d3aa003512c1173cc2582071b} 
+float Curse\+VR.\+Voice\+Control.\+Models.\+VADParameters.\+Inactivation\+Interval\+Seconds = 0.\+3f}
+
+
+
+Time interval for inactivation check in seconds. 
+
+The minimum time that must elapse between voice deactivation events. A higher value makes the system more tolerant of brief pauses in speech, preventing a single utterance from being split into multiple activations. 
+
+См. определение в файле \mbox{\hyperlink{_v_a_d_parameters_8cs_source}{VADParameters.\+cs}} строка \mbox{\hyperlink{_v_a_d_parameters_8cs_source_l00122}{122}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_ac14bc9fe71dd1c4191cfb25509ae89b1}\index{CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}!InactivationRateThreshold@{InactivationRateThreshold}}
+\index{InactivationRateThreshold@{InactivationRateThreshold}!CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}}
+\doxysubsubsection{\texorpdfstring{InactivationRateThreshold}{InactivationRateThreshold}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_ac14bc9fe71dd1c4191cfb25509ae89b1} 
+float Curse\+VR.\+Voice\+Control.\+Models.\+VADParameters.\+Inactivation\+Rate\+Threshold = 0.\+4f}
+
+
+
+Rate threshold for inactivation. 
+
+The proportion of audio frames that must fall below the volume threshold within a detection window to trigger voice deactivation. Lower values make the system more responsive to pauses in speech. 
+
+См. определение в файле \mbox{\hyperlink{_v_a_d_parameters_8cs_source}{VADParameters.\+cs}} строка \mbox{\hyperlink{_v_a_d_parameters_8cs_source_l00100}{100}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_ad9e02bb5ee9c60b1136b6b88844b22e0}\index{CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}!MaxActiveDurationSeconds@{MaxActiveDurationSeconds}}
+\index{MaxActiveDurationSeconds@{MaxActiveDurationSeconds}!CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}}
+\doxysubsubsection{\texorpdfstring{MaxActiveDurationSeconds}{MaxActiveDurationSeconds}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_ad9e02bb5ee9c60b1136b6b88844b22e0} 
+float Curse\+VR.\+Voice\+Control.\+Models.\+VADParameters.\+Max\+Active\+Duration\+Seconds = 10f}
+
+
+
+Maximum duration of continuous voice activity in seconds. 
+
+Sets a limit on how long a single voice activation can last before being forcibly terminated. This prevents runaway recordings in noisy environments or when the deactivation threshold isn\textquotesingle{}t met. 
+
+См. определение в файле \mbox{\hyperlink{_v_a_d_parameters_8cs_source}{VADParameters.\+cs}} строка \mbox{\hyperlink{_v_a_d_parameters_8cs_source_l00040}{40}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_ab99b48a19d6cc1503a1ba86eb6c0f0fa}\index{CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}!MaxQueueingTimeSeconds@{MaxQueueingTimeSeconds}}
+\index{MaxQueueingTimeSeconds@{MaxQueueingTimeSeconds}!CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}}
+\doxysubsubsection{\texorpdfstring{MaxQueueingTimeSeconds}{MaxQueueingTimeSeconds}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_ab99b48a19d6cc1503a1ba86eb6c0f0fa} 
+float Curse\+VR.\+Voice\+Control.\+Models.\+VADParameters.\+Max\+Queueing\+Time\+Seconds = 0.\+1f}
+
+
+
+Maximum time to queue audio data before processing in seconds. 
+
+The upper limit on how long audio data will be queued before being processed. Helps ensure that even in difficult detection scenarios, data will eventually be processed. 
+
+См. определение в файле \mbox{\hyperlink{_v_a_d_parameters_8cs_source}{VADParameters.\+cs}} строка \mbox{\hyperlink{_v_a_d_parameters_8cs_source_l00051}{51}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a032b638f666cdaad05ad25005dce8899}\index{CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}!MinQueueingTimeSeconds@{MinQueueingTimeSeconds}}
+\index{MinQueueingTimeSeconds@{MinQueueingTimeSeconds}!CurseVR.VoiceControl.Models.VADParameters@{CurseVR.VoiceControl.Models.VADParameters}}
+\doxysubsubsection{\texorpdfstring{MinQueueingTimeSeconds}{MinQueueingTimeSeconds}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_a032b638f666cdaad05ad25005dce8899} 
+float Curse\+VR.\+Voice\+Control.\+Models.\+VADParameters.\+Min\+Queueing\+Time\+Seconds = 0.\+05f}
+
+
+
+Minimum time to queue audio data before processing in seconds. 
+
+The lower limit on how long audio data must be queued before processing starts. This helps prevent processing very small chunks of audio which could reduce recognition accuracy. 
+
+См. определение в файле \mbox{\hyperlink{_v_a_d_parameters_8cs_source}{VADParameters.\+cs}} строка \mbox{\hyperlink{_v_a_d_parameters_8cs_source_l00062}{62}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Voice\+Control/\+Models/\mbox{\hyperlink{_v_a_d_parameters_8cs}{VADParameters.\+cs}}\end{DoxyCompactItemize}

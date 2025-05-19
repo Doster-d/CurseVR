@@ -1,0 +1,14 @@
+<map id="CurseVR.VoiceControl.VAD.VoiceActivityDetector" name="CurseVR.VoiceControl.VAD.VoiceActivityDetector">
+<area shape="rect" id="Node000001" title="Implements voice activity detection by analyzing microphone input volume." alt="" coords="461,116,648,159"/>
+<area shape="rect" id="Node000002" href="$interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html" title="Interface for voice activity detection functionality." alt="" coords="151,5,337,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="332,51,438,87,504,113,502,118,436,92,330,56"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,48,94,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,48,150,41,151,46,109,53"/>
+<area shape="rect" id="Node000004" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html" title="Provides an abstraction over Unity&#39;s Microphone API for simplified access to audio input." alt="" coords="151,72,337,115"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="110,68,151,75,150,81,109,74"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="353,106,461,122,460,127,352,111"/>
+<area shape="rect" id="Node000005" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer.html" title="Buffers audio samples and creates AudioClips when the buffer is filled or flushed." alt="" coords="151,139,337,181"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="352,152,437,147,461,145,461,150,438,152,352,158"/>
+<area shape="rect" id="Node000006" href="$class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html" title="Parameters for the Voice Activity Detection (VAD) system." alt="" coords="143,205,344,248"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="343,198,437,172,486,157,488,162,438,177,345,203"/>
+</map>

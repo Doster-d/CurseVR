@@ -1,0 +1,9 @@
+<map id="CurseVR.VoiceControl.Services.VoiceCommandService" name="CurseVR.VoiceControl.Services.VoiceCommandService">
+<area shape="rect" id="Node000001" title="Implementation of the voice command service using WebSocket communication." alt="" coords="293,56,501,99"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="51,5,161,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,30,293,54,292,59,176,35"/>
+<area shape="rect" id="Node000003" href="$interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service.html" title="Interface for the voice command service that handles communication with the ASR API." alt="" coords="13,56,199,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="215,75,292,75,292,80,215,80"/>
+<area shape="rect" id="Node000004" href="$class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config.html" title="Configuration settings for the voice command service." alt="" coords="5,123,207,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="216,116,300,97,301,102,217,121"/>
+</map>

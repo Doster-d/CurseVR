@@ -1,0 +1,20 @@
+<map id="CurseVR.VoiceControl.Input.VoiceInputManager" name="CurseVR.VoiceControl.Input.VoiceInputManager">
+<area shape="rect" id="Node000001" title="Manages voice input and integrates with Unity&#39;s Input System." alt="" coords="482,189,670,232"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="189,5,298,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="314,32,345,41,405,63,460,95,516,142,558,187,554,191,512,146,457,100,403,68,343,47,313,37"/>
+<area shape="rect" id="Node000003" href="$class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html" title="Parameters for the Voice Activity Detection (VAD) system." alt="" coords="143,56,344,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="326,102,345,108,403,126,459,147,538,187,536,191,457,152,401,131,344,113,324,107"/>
+<area shape="rect" id="Node000004" href="$class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config.html" title="Configuration settings for the voice command service." alt="" coords="143,123,344,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="360,165,482,189,481,195,359,170"/>
+<area shape="rect" id="Node000005" href="$interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html" title="Interface for voice activity detection functionality." alt="" coords="151,189,337,232"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="352,208,482,208,482,213,352,213"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,232,94,259"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="109,232,150,225,151,230,109,237"/>
+<area shape="rect" id="Node000007" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html" title="Provides an abstraction over Unity&#39;s Microphone API for simplified access to audio input." alt="" coords="151,256,337,299"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="110,252,151,259,150,265,109,258"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="351,253,481,227,482,232,352,258"/>
+<area shape="rect" id="Node000008" href="$interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service.html" title="Interface for the voice command service that handles communication with the ASR API." alt="" coords="151,323,337,365"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="335,315,457,271,537,230,539,235,459,276,337,320"/>
+<area shape="rect" id="Node000009" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer.html" title="Buffers audio samples and creates AudioClips when the buffer is filled or flushed." alt="" coords="151,389,337,432"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="327,381,343,375,403,354,427,343,457,325,513,277,555,231,559,234,517,281,460,329,430,347,405,359,345,380,328,386"/>
+</map>

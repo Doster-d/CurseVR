@@ -1,0 +1,9 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,47,94,73"/>
+<area shape="rect" id="Node000001" href="$interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html" title="Interface for voice activity detection functionality." alt="" coords="142,5,328,48"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="109,47,141,41,142,46,110,52"/>
+<area shape="rect" id="Node000003" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html" title="Provides an abstraction over Unity&#39;s Microphone API for simplified access to audio input." alt="" coords="142,72,328,115"/>
+<area shape="poly" id="edge7_Node000000_Node000003" title=" " alt="" coords="110,68,142,74,141,79,109,73"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector.html" title="Implements voice activity detection by analyzing microphone input volume." alt="" coords="376,5,562,48"/>
+<area shape="poly" id="edge6_Node000001_Node000002" title=" " alt="" coords="343,24,376,24,376,29,343,29"/>
+</map>

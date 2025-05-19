@@ -1,0 +1,5 @@
+<map id="CurseVR.VoiceControl.Services.VoiceCommandService.DisconnectAsync" name="CurseVR.VoiceControl.Services.VoiceCommandService.DisconnectAsync">
+<area shape="rect" id="Node000001" title="Terminates the connection to the voice recognition service." alt="" coords="275,5,536,48"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service.html#a28f7620547b10dd164fb495b16080891" title=" " alt="" coords="5,5,227,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,29,227,29,227,24,259,24"/>
+</map>

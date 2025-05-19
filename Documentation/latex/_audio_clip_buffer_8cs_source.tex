@@ -1,0 +1,83 @@
+\doxysection{Audio\+Clip\+Buffer.\+cs}
+\hypertarget{_audio_clip_buffer_8cs_source}{}\label{_audio_clip_buffer_8cs_source}\index{Assets/Scripts/VoiceControl/VAD/AudioClipBuffer.cs@{Assets/Scripts/VoiceControl/VAD/AudioClipBuffer.cs}}
+\mbox{\hyperlink{_audio_clip_buffer_8cs}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00004}\mbox{\hyperlink{namespace_curse_v_r_1_1_voice_control_1_1_v_a_d}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_curse_v_r_1_1_voice_control_1_1_v_a_d}{CurseVR.VoiceControl.VAD}}}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00015}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a6b7110b2ddf99b3359a1b2c937dc1dea}{AudioClipBuffer}}}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00017}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_aff39fe5a4ce82bf898e08a802afb0699}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{float}[]\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_aff39fe5a4ce82bf898e08a802afb0699}{buffer}};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00018}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a5e769d8f546290f2509315e5208e501a}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a5e769d8f546290f2509315e5208e501a}{channels}};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00019}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a261f9ff98e86b606ab36efcd7c7beb69}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a261f9ff98e86b606ab36efcd7c7beb69}{frequency}};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00020}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a87bc99587cd04eb37f8d04a6bfff79be}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a87bc99587cd04eb37f8d04a6bfff79be}{writePosition}};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00021}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a4ad9b2df2ff5395cb0e3b12e3030db5e}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a4ad9b2df2ff5395cb0e3b12e3030db5e}{isFull}};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00030}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a423b59e3afd64d9b664b06887d140bbb}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ Action<AudioClip>\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a423b59e3afd64d9b664b06887d140bbb}{OnBufferFilled}};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00042}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a6b7110b2ddf99b3359a1b2c937dc1dea}{00042}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a6b7110b2ddf99b3359a1b2c937dc1dea}{AudioClipBuffer}}(\textcolor{keywordtype}{int}\ maxSampleLength,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a261f9ff98e86b606ab36efcd7c7beb69}{frequency}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a5e769d8f546290f2509315e5208e501a}{channels}}\ =\ 1)}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ this.buffer\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[maxSampleLength\ *\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a5e769d8f546290f2509315e5208e501a}{channels}}];}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ this.frequency\ =\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a261f9ff98e86b606ab36efcd7c7beb69}{frequency}};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ this.channels\ =\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a5e769d8f546290f2509315e5208e501a}{channels}};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ this.writePosition\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ this.isFull\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00061}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_ae3d622240bb62c6db6de961a11b030b4}{00061}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_ae3d622240bb62c6db6de961a11b030b4}{AddSamples}}(\textcolor{keywordtype}{float}[]\ samples)}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (samples\ ==\ \textcolor{keyword}{null}\ ||\ samples.Length\ ==\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ samplesToWrite\ =\ Math.Min(samples.Length,\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_aff39fe5a4ce82bf898e08a802afb0699}{buffer}}.Length\ -\/\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a87bc99587cd04eb37f8d04a6bfff79be}{writePosition}});}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ Array.Copy(samples,\ 0,\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_aff39fe5a4ce82bf898e08a802afb0699}{buffer}},\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a87bc99587cd04eb37f8d04a6bfff79be}{writePosition}},\ samplesToWrite);}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a87bc99587cd04eb37f8d04a6bfff79be}{writePosition}}\ +=\ samplesToWrite;}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a87bc99587cd04eb37f8d04a6bfff79be}{writePosition}}\ >=\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_aff39fe5a4ce82bf898e08a802afb0699}{buffer}}.Length)}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a4ad9b2df2ff5395cb0e3b12e3030db5e}{isFull}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a2e6288cd22f41f93a7c7fb5a629661eb}{CreateAndEmitAudioClip}}();}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a97439caa1755ec5c0a77b1dbd6c86bcf}{Reset}}();}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00086}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a3570be297bce8e0f00f5836547d0bc94}{00086}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a3570be297bce8e0f00f5836547d0bc94}{Flush}}()}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a87bc99587cd04eb37f8d04a6bfff79be}{writePosition}}\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a2e6288cd22f41f93a7c7fb5a629661eb}{CreateAndEmitAudioClip}}();}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a97439caa1755ec5c0a77b1dbd6c86bcf}{Reset}}();}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00102}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a2e6288cd22f41f93a7c7fb5a629661eb}{00102}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a2e6288cd22f41f93a7c7fb5a629661eb}{CreateAndEmitAudioClip}}()}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ sampleCount\ =\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a4ad9b2df2ff5395cb0e3b12e3030db5e}{isFull}}\ ?\ buffer.Length\ :\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a87bc99587cd04eb37f8d04a6bfff79be}{writePosition}};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sampleCount\ ==\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ var\ clip\ =\ AudioClip.Create(}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}VoiceBuffer"{}},\ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sampleCount\ /\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a5e769d8f546290f2509315e5208e501a}{channels}},\ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a5e769d8f546290f2509315e5208e501a}{channels}},\ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a261f9ff98e86b606ab36efcd7c7beb69}{frequency}},\ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}[]\ data\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[sampleCount];}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ Array.Copy(\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_aff39fe5a4ce82bf898e08a802afb0699}{buffer}},\ data,\ sampleCount);}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ clip.SetData(data,\ 0);}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a423b59e3afd64d9b664b06887d140bbb}{OnBufferFilled}}?.Invoke(clip);}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00128}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a97439caa1755ec5c0a77b1dbd6c86bcf}{00128}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a97439caa1755ec5c0a77b1dbd6c86bcf}{Reset}}()}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a87bc99587cd04eb37f8d04a6bfff79be}{writePosition}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a4ad9b2df2ff5395cb0e3b12e3030db5e}{isFull}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ Array.Clear(\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_aff39fe5a4ce82bf898e08a802afb0699}{buffer}},\ 0,\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_aff39fe5a4ce82bf898e08a802afb0699}{buffer}}.Length);}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00134}00134\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_clip_buffer_8cs_source_l00135}00135\ \}\ }
+
+\end{DoxyCode}

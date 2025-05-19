@@ -1,0 +1,162 @@
+\doxysection{Содержание директории Assets/\+Scripts/\+Voice\+Control}
+\hypertarget{dir_a828ca451fcb4c74efeb238708675644}{}\label{dir_a828ca451fcb4c74efeb238708675644}\index{Содержание директории Assets/Scripts/VoiceControl@{Содержание директории Assets/Scripts/VoiceControl}}
+Директория графа зависимостей Voice\+Control\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dir_a828ca451fcb4c74efeb238708675644_dep}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Директории}
+\begin{DoxyCompactItemize}
+\item 
+директория \mbox{\hyperlink{dir_8b37afda4b930af6a9d8f81a367207c9}{Core}}
+\item 
+директория \mbox{\hyperlink{dir_3bcb93cb10fe2b456eaa279c6ce0c1f1}{Editor}}
+\item 
+директория \mbox{\hyperlink{dir_511dfcc31657bd380d0d060bada9bc24}{Input}}
+\item 
+директория \mbox{\hyperlink{dir_13af0fef57d892912cfc1c823d558e1d}{Models}}
+\item 
+директория \mbox{\hyperlink{dir_3dcf2bc4714448ebaa5698e7b50923e1}{Services}}
+\item 
+директория \mbox{\hyperlink{dir_3d5785b0a97affaf8d77c8c1c364ad9e}{Test}}
+\item 
+директория \mbox{\hyperlink{dir_694dd868262a9c223294b0b7cb340885}{Utils}}
+\item 
+директория \mbox{\hyperlink{dir_9b95463337b13917dbb108fe0036abc1}{VAD}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+A voice control system that integrates with Unity\textquotesingle{}s new Input System, using Voice Activity Detection (VAD) and a Web\+Socket-\/based ASR service.\hypertarget{README.md_autotoc_md1}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{README.md_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Real-\/time voice activity detection
+\item Web\+Socket-\/based communication with ASR service
+\item Integration with Unity\textquotesingle{}s new Input System
+\item Debug tools and visualization
+\item Custom editor interface
+\item Audio utilities for processing voice data
+\end{DoxyItemize}\hypertarget{README.md_autotoc_md2}{}\doxysubsection{\texorpdfstring{Setup}{Setup}}\label{README.md_autotoc_md2}
+
+\begin{DoxyEnumerate}
+\item Install required dependencies\+:
+\begin{DoxyItemize}
+\item Voice Activity Detection (VAD) library
+\item Native\+Web\+Socket
+\item Uni\+Rx
+\item Newtonsoft.\+Json
+\end{DoxyItemize}
+\item Configure the Input System\+:
+\begin{DoxyItemize}
+\item Create a new Input Action Asset if you haven\textquotesingle{}t already
+\item Add a new Action Map named "{}\+Voice"{}
+\item Add actions for each voice command you want to support
+\end{DoxyItemize}
+\item Set up the Voice Input Manager\+:
+\begin{DoxyItemize}
+\item Create an empty Game\+Object in your scene
+\item Add the {\ttfamily Voice\+Input\+Manager} component
+\item Assign your Input Action Asset
+\item Configure the VAD Parameters
+\item Set up the Voice Service Configuration
+\item (Optional) Add an Audio Source for debug playback
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{README.md_autotoc_md3}{}\doxysubsection{\texorpdfstring{Configuration}{Configuration}}\label{README.md_autotoc_md3}
+\hypertarget{README.md_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{Voice Service Config}{Voice Service Config}}\label{README.md_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ "{}WebSocketUrl"{}:\ "{}ws://localhost:8000/ws/asr/"{},}
+\DoxyCodeLine{\ \ \ \ "{}ClientId"{}:\ "{}unity\_client"{},}
+\DoxyCodeLine{\ \ \ \ "{}SampleRate"{}:\ 16000,}
+\DoxyCodeLine{\ \ \ \ "{}Channels"{}:\ 1,}
+\DoxyCodeLine{\ \ \ \ "{}BufferSize"{}:\ 2048,}
+\DoxyCodeLine{\ \ \ \ "{}MaxReconnectAttempts"{}:\ 3,}
+\DoxyCodeLine{\ \ \ \ "{}ReconnectDelayMs"{}:\ 1000}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{README.md_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{VAD Parameters}{VAD Parameters}}\label{README.md_autotoc_md5}
+Configure these in the Unity Inspector\+:
+\begin{DoxyItemize}
+\item Max/\+Min Queueing Time
+\item Volume Threshold
+\item Activation/\+Inactivation Rates
+\item Intervals
+\item Max Active Duration
+\end{DoxyItemize}\hypertarget{README.md_autotoc_md6}{}\doxysubsection{\texorpdfstring{Usage}{Usage}}\label{README.md_autotoc_md6}
+
+\begin{DoxyEnumerate}
+\item Add voice commands to your Input Action Asset\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Example\ in\ code}}
+\DoxyCodeLine{var\ voiceActionMap\ =\ inputActions.FindActionMap(\textcolor{stringliteral}{"{}Voice"{}});}
+\DoxyCodeLine{var\ moveCommand\ =\ voiceActionMap.AddAction(\textcolor{stringliteral}{"{}move"{}});}
+\DoxyCodeLine{var\ interactCommand\ =\ voiceActionMap.AddAction(\textcolor{stringliteral}{"{}interact"{}});}
+
+\end{DoxyCode}
+
+\item Subscribe to voice commands\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{voiceActionMap[\textcolor{stringliteral}{"{}move"{}}].performed\ +=\ ctx\ =>\ HandleMoveCommand(ctx);}
+\DoxyCodeLine{voiceActionMap[\textcolor{stringliteral}{"{}interact"{}}].performed\ +=\ ctx\ =>\ HandleInteractCommand(ctx);}
+
+\end{DoxyCode}
+
+\item The Voice\+Input\+Manager will automatically\+:
+\begin{DoxyItemize}
+\item Detect voice activity
+\item Send audio to the ASR service
+\item Receive command recognition results
+\item Trigger appropriate Input System actions
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{README.md_autotoc_md7}{}\doxysubsection{\texorpdfstring{Debugging}{Debugging}}\label{README.md_autotoc_md7}
+The custom editor provides several debugging tools\+:
+\begin{DoxyItemize}
+\item Microphone testing
+\item Web\+Socket connection testing
+\item Audio playback visualization
+\item Voice activity monitoring
+\end{DoxyItemize}\hypertarget{README.md_autotoc_md8}{}\doxysubsection{\texorpdfstring{Project Structure}{Project Structure}}\label{README.md_autotoc_md8}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Assets/Scripts/VoiceControl/}
+\DoxyCodeLine{├──\ Core/}
+\DoxyCodeLine{│\ \ \ └──\ IVoiceCommandService.cs}
+\DoxyCodeLine{├──\ Models/}
+\DoxyCodeLine{│\ \ \ ├──\ VoiceCommandData.cs}
+\DoxyCodeLine{│\ \ \ └──\ VoiceServiceConfig.cs}
+\DoxyCodeLine{├──\ Services/}
+\DoxyCodeLine{│\ \ \ └──\ VoiceCommandService.cs}
+\DoxyCodeLine{├──\ Input/}
+\DoxyCodeLine{│\ \ \ └──\ VoiceInputManager.cs}
+\DoxyCodeLine{├──\ Utils/}
+\DoxyCodeLine{│\ \ \ └──\ AudioUtils.cs}
+\DoxyCodeLine{└──\ Editor/}
+\DoxyCodeLine{\ \ \ \ └──\ VoiceInputManagerEditor.cs}
+
+\end{DoxyCode}
+\hypertarget{README.md_autotoc_md9}{}\doxysubsection{\texorpdfstring{Best Practices}{Best Practices}}\label{README.md_autotoc_md9}
+
+\begin{DoxyEnumerate}
+\item Always check the connection status before sending audio data
+\item Use the debug audio source in development
+\item Configure VAD parameters based on your environment
+\item Test with various microphones and noise levels
+\item Handle connection errors gracefully
+\end{DoxyEnumerate}\hypertarget{README.md_autotoc_md10}{}\doxysubsection{\texorpdfstring{Known Issues}{Known Issues}}\label{README.md_autotoc_md10}
+
+\begin{DoxyItemize}
+\item Web\+Socket connection may require reconnection after long periods
+\item VAD might need tuning for different environments
+\item Debug audio playback may have latency
+\end{DoxyItemize}\hypertarget{README.md_autotoc_md11}{}\doxysubsection{\texorpdfstring{Contributing}{Contributing}}\label{README.md_autotoc_md11}
+Feel free to contribute to this project by\+:
+\begin{DoxyEnumerate}
+\item Reporting issues
+\item Suggesting improvements
+\item Creating pull requests
+\end{DoxyEnumerate}\hypertarget{README.md_autotoc_md12}{}\doxysubsection{\texorpdfstring{License}{License}}\label{README.md_autotoc_md12}
+This project is licensed under the MIT License -\/ see the LICENSE file for details 

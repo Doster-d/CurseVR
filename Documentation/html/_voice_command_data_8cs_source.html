@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CourseVR: Исходный файл Assets/Scripts/VoiceControl/Models/VoiceCommandData.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">CourseVR<span id="projectnumber">&#160;0.1.0</span>
+   </div>
+   <div id="projectbrief">Voice Controlled VR System</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_voice_command_data_8cs_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">VoiceCommandData.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_voice_command_data_8cs.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_curse_v_r_1_1_voice_control_1_1_models.html">CurseVR.VoiceControl.Models</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    [Serializable]</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html">   17</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a07a3f61b6e9d6e750a113557feff1e1b">VoiceCommandData</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#aac750f33c264cfc01f926c72f5f664b2">   28</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#aac750f33c264cfc01f926c72f5f664b2">CommandType</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a0cb35cc95facbb27347c278b30f7502f">   39</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code hl_property" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a0cb35cc95facbb27347c278b30f7502f">RawText</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a0809af8dc2e8aacba6e6a1e6d1d26422">   50</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_property" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a0809af8dc2e8aacba6e6a1e6d1d26422">Confidence</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a9e44fcf8e6918093476b64438bd37365">   61</a></span>        <span class="keyword">public</span> Dictionary&lt;string, object&gt; <a class="code hl_property" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a9e44fcf8e6918093476b64438bd37365">Parameters</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a756acd8f0ca83fc2e0caf0823261da60">   72</a></span>        <span class="keyword">public</span> DateTime <a class="code hl_property" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a756acd8f0ca83fc2e0caf0823261da60">Timestamp</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a07a3f61b6e9d6e750a113557feff1e1b">   81</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a07a3f61b6e9d6e750a113557feff1e1b">VoiceCommandData</a>()</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <a class="code hl_property" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a9e44fcf8e6918093476b64438bd37365">Parameters</a> = <span class="keyword">new</span> Dictionary&lt;string, object&gt;();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <a class="code hl_property" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a756acd8f0ca83fc2e0caf0823261da60">Timestamp</a> = DateTime.UtcNow;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_html_a07a3f61b6e9d6e750a113557feff1e1b"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a07a3f61b6e9d6e750a113557feff1e1b">CurseVR.VoiceControl.Models.VoiceCommandData.VoiceCommandData</a></div><div class="ttdeci">VoiceCommandData()</div><div class="ttdoc">Initializes a new instance of the VoiceCommandData class.</div><div class="ttdef"><b>Определения</b> <a href="#l00081">VoiceCommandData.cs:81</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_html_a0809af8dc2e8aacba6e6a1e6d1d26422"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a0809af8dc2e8aacba6e6a1e6d1d26422">CurseVR.VoiceControl.Models.VoiceCommandData.Confidence</a></div><div class="ttdeci">float Confidence</div><div class="ttdoc">Gets or sets the confidence score of the recognition.</div><div class="ttdef"><b>Определения</b> <a href="#l00050">VoiceCommandData.cs:50</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_html_a0cb35cc95facbb27347c278b30f7502f"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a0cb35cc95facbb27347c278b30f7502f">CurseVR.VoiceControl.Models.VoiceCommandData.RawText</a></div><div class="ttdeci">string RawText</div><div class="ttdoc">Gets or sets the raw text transcribed from speech.</div><div class="ttdef"><b>Определения</b> <a href="#l00039">VoiceCommandData.cs:39</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_html_a756acd8f0ca83fc2e0caf0823261da60"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a756acd8f0ca83fc2e0caf0823261da60">CurseVR.VoiceControl.Models.VoiceCommandData.Timestamp</a></div><div class="ttdeci">DateTime Timestamp</div><div class="ttdoc">Gets or sets the timestamp when the command was recognized.</div><div class="ttdef"><b>Определения</b> <a href="#l00072">VoiceCommandData.cs:72</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_html_a9e44fcf8e6918093476b64438bd37365"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#a9e44fcf8e6918093476b64438bd37365">CurseVR.VoiceControl.Models.VoiceCommandData.Parameters</a></div><div class="ttdeci">Dictionary&lt; string, object &gt; Parameters</div><div class="ttdoc">Gets or sets additional parameters associated with the command.</div><div class="ttdef"><b>Определения</b> <a href="#l00061">VoiceCommandData.cs:61</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_html_aac750f33c264cfc01f926c72f5f664b2"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html#aac750f33c264cfc01f926c72f5f664b2">CurseVR.VoiceControl.Models.VoiceCommandData.CommandType</a></div><div class="ttdeci">string CommandType</div><div class="ttdoc">Gets or sets the type of command recognized.</div><div class="ttdef"><b>Определения</b> <a href="#l00028">VoiceCommandData.cs:28</a></div></div>
+<div class="ttc" id="anamespace_curse_v_r_1_1_voice_control_1_1_models_html"><div class="ttname"><a href="namespace_curse_v_r_1_1_voice_control_1_1_models.html">CurseVR.VoiceControl.Models</a></div><div class="ttdef"><b>Определения</b> <a href="_v_a_d_parameters_8cs_source.html#l00003">VADParameters.cs:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_f13b41af88cf68434578284aaf699e39.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_a828ca451fcb4c74efeb238708675644.html">VoiceControl</a></li><li class="navelem"><a class="el" href="dir_13af0fef57d892912cfc1c823d558e1d.html">Models</a></li><li class="navelem"><a class="el" href="_voice_command_data_8cs.html">VoiceCommandData.cs</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

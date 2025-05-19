@@ -1,0 +1,223 @@
+\doxysection{Класс Curse\+VR.\+Voice\+Control.\+VAD.\+Unity\+Microphone\+Proxy}
+\hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy}{}\label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy}\index{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}}
+
+
+Provides an abstraction over Unity\textquotesingle{}s Microphone API for simplified access to audio input.  
+
+
+
+
+Граф наследования\+:Curse\+VR.\+Voice\+Control.\+VAD.\+Unity\+Microphone\+Proxy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Curse\+VR.\+Voice\+Control.\+VAD.\+Unity\+Microphone\+Proxy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a4b9de24c2f03036a0b330d16159b688d}{Unity\+Microphone\+Proxy}} (string \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_af02429b5c83db1eeb863b9afa37e27ba}{device\+Name}}=null, int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a555055ac143ecb8b4a43cdc83abe90de}{frequency}}=44100)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy}{Unity\+Microphone\+Proxy} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a5c6945018694151e5e1f61cf43764e36}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Disposes of resources used by the microphone proxy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a9069867b6f3e603cd064c91a26bf8942}{Audio\+Clip}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the Audio\+Clip containing the microphone input data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a2b99a0b2e30606ffb6dba300fb660b8b}{Sample\+Rate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the sample rate of the audio recording. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a4c49945e2b1b5d2a0730d072bfba9007}{Initialize\+Microphone}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the microphone and begins recording. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+readonly string \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_af02429b5c83db1eeb863b9afa37e27ba}{device\+Name}}
+\item 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a9069867b6f3e603cd064c91a26bf8942}{Audio\+Clip}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_afb5c21dd223b2cdb26cbd27166a3abe0}{audio\+Clip}}
+\item 
+readonly int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a555055ac143ecb8b4a43cdc83abe90de}{frequency}}
+\item 
+readonly int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_acb1f8e5913665857bcc33c87ea83d92f}{sample\+Rate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Provides an abstraction over Unity\textquotesingle{}s Microphone API for simplified access to audio input. 
+
+This class encapsulates the initialization, management, and cleanup of Unity\textquotesingle{}s microphone system. It creates a continuous recording Audio\+Clip that can be accessed for real-\/time audio processing. The proxy pattern allows for easier testing and a more controlled interface to the Unity API. 
+
+См. определение в файле \mbox{\hyperlink{_unity_microphone_proxy_8cs_source}{Unity\+Microphone\+Proxy.\+cs}} строка \mbox{\hyperlink{_unity_microphone_proxy_8cs_source_l00014}{14}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a4b9de24c2f03036a0b330d16159b688d}\index{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}!UnityMicrophoneProxy@{UnityMicrophoneProxy}}
+\index{UnityMicrophoneProxy@{UnityMicrophoneProxy}!CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}}
+\doxysubsubsection{\texorpdfstring{UnityMicrophoneProxy()}{UnityMicrophoneProxy()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a4b9de24c2f03036a0b330d16159b688d} 
+Curse\+VR.\+Voice\+Control.\+VAD.\+Unity\+Microphone\+Proxy.\+Unity\+Microphone\+Proxy (\begin{DoxyParamCaption}\item[{string}]{device\+Name}{ = {\ttfamily null}, }\item[{int}]{frequency}{ = {\ttfamily 44100}}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxylink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy}{Unity\+Microphone\+Proxy} class. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em device\+Name} & Name of the microphone device to use, or null for default device\\
+\hline
+{\em frequency} & Requested sample rate for recording in Hz\\
+\hline
+\end{DoxyParams}
+
+
+If device\+Name is null, the first available microphone device will be used. The default frequency of 44100Hz is CD quality, but can be reduced for voice recognition (e.\+g., 16000Hz is common for speech processing). 
+
+
+\begin{DoxyExceptions}{Исключения}
+{\em Invalid\+Operation\+Exception} & Thrown when no microphone devices are available\\
+\hline
+\end{DoxyExceptions}
+
+
+См. определение в файле \mbox{\hyperlink{_unity_microphone_proxy_8cs_source}{Unity\+Microphone\+Proxy.\+cs}} строка \mbox{\hyperlink{_unity_microphone_proxy_8cs_source_l00048}{48}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a4b9de24c2f03036a0b330d16159b688d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a5c6945018694151e5e1f61cf43764e36}\index{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a5c6945018694151e5e1f61cf43764e36} 
+void Curse\+VR.\+Voice\+Control.\+VAD.\+Unity\+Microphone\+Proxy.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Disposes of resources used by the microphone proxy. 
+
+Stops any active recording and destroys the Audio\+Clip to prevent memory leaks. This should be called when the proxy is no longer needed, typically during application cleanup or scene transitions. 
+
+См. определение в файле \mbox{\hyperlink{_unity_microphone_proxy_8cs_source}{Unity\+Microphone\+Proxy.\+cs}} строка \mbox{\hyperlink{_unity_microphone_proxy_8cs_source_l00090}{90}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a4c49945e2b1b5d2a0730d072bfba9007}\index{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}!InitializeMicrophone@{InitializeMicrophone}}
+\index{InitializeMicrophone@{InitializeMicrophone}!CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}}
+\doxysubsubsection{\texorpdfstring{InitializeMicrophone()}{InitializeMicrophone()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a4c49945e2b1b5d2a0730d072bfba9007} 
+void Curse\+VR.\+Voice\+Control.\+VAD.\+Unity\+Microphone\+Proxy.\+Initialize\+Microphone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initializes the microphone and begins recording. 
+
+This method stops any existing recording, creates a new Audio\+Clip for recording, and starts the microphone in loop mode. It waits until recording has actually started before returning. 
+
+См. определение в файле \mbox{\hyperlink{_unity_microphone_proxy_8cs_source}{Unity\+Microphone\+Proxy.\+cs}} строка \mbox{\hyperlink{_unity_microphone_proxy_8cs_source_l00070}{70}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a4c49945e2b1b5d2a0730d072bfba9007_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_afb5c21dd223b2cdb26cbd27166a3abe0}\index{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}!audioClip@{audioClip}}
+\index{audioClip@{audioClip}!CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}}
+\doxysubsubsection{\texorpdfstring{audioClip}{audioClip}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_afb5c21dd223b2cdb26cbd27166a3abe0} 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a9069867b6f3e603cd064c91a26bf8942}{Audio\+Clip}} Curse\+VR.\+Voice\+Control.\+VAD.\+Unity\+Microphone\+Proxy.\+audio\+Clip\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_unity_microphone_proxy_8cs_source}{Unity\+Microphone\+Proxy.\+cs}} строка \mbox{\hyperlink{_unity_microphone_proxy_8cs_source_l00017}{17}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_af02429b5c83db1eeb863b9afa37e27ba}\index{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}!deviceName@{deviceName}}
+\index{deviceName@{deviceName}!CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}}
+\doxysubsubsection{\texorpdfstring{deviceName}{deviceName}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_af02429b5c83db1eeb863b9afa37e27ba} 
+readonly string Curse\+VR.\+Voice\+Control.\+VAD.\+Unity\+Microphone\+Proxy.\+device\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_unity_microphone_proxy_8cs_source}{Unity\+Microphone\+Proxy.\+cs}} строка \mbox{\hyperlink{_unity_microphone_proxy_8cs_source_l00016}{16}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a555055ac143ecb8b4a43cdc83abe90de}\index{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}!frequency@{frequency}}
+\index{frequency@{frequency}!CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}}
+\doxysubsubsection{\texorpdfstring{frequency}{frequency}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a555055ac143ecb8b4a43cdc83abe90de} 
+readonly int Curse\+VR.\+Voice\+Control.\+VAD.\+Unity\+Microphone\+Proxy.\+frequency\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_unity_microphone_proxy_8cs_source}{Unity\+Microphone\+Proxy.\+cs}} строка \mbox{\hyperlink{_unity_microphone_proxy_8cs_source_l00018}{18}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_acb1f8e5913665857bcc33c87ea83d92f}\index{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}!sampleRate@{sampleRate}}
+\index{sampleRate@{sampleRate}!CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}}
+\doxysubsubsection{\texorpdfstring{sampleRate}{sampleRate}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_acb1f8e5913665857bcc33c87ea83d92f} 
+readonly int Curse\+VR.\+Voice\+Control.\+VAD.\+Unity\+Microphone\+Proxy.\+sample\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_unity_microphone_proxy_8cs_source}{Unity\+Microphone\+Proxy.\+cs}} строка \mbox{\hyperlink{_unity_microphone_proxy_8cs_source_l00019}{19}}
+
+
+
+\doxysubsection{Полный список свойств}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a9069867b6f3e603cd064c91a26bf8942}\index{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}!AudioClip@{AudioClip}}
+\index{AudioClip@{AudioClip}!CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}}
+\doxysubsubsection{\texorpdfstring{AudioClip}{AudioClip}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a9069867b6f3e603cd064c91a26bf8942} 
+Audio\+Clip Curse\+VR.\+Voice\+Control.\+VAD.\+Unity\+Microphone\+Proxy.\+Audio\+Clip\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the Audio\+Clip containing the microphone input data. 
+
+The Audio\+Clip recording from the microphone
+
+This is a continuous recording in a circular buffer. Use Microphone.\+Get\+Position to determine the current recording position within the clip. 
+
+См. определение в файле \mbox{\hyperlink{_unity_microphone_proxy_8cs_source}{Unity\+Microphone\+Proxy.\+cs}} строка \mbox{\hyperlink{_unity_microphone_proxy_8cs_source_l00029}{29}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a2b99a0b2e30606ffb6dba300fb660b8b}\index{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}!SampleRate@{SampleRate}}
+\index{SampleRate@{SampleRate}!CurseVR.VoiceControl.VAD.UnityMicrophoneProxy@{CurseVR.VoiceControl.VAD.UnityMicrophoneProxy}}
+\doxysubsubsection{\texorpdfstring{SampleRate}{SampleRate}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_a2b99a0b2e30606ffb6dba300fb660b8b} 
+int Curse\+VR.\+Voice\+Control.\+VAD.\+Unity\+Microphone\+Proxy.\+Sample\+Rate\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the sample rate of the audio recording. 
+
+Sample rate in Hz
+
+См. определение в файле \mbox{\hyperlink{_unity_microphone_proxy_8cs_source}{Unity\+Microphone\+Proxy.\+cs}} строка \mbox{\hyperlink{_unity_microphone_proxy_8cs_source_l00035}{35}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Voice\+Control/\+VAD/\mbox{\hyperlink{_unity_microphone_proxy_8cs}{Unity\+Microphone\+Proxy.\+cs}}\end{DoxyCompactItemize}

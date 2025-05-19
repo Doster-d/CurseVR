@@ -1,0 +1,215 @@
+\doxysection{Интерфейс Curse\+VR.\+Voice\+Control.\+Core.\+IVoice\+Command\+Service}
+\hypertarget{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service}{}\label{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service}\index{CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}}
+
+
+Interface for the voice command service that handles communication with the ASR API.  
+
+
+
+
+Граф наследования\+:Curse\+VR.\+Voice\+Control.\+Core.\+IVoice\+Command\+Service\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+Task \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a0221f4905643e44be550094718c04da3}{Initialize\+Async}} (\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config}{Voice\+Service\+Config}} config)
+\begin{DoxyCompactList}\small\item\em Initializes the voice command service with the provided configuration. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_af48f8081e7a229bccbf9754121f897b3}{Send\+Audio\+Data\+Async}} (byte\mbox{[}$\,$\mbox{]} audio\+Data)
+\begin{DoxyCompactList}\small\item\em Sends audio data to the ASR service for processing. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_aade3ada212e9186ccf705cd2fe3466de}{Connect\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Establishes a connection to the voice recognition service. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a45cd69b61ab9734443b10ca4d421b10a}{Disconnect\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Terminates the connection to the voice recognition service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a749565509d576006b81c61b6dc8e1273}{Is\+Connected}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether the service is currently connected to the ASR endpoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{События}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data}{Voice\+Command\+Data}} $>$ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a1a8ee4676a6a8d4bd0b9f2f9acce9e7c}{On\+Command\+Recognized}}
+\begin{DoxyCompactList}\small\item\em Event triggered when a voice command is recognized by the ASR service. \end{DoxyCompactList}\item 
+Action$<$ bool $>$ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_ab04876bd796cfcf91988814e46b246a6}{On\+Connection\+Status\+Changed}}
+\begin{DoxyCompactList}\small\item\em Event triggered when the connection status with the ASR service changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Interface for the voice command service that handles communication with the ASR API. 
+
+This interface defines the contract for communicating with an Automatic Speech Recognition (ASR) service over Web\+Sockets. It handles initialization, connection management, and data transmission. 
+
+См. определение в файле \mbox{\hyperlink{_i_voice_command_service_8cs_source}{IVoice\+Command\+Service.\+cs}} строка \mbox{\hyperlink{_i_voice_command_service_8cs_source_l00015}{15}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_aade3ada212e9186ccf705cd2fe3466de}\index{CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}!ConnectAsync@{ConnectAsync}}
+\index{ConnectAsync@{ConnectAsync}!CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}}
+\doxysubsubsection{\texorpdfstring{ConnectAsync()}{ConnectAsync()}}
+{\footnotesize\ttfamily \label{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_aade3ada212e9186ccf705cd2fe3466de} 
+Task Curse\+VR.\+Voice\+Control.\+Core.\+IVoice\+Command\+Service.\+Connect\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Establishes a connection to the voice recognition service. 
+
+\begin{DoxyReturn}{Возвращает}
+A task representing the asynchronous connection operation
+\end{DoxyReturn}
+
+
+This method should be called after initialization and before sending audio data. It establishes a Web\+Socket connection to the ASR service endpoint specified in the configuration. 
+
+
+\begin{DoxyExceptions}{Исключения}
+{\em Invalid\+Operation\+Exception} & Thrown when service is not initialized\\
+\hline
+\end{DoxyExceptions}
+
+
+Замещается в \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service_ac13c8c871659407e6037c2f98528e035}{Curse\+VR.\+Voice\+Control.\+Services.\+Voice\+Command\+Service}}.
+
+\Hypertarget{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a45cd69b61ab9734443b10ca4d421b10a}\index{CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}!DisconnectAsync@{DisconnectAsync}}
+\index{DisconnectAsync@{DisconnectAsync}!CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}}
+\doxysubsubsection{\texorpdfstring{DisconnectAsync()}{DisconnectAsync()}}
+{\footnotesize\ttfamily \label{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a45cd69b61ab9734443b10ca4d421b10a} 
+Task Curse\+VR.\+Voice\+Control.\+Core.\+IVoice\+Command\+Service.\+Disconnect\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Terminates the connection to the voice recognition service. 
+
+\begin{DoxyReturn}{Возвращает}
+A task representing the asynchronous disconnection operation
+\end{DoxyReturn}
+
+
+This method should be called when the application no longer needs to process voice commands, such as during application shutdown or when switching scenes. 
+
+Замещается в \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service_a235185bf9909723b49f19c94eae51660}{Curse\+VR.\+Voice\+Control.\+Services.\+Voice\+Command\+Service}}.
+
+\Hypertarget{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a0221f4905643e44be550094718c04da3}\index{CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}!InitializeAsync@{InitializeAsync}}
+\index{InitializeAsync@{InitializeAsync}!CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}}
+\doxysubsubsection{\texorpdfstring{InitializeAsync()}{InitializeAsync()}}
+{\footnotesize\ttfamily \label{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a0221f4905643e44be550094718c04da3} 
+Task Curse\+VR.\+Voice\+Control.\+Core.\+IVoice\+Command\+Service.\+Initialize\+Async (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config}{Voice\+Service\+Config}}}]{config}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the voice command service with the provided configuration. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em config} & Configuration parameters for the voice service connection\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+A task representing the asynchronous initialization operation
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Argument\+Null\+Exception} & Thrown when config is null\\
+\hline
+{\em Invalid\+Operation\+Exception} & Thrown when initialization fails\\
+\hline
+\end{DoxyExceptions}
+
+
+Замещается в \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service_aff6040d2ba6ac9a306fa4fd5263d9f4f}{Curse\+VR.\+Voice\+Control.\+Services.\+Voice\+Command\+Service}}.
+
+\Hypertarget{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_af48f8081e7a229bccbf9754121f897b3}\index{CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}!SendAudioDataAsync@{SendAudioDataAsync}}
+\index{SendAudioDataAsync@{SendAudioDataAsync}!CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}}
+\doxysubsubsection{\texorpdfstring{SendAudioDataAsync()}{SendAudioDataAsync()}}
+{\footnotesize\ttfamily \label{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_af48f8081e7a229bccbf9754121f897b3} 
+Task Curse\+VR.\+Voice\+Control.\+Core.\+IVoice\+Command\+Service.\+Send\+Audio\+Data\+Async (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{audio\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Sends audio data to the ASR service for processing. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em audio\+Data} & Raw audio data bytes to be sent for recognition\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+A task representing the asynchronous send operation
+\end{DoxyReturn}
+
+
+The audio data should be in the format specified in the \doxylink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config}{Voice\+Service\+Config} (sample rate, channels, etc.). The data will be sent over Web\+Socket to the ASR service. 
+
+
+\begin{DoxyExceptions}{Исключения}
+{\em Invalid\+Operation\+Exception} & Thrown when service is not connected\\
+\hline
+\end{DoxyExceptions}
+
+
+Замещается в \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service_a40a1f2590680cb821da105aaa7fe2125}{Curse\+VR.\+Voice\+Control.\+Services.\+Voice\+Command\+Service}}.
+
+
+
+\doxysubsection{Полный список свойств}
+\Hypertarget{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a749565509d576006b81c61b6dc8e1273}\index{CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}!IsConnected@{IsConnected}}
+\index{IsConnected@{IsConnected}!CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}}
+\doxysubsubsection{\texorpdfstring{IsConnected}{IsConnected}}
+{\footnotesize\ttfamily \label{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a749565509d576006b81c61b6dc8e1273} 
+bool Curse\+VR.\+Voice\+Control.\+Core.\+IVoice\+Command\+Service.\+Is\+Connected\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets a value indicating whether the service is currently connected to the ASR endpoint. 
+
+True if connected, false otherwise
+
+This property should be checked before attempting to send audio data to prevent errors. 
+
+Замещается в \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service_a6926ad60ea404a944301d47d486224f9}{Curse\+VR.\+Voice\+Control.\+Services.\+Voice\+Command\+Service}}.
+
+
+
+См. определение в файле \mbox{\hyperlink{_i_voice_command_service_8cs_source}{IVoice\+Command\+Service.\+cs}} строка \mbox{\hyperlink{_i_voice_command_service_8cs_source_l00084}{84}}
+
+
+
+\doxysubsection{Cобытия}
+\Hypertarget{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a1a8ee4676a6a8d4bd0b9f2f9acce9e7c}\index{CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}!OnCommandRecognized@{OnCommandRecognized}}
+\index{OnCommandRecognized@{OnCommandRecognized}!CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}}
+\doxysubsubsection{\texorpdfstring{OnCommandRecognized}{OnCommandRecognized}}
+{\footnotesize\ttfamily \label{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_a1a8ee4676a6a8d4bd0b9f2f9acce9e7c} 
+Action$<$\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data}{Voice\+Command\+Data}}$>$ Curse\+VR.\+Voice\+Control.\+Core.\+IVoice\+Command\+Service.\+On\+Command\+Recognized}
+
+
+
+Event triggered when a voice command is recognized by the ASR service. 
+
+Subscribers will receive a \doxylink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data}{Voice\+Command\+Data} object containing the recognized command details including the command text, confidence level, and any additional parameters. 
+
+См. определение в файле \mbox{\hyperlink{_i_voice_command_service_8cs_source}{IVoice\+Command\+Service.\+cs}} строка \mbox{\hyperlink{_i_voice_command_service_8cs_source_l00024}{24}}
+
+\Hypertarget{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_ab04876bd796cfcf91988814e46b246a6}\index{CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}!OnConnectionStatusChanged@{OnConnectionStatusChanged}}
+\index{OnConnectionStatusChanged@{OnConnectionStatusChanged}!CurseVR.VoiceControl.Core.IVoiceCommandService@{CurseVR.VoiceControl.Core.IVoiceCommandService}}
+\doxysubsubsection{\texorpdfstring{OnConnectionStatusChanged}{OnConnectionStatusChanged}}
+{\footnotesize\ttfamily \label{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service_ab04876bd796cfcf91988814e46b246a6} 
+Action$<$bool$>$ Curse\+VR.\+Voice\+Control.\+Core.\+IVoice\+Command\+Service.\+On\+Connection\+Status\+Changed}
+
+
+
+Event triggered when the connection status with the ASR service changes. 
+
+The boolean parameter indicates whether the connection is active (true) or inactive (false). This event should be used to update UI elements or system state based on connection status. 
+
+См. определение в файле \mbox{\hyperlink{_i_voice_command_service_8cs_source}{IVoice\+Command\+Service.\+cs}} строка \mbox{\hyperlink{_i_voice_command_service_8cs_source_l00033}{33}}
+
+
+
+Объявления и описания членов интерфейса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Voice\+Control/\+Core/\mbox{\hyperlink{_i_voice_command_service_8cs}{IVoice\+Command\+Service.\+cs}}\end{DoxyCompactItemize}

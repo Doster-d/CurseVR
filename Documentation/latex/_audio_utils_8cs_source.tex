@@ -1,0 +1,70 @@
+\doxysection{Audio\+Utils.\+cs}
+\hypertarget{_audio_utils_8cs_source}{}\label{_audio_utils_8cs_source}\index{Assets/Scripts/VoiceControl/Utils/AudioUtils.cs@{Assets/Scripts/VoiceControl/Utils/AudioUtils.cs}}
+\mbox{\hyperlink{_audio_utils_8cs}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00003}\mbox{\hyperlink{namespace_curse_v_r_1_1_voice_control_1_1_utils}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_curse_v_r_1_1_voice_control_1_1_utils}{CurseVR.VoiceControl.Utils}}}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00008}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils}{AudioUtils}}}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00013}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a1789d131b00cc2ea1ef1b312f930eb1e}{00013}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{byte}[]\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a1789d131b00cc2ea1ef1b312f930eb1e}{AudioClipToBytes}}(AudioClip\ clip)}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (clip\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}[]\ samples\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[clip.samples\ *\ clip.channels];}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ clip.GetData(samples,\ 0);}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{byte}[]\ audioData\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{byte}[samples.Length\ *\ 2];}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ samples.Length;\ i++)}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{short}\ value\ =\ (short)(samples[i]\ *\ 32767f);}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ audioData[i\ *\ 2]\ =\ (byte)(value\ \&\ 0xff);}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ audioData[i\ *\ 2\ +\ 1]\ =\ (byte)((value\ >>\ 8)\ \&\ 0xff);}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ audioData;}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00034}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a01a54473f017fc3b01ad157aeae17d56}{00034}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ AudioClip\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a01a54473f017fc3b01ad157aeae17d56}{BytesToAudioClip}}(\textcolor{keywordtype}{byte}[]\ audioData,\ \textcolor{keywordtype}{int}\ channels,\ \textcolor{keywordtype}{int}\ frequency)}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (audioData\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}[]\ samples\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[audioData.Length\ /\ 2];}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ samples.Length;\ i++)}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{short}\ value\ =\ (short)((audioData[i\ *\ 2\ +\ 1]\ <<\ 8)\ |\ audioData[i\ *\ 2]);}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ samples[i]\ =\ value\ /\ 32768f;}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ AudioClip\ clip\ =\ AudioClip.Create(\textcolor{stringliteral}{"{}ConvertedClip"{}},\ samples.Length\ /\ channels,\ channels,\ frequency,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ clip.SetData(samples,\ 0);}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ clip;}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00054}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a60c1f2a818caa6758c381cba5f9d36d1}{00054}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a60c1f2a818caa6758c381cba5f9d36d1}{CalculateRMSVolume}}(\textcolor{keywordtype}{float}[]\ samples)}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sum\ =\ 0f;}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ samples.Length;\ i++)}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sum\ +=\ samples[i]\ *\ samples[i];}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Mathf.Sqrt(sum\ /\ samples.Length);}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00068}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_acee025d745f78135d3432c2ba9e6c13a}{00068}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_acee025d745f78135d3432c2ba9e6c13a}{ApplyNoiseGate}}(\textcolor{keywordtype}{float}[]\ samples,\ \textcolor{keywordtype}{float}\ threshold)}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ samples.Length;\ i++)}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Mathf.Abs(samples[i])\ <\ threshold)}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ samples[i]\ =\ 0f;}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_audio_utils_8cs_source_l00079}00079\ \}}
+
+\end{DoxyCode}

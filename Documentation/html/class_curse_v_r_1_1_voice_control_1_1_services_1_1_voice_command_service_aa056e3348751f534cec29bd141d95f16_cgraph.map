@@ -1,0 +1,5 @@
+<map id="CurseVR.VoiceControl.Services.VoiceCommandService.TryReconnect" name="CurseVR.VoiceControl.Services.VoiceCommandService.TryReconnect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,245,48"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service.html#ac13c8c871659407e6037c2f98528e035" title="Establishes a connection to the voice recognition service." alt="" coords="293,5,537,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,24,277,24,277,29,245,29"/>
+</map>

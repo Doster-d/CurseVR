@@ -1,0 +1,9 @@
+<map id="CurseVR.VoiceControl.Input.VoiceInputManager.InitializeVoiceService" name="CurseVR.VoiceControl.Input.VoiceInputManager.InitializeVoiceService">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,43,222,101"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#aa552ce4cdaade1bd3bc43cc8540f7e14" title=" " alt="" coords="283,5,525,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,55,267,50,268,55,222,61"/>
+<area shape="rect" id="Node000003" href="$class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a873fa9edee5669632e1bf555a975cc3a" title=" " alt="" coords="270,88,538,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,83,255,87,254,93,222,89"/>
+<area shape="rect" id="Node000004" href="$class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a52bed871e3469c5de2b0183a1c840768" title=" " alt="" coords="586,88,797,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="539,107,570,107,570,112,539,112"/>
+</map>

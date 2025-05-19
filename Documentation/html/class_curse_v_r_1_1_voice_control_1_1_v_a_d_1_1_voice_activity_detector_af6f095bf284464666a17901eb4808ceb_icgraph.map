@@ -1,0 +1,5 @@
+<map id="CurseVR.VoiceControl.VAD.VoiceActivityDetector.GetSamplesToRead" name="CurseVR.VoiceControl.VAD.VoiceActivityDetector.GetSamplesToRead">
+<area shape="rect" id="Node000001" title="Calculates how many new audio samples should be read from the microphone." alt="" coords="244,5,465,64"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector.html#a6bdb992a5b4a9b188e43bc67d19e89a7" title="Updates the voice activity detection state.This method should be called regularly (typically once per..." alt="" coords="5,13,196,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,37,196,37,196,32,228,32"/>
+</map>

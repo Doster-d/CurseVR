@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['unitymicrophoneproxy_0',['UnityMicrophoneProxy',['../class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html',1,'CurseVR.VoiceControl.VAD.UnityMicrophoneProxy'],['../class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a4b9de24c2f03036a0b330d16159b688d',1,'CurseVR.VoiceControl.VAD.UnityMicrophoneProxy.UnityMicrophoneProxy()']]],
+  ['unitymicrophoneproxy_2ecs_1',['UnityMicrophoneProxy.cs',['../_unity_microphone_proxy_8cs.html',1,'']]],
+  ['update_2',['Update',['../class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a9e6e497d828dcda31ade84854eafa523',1,'CurseVR.VoiceControl.Input.VoiceInputManager.Update()'],['../class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service.html#adcace2e4cb11b82bbc4a45cded27a297',1,'CurseVR.VoiceControl.Services.VoiceCommandService.Update()'],['../class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#a6da45e869166584887acef9d2ac3f838',1,'CurseVR.VoiceControl.Test.MockVoiceControlTest.Update()'],['../interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector.html#a20511f7e032a201a0c82fb111b351c55',1,'CurseVR.VoiceControl.VAD.IVoiceActivityDetector.Update()'],['../class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector.html#a6bdb992a5b4a9b188e43bc67d19e89a7',1,'CurseVR.VoiceControl.VAD.VoiceActivityDetector.Update()']]],
+  ['usage_3',['Usage',['../E:/source/repos/CurseVR/Assets/Scripts/VoiceControl/README.md#autotoc_md6',1,'']]]
+];

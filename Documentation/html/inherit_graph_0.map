@@ -1,0 +1,11 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" href="$interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service.html" title="Interface for the voice command service that handles communication with the ASR API." alt="" coords="5,5,192,48"/>
+<area shape="rect" id="Node000001" href="$class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service.html" title="Implementation of the voice command service using WebSocket communication." alt="" coords="240,5,448,48"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="208,24,239,24,239,29,208,29"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="44,80,153,107"/>
+<area shape="poly" id="edge3_Node000002_Node000001" title=" " alt="" coords="165,73,262,46,263,51,166,78"/>
+<area shape="rect" id="Node000003" href="$class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html" title="Manages voice input and integrates with Unity&#39;s Input System." alt="" coords="250,72,438,115"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="169,91,250,91,250,96,169,96"/>
+<area shape="rect" id="Node000004" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html" title=" " alt="" coords="252,139,436,181"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="166,109,263,135,262,141,165,114"/>
+</map>

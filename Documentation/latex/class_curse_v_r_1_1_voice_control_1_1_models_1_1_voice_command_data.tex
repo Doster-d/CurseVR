@@ -1,0 +1,139 @@
+\doxysection{Класс Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Command\+Data}
+\hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data}{}\label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data}\index{CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}}
+
+
+Data structure for voice commands received from the ASR service.  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a07a3f61b6e9d6e750a113557feff1e1b}{Voice\+Command\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data}{Voice\+Command\+Data} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_aac750f33c264cfc01f926c72f5f664b2}{Command\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the type of command recognized. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a0cb35cc95facbb27347c278b30f7502f}{Raw\+Text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the raw text transcribed from speech. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a0809af8dc2e8aacba6e6a1e6d1d26422}{Confidence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the confidence score of the recognition. \end{DoxyCompactList}\item 
+Dictionary$<$ string, object $>$ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a9e44fcf8e6918093476b64438bd37365}{Parameters}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets additional parameters associated with the command. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a756acd8f0ca83fc2e0caf0823261da60}{Timestamp}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the timestamp when the command was recognized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Data structure for voice commands received from the ASR service. 
+
+This class represents a processed voice command after recognition by the ASR service. It contains the recognized command type, the original transcribed text, confidence level, and any parameters extracted from the command. This object is passed to subscribers of the On\+Command\+Recognized event in the voice command service. 
+
+См. определение в файле \mbox{\hyperlink{_voice_command_data_8cs_source}{Voice\+Command\+Data.\+cs}} строка \mbox{\hyperlink{_voice_command_data_8cs_source_l00017}{17}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a07a3f61b6e9d6e750a113557feff1e1b}\index{CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}!VoiceCommandData@{VoiceCommandData}}
+\index{VoiceCommandData@{VoiceCommandData}!CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}}
+\doxysubsubsection{\texorpdfstring{VoiceCommandData()}{VoiceCommandData()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a07a3f61b6e9d6e750a113557feff1e1b} 
+Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Command\+Data.\+Voice\+Command\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxylink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data}{Voice\+Command\+Data} class. 
+
+Creates a new voice command data object with an empty parameter dictionary and sets the timestamp to the current UTC time. 
+
+См. определение в файле \mbox{\hyperlink{_voice_command_data_8cs_source}{Voice\+Command\+Data.\+cs}} строка \mbox{\hyperlink{_voice_command_data_8cs_source_l00081}{81}}
+
+
+
+\doxysubsection{Полный список свойств}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_aac750f33c264cfc01f926c72f5f664b2}\index{CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}!CommandType@{CommandType}}
+\index{CommandType@{CommandType}!CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}}
+\doxysubsubsection{\texorpdfstring{CommandType}{CommandType}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_aac750f33c264cfc01f926c72f5f664b2} 
+string Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Command\+Data.\+Command\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the type of command recognized. 
+
+A string identifier for the command category (e.\+g., "{}move"{}, "{}select"{}, "{}open"{})
+
+This field represents the classified intent of the voice command after natural language processing. It is used to determine which action should be performed in response to the command. 
+
+См. определение в файле \mbox{\hyperlink{_voice_command_data_8cs_source}{Voice\+Command\+Data.\+cs}} строка \mbox{\hyperlink{_voice_command_data_8cs_source_l00028}{28}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a0809af8dc2e8aacba6e6a1e6d1d26422}\index{CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}!Confidence@{Confidence}}
+\index{Confidence@{Confidence}!CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}}
+\doxysubsubsection{\texorpdfstring{Confidence}{Confidence}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a0809af8dc2e8aacba6e6a1e6d1d26422} 
+float Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Command\+Data.\+Confidence\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the confidence score of the recognition. 
+
+A float between 0.\+0 and 1.\+0 representing recognition confidence
+
+Higher values indicate greater confidence in the accuracy of the transcription. This can be used to filter out potentially misheard commands or to request confirmation from the user when confidence is low. 
+
+См. определение в файле \mbox{\hyperlink{_voice_command_data_8cs_source}{Voice\+Command\+Data.\+cs}} строка \mbox{\hyperlink{_voice_command_data_8cs_source_l00050}{50}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a9e44fcf8e6918093476b64438bd37365}\index{CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}!Parameters@{Parameters}}
+\index{Parameters@{Parameters}!CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}}
+\doxysubsubsection{\texorpdfstring{Parameters}{Parameters}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a9e44fcf8e6918093476b64438bd37365} 
+Dictionary$<$string, object$>$ Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Command\+Data.\+Parameters\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets additional parameters associated with the command. 
+
+A dictionary mapping parameter names to their values
+
+These parameters are extracted from the speech by the natural language understanding component. For example, in "{}move forward three meters"{}, "{}direction"{} might be "{}forward"{} and "{}distance"{} might be 3.\+0. Parameter values can be of various types (string, number, boolean). 
+
+См. определение в файле \mbox{\hyperlink{_voice_command_data_8cs_source}{Voice\+Command\+Data.\+cs}} строка \mbox{\hyperlink{_voice_command_data_8cs_source_l00061}{61}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a0cb35cc95facbb27347c278b30f7502f}\index{CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}!RawText@{RawText}}
+\index{RawText@{RawText}!CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}}
+\doxysubsubsection{\texorpdfstring{RawText}{RawText}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a0cb35cc95facbb27347c278b30f7502f} 
+string Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Command\+Data.\+Raw\+Text\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the raw text transcribed from speech. 
+
+The unprocessed text as transcribed by the ASR service
+
+This is the direct output from the speech-\/to-\/text process before any intent recognition or parameter extraction. Useful for debugging or displaying exactly what was heard. 
+
+См. определение в файле \mbox{\hyperlink{_voice_command_data_8cs_source}{Voice\+Command\+Data.\+cs}} строка \mbox{\hyperlink{_voice_command_data_8cs_source_l00039}{39}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a756acd8f0ca83fc2e0caf0823261da60}\index{CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}!Timestamp@{Timestamp}}
+\index{Timestamp@{Timestamp}!CurseVR.VoiceControl.Models.VoiceCommandData@{CurseVR.VoiceControl.Models.VoiceCommandData}}
+\doxysubsubsection{\texorpdfstring{Timestamp}{Timestamp}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_a756acd8f0ca83fc2e0caf0823261da60} 
+Date\+Time Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Command\+Data.\+Timestamp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the timestamp when the command was recognized. 
+
+Date\+Time indicating when the command was processed
+
+This timestamp can be used to implement command timeout or to synchronize commands with other events in the application. It is set to UTC time when the object is created. 
+
+См. определение в файле \mbox{\hyperlink{_voice_command_data_8cs_source}{Voice\+Command\+Data.\+cs}} строка \mbox{\hyperlink{_voice_command_data_8cs_source_l00072}{72}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Voice\+Control/\+Models/\mbox{\hyperlink{_voice_command_data_8cs}{Voice\+Command\+Data.\+cs}}\end{DoxyCompactItemize}

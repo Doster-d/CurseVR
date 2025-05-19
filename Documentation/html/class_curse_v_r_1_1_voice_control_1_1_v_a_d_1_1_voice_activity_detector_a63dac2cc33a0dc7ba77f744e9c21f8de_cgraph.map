@@ -1,0 +1,5 @@
+<map id="CurseVR.VoiceControl.VAD.VoiceActivityDetector.ProcessAudioData" name="CurseVR.VoiceControl.VAD.VoiceActivityDetector.ProcessAudioData">
+<area shape="rect" id="Node000001" title="Processes a batch of audio data to detect voice activity." alt="" coords="5,13,263,56"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector.html#a55afa36e452f899cd00ee7bf5ca05cfd" title="Calculates the Root Mean Square (RMS) volume level of an audio sample batch." alt="" coords="311,5,514,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="263,32,295,32,295,37,263,37"/>
+</map>

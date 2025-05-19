@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CourseVR: Исходный файл Assets/Scripts/VoiceControl/VAD/UnityMicrophoneProxy.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">CourseVR<span id="projectnumber">&#160;0.1.0</span>
+   </div>
+   <div id="projectbrief">Voice Controlled VR System</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_unity_microphone_proxy_8cs_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UnityMicrophoneProxy.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_unity_microphone_proxy_8cs.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_curse_v_r_1_1_voice_control_1_1_v_a_d.html">CurseVR.VoiceControl.VAD</a></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html">   14</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a4b9de24c2f03036a0b330d16159b688d">UnityMicrophoneProxy</a> : IDisposable</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#af02429b5c83db1eeb863b9afa37e27ba">   16</a></span>        <span class="keyword">private</span> readonly <span class="keywordtype">string</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#af02429b5c83db1eeb863b9afa37e27ba">deviceName</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#afb5c21dd223b2cdb26cbd27166a3abe0">   17</a></span>        <span class="keyword">private</span> <a class="code hl_property" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a9069867b6f3e603cd064c91a26bf8942">AudioClip</a> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#afb5c21dd223b2cdb26cbd27166a3abe0">audioClip</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a555055ac143ecb8b4a43cdc83abe90de">   18</a></span>        <span class="keyword">private</span> readonly <span class="keywordtype">int</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a555055ac143ecb8b4a43cdc83abe90de">frequency</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#acb1f8e5913665857bcc33c87ea83d92f">   19</a></span>        <span class="keyword">private</span> readonly <span class="keywordtype">int</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#acb1f8e5913665857bcc33c87ea83d92f">sampleRate</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a9069867b6f3e603cd064c91a26bf8942">   29</a></span>        <span class="keyword">public</span> <a class="code hl_property" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a9069867b6f3e603cd064c91a26bf8942">AudioClip</a> <a class="code hl_property" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a9069867b6f3e603cd064c91a26bf8942">AudioClip</a> =&gt; <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#afb5c21dd223b2cdb26cbd27166a3abe0">audioClip</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a2b99a0b2e30606ffb6dba300fb660b8b">   35</a></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a2b99a0b2e30606ffb6dba300fb660b8b">SampleRate</a> =&gt; <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#acb1f8e5913665857bcc33c87ea83d92f">sampleRate</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a4b9de24c2f03036a0b330d16159b688d">   48</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a4b9de24c2f03036a0b330d16159b688d">UnityMicrophoneProxy</a>(<span class="keywordtype">string</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#af02429b5c83db1eeb863b9afa37e27ba">deviceName</a> = <span class="keyword">null</span>, <span class="keywordtype">int</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a555055ac143ecb8b4a43cdc83abe90de">frequency</a> = 44100)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">if</span> (Microphone.devices.Length == 0)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> InvalidOperationException(<span class="stringliteral">&quot;No microphone devices available&quot;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            this.deviceName = <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#af02429b5c83db1eeb863b9afa37e27ba">deviceName</a> ?? Microphone.devices[0];</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            this.frequency = <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a555055ac143ecb8b4a43cdc83abe90de">frequency</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            this.sampleRate = <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a555055ac143ecb8b4a43cdc83abe90de">frequency</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <a class="code hl_function" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a4c49945e2b1b5d2a0730d072bfba9007">InitializeMicrophone</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a4c49945e2b1b5d2a0730d072bfba9007">   70</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a4c49945e2b1b5d2a0730d072bfba9007">InitializeMicrophone</a>()</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">if</span> (Microphone.IsRecording(<a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#af02429b5c83db1eeb863b9afa37e27ba">deviceName</a>))</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                Microphone.End(<a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#af02429b5c83db1eeb863b9afa37e27ba">deviceName</a>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#afb5c21dd223b2cdb26cbd27166a3abe0">audioClip</a> = Microphone.Start(<a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#af02429b5c83db1eeb863b9afa37e27ba">deviceName</a>, <span class="keyword">true</span>, 1, <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a555055ac143ecb8b4a43cdc83abe90de">frequency</a>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">while</span> (!(Microphone.GetPosition(<a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#af02429b5c83db1eeb863b9afa37e27ba">deviceName</a>) &gt; 0)) { }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a5c6945018694151e5e1f61cf43764e36">   90</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a5c6945018694151e5e1f61cf43764e36">Dispose</a>()</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">if</span> (Microphone.IsRecording(<a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#af02429b5c83db1eeb863b9afa37e27ba">deviceName</a>))</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                Microphone.End(<a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#af02429b5c83db1eeb863b9afa37e27ba">deviceName</a>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#afb5c21dd223b2cdb26cbd27166a3abe0">audioClip</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                UnityEngine.Object.Destroy(<a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#afb5c21dd223b2cdb26cbd27166a3abe0">audioClip</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#afb5c21dd223b2cdb26cbd27166a3abe0">audioClip</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>} </div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_html_a2b99a0b2e30606ffb6dba300fb660b8b"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a2b99a0b2e30606ffb6dba300fb660b8b">CurseVR.VoiceControl.VAD.UnityMicrophoneProxy.SampleRate</a></div><div class="ttdeci">int SampleRate</div><div class="ttdoc">Gets the sample rate of the audio recording.</div><div class="ttdef"><b>Определения</b> <a href="#l00035">UnityMicrophoneProxy.cs:35</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_html_a4b9de24c2f03036a0b330d16159b688d"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a4b9de24c2f03036a0b330d16159b688d">CurseVR.VoiceControl.VAD.UnityMicrophoneProxy.UnityMicrophoneProxy</a></div><div class="ttdeci">UnityMicrophoneProxy(string deviceName=null, int frequency=44100)</div><div class="ttdoc">Initializes a new instance of the UnityMicrophoneProxy class.</div><div class="ttdef"><b>Определения</b> <a href="#l00048">UnityMicrophoneProxy.cs:48</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_html_a4c49945e2b1b5d2a0730d072bfba9007"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a4c49945e2b1b5d2a0730d072bfba9007">CurseVR.VoiceControl.VAD.UnityMicrophoneProxy.InitializeMicrophone</a></div><div class="ttdeci">void InitializeMicrophone()</div><div class="ttdoc">Initializes the microphone and begins recording.</div><div class="ttdef"><b>Определения</b> <a href="#l00070">UnityMicrophoneProxy.cs:70</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_html_a555055ac143ecb8b4a43cdc83abe90de"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a555055ac143ecb8b4a43cdc83abe90de">CurseVR.VoiceControl.VAD.UnityMicrophoneProxy.frequency</a></div><div class="ttdeci">readonly int frequency</div><div class="ttdef"><b>Определения</b> <a href="#l00018">UnityMicrophoneProxy.cs:18</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_html_a5c6945018694151e5e1f61cf43764e36"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a5c6945018694151e5e1f61cf43764e36">CurseVR.VoiceControl.VAD.UnityMicrophoneProxy.Dispose</a></div><div class="ttdeci">void Dispose()</div><div class="ttdoc">Disposes of resources used by the microphone proxy.</div><div class="ttdef"><b>Определения</b> <a href="#l00090">UnityMicrophoneProxy.cs:90</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_html_a9069867b6f3e603cd064c91a26bf8942"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a9069867b6f3e603cd064c91a26bf8942">CurseVR.VoiceControl.VAD.UnityMicrophoneProxy.AudioClip</a></div><div class="ttdeci">AudioClip AudioClip</div><div class="ttdoc">Gets the AudioClip containing the microphone input data.</div><div class="ttdef"><b>Определения</b> <a href="#l00029">UnityMicrophoneProxy.cs:29</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_html_acb1f8e5913665857bcc33c87ea83d92f"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#acb1f8e5913665857bcc33c87ea83d92f">CurseVR.VoiceControl.VAD.UnityMicrophoneProxy.sampleRate</a></div><div class="ttdeci">readonly int sampleRate</div><div class="ttdef"><b>Определения</b> <a href="#l00019">UnityMicrophoneProxy.cs:19</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_html_af02429b5c83db1eeb863b9afa37e27ba"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#af02429b5c83db1eeb863b9afa37e27ba">CurseVR.VoiceControl.VAD.UnityMicrophoneProxy.deviceName</a></div><div class="ttdeci">readonly string deviceName</div><div class="ttdef"><b>Определения</b> <a href="#l00016">UnityMicrophoneProxy.cs:16</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy_html_afb5c21dd223b2cdb26cbd27166a3abe0"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#afb5c21dd223b2cdb26cbd27166a3abe0">CurseVR.VoiceControl.VAD.UnityMicrophoneProxy.audioClip</a></div><div class="ttdeci">AudioClip audioClip</div><div class="ttdef"><b>Определения</b> <a href="#l00017">UnityMicrophoneProxy.cs:17</a></div></div>
+<div class="ttc" id="anamespace_curse_v_r_1_1_voice_control_1_1_v_a_d_html"><div class="ttname"><a href="namespace_curse_v_r_1_1_voice_control_1_1_v_a_d.html">CurseVR.VoiceControl.VAD</a></div><div class="ttdef"><b>Определения</b> <a href="_audio_clip_buffer_8cs_source.html#l00004">AudioClipBuffer.cs:5</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_f13b41af88cf68434578284aaf699e39.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_a828ca451fcb4c74efeb238708675644.html">VoiceControl</a></li><li class="navelem"><a class="el" href="dir_9b95463337b13917dbb108fe0036abc1.html">VAD</a></li><li class="navelem"><a class="el" href="_unity_microphone_proxy_8cs.html">UnityMicrophoneProxy.cs</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

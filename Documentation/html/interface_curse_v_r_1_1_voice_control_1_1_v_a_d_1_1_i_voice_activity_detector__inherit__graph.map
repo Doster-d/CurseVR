@@ -1,0 +1,7 @@
+<map id="CurseVR.VoiceControl.VAD.IVoiceActivityDetector" name="CurseVR.VoiceControl.VAD.IVoiceActivityDetector">
+<area shape="rect" id="Node000001" title="Interface for voice activity detection functionality." alt="" coords="5,80,192,123"/>
+<area shape="rect" id="Node000003" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector.html" title="Implements voice activity detection by analyzing microphone input volume." alt="" coords="5,171,192,213"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="101,138,101,170,96,170,96,138"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="54,5,143,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,48,101,80,96,80,96,48"/>
+</map>

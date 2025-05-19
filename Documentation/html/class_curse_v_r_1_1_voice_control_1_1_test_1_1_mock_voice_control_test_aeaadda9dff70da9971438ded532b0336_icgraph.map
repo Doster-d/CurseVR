@@ -1,0 +1,17 @@
+<map id="CurseVR.VoiceControl.Test.MockVoiceControlTest.MoveObjectRight" name="CurseVR.VoiceControl.Test.MockVoiceControlTest.MoveObjectRight">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1396,55,1650,97"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#a4b898eeceba47a3eca449da5a9e7a946" title=" " alt="" coords="1119,47,1348,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1380,79,1348,79,1348,73,1380,73"/>
+<area shape="rect" id="Node000003" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#a23ff7fb7b39a6a741e56e6f7365ee5fa" title=" " alt="" coords="851,5,1054,64"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1103,59,1054,52,1055,47,1104,54"/>
+<area shape="rect" id="Node000005" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#a0b5613db351c0f3a577c59a5f93b8e95" title=" " alt="" coords="834,88,1071,147"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="1103,98,1072,103,1071,97,1103,93"/>
+<area shape="rect" id="Node000004" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#ac1edc33c8354c5b9879424ba9060cf61" title=" " alt="" coords="579,13,763,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="835,37,763,37,763,32,835,32"/>
+<area shape="rect" id="Node000006" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#a8e1ce111c1dcb097530fed50385d28b1" title=" " alt="" coords="555,96,786,139"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="819,120,787,120,787,115,819,115"/>
+<area shape="rect" id="Node000007" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#af396d75522316e5bf9fe87accdab0021" title=" " alt="" coords="251,96,507,139"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="539,120,508,120,508,115,539,115"/>
+<area shape="rect" id="Node000008" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#a6da45e869166584887acef9d2ac3f838" title=" " alt="" coords="5,96,203,139"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="235,120,203,120,203,115,235,115"/>
+</map>

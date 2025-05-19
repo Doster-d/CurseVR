@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CourseVR: Исходный файл Assets/Scripts/VoiceControl/Models/VADParameters.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">CourseVR<span id="projectnumber">&#160;0.1.0</span>
+   </div>
+   <div id="projectbrief">Voice Controlled VR System</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_v_a_d_parameters_8cs_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">VADParameters.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_v_a_d_parameters_8cs.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="foldopen" id="foldopen00003" data-start="{" data-end="}">
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="namespace_curse_v_r_1_1_voice_control_1_1_models.html">    3</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_curse_v_r_1_1_voice_control_1_1_models.html">CurseVR.VoiceControl.Models</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    [System.Serializable]</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html">   16</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html">VADParameters</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        [Header(<span class="stringliteral">&quot;Audio Settings&quot;</span>)]</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        [Tooltip(<span class="stringliteral">&quot;Size of the audio buffer in samples&quot;</span>)]</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a0bfb942b71b8de13aca8dfeb770bed99">   28</a></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a0bfb942b71b8de13aca8dfeb770bed99">BufferSize</a> = 2048;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        [Header(<span class="stringliteral">&quot;Timing&quot;</span>)]</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        [Tooltip(<span class="stringliteral">&quot;Maximum duration of voice activity in seconds&quot;</span>)]</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#ad9e02bb5ee9c60b1136b6b88844b22e0">   40</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#ad9e02bb5ee9c60b1136b6b88844b22e0">MaxActiveDurationSeconds</a> = 10f;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        [Tooltip(<span class="stringliteral">&quot;Maximum time to queue audio data before processing&quot;</span>)]</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#ab99b48a19d6cc1503a1ba86eb6c0f0fa">   51</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#ab99b48a19d6cc1503a1ba86eb6c0f0fa">MaxQueueingTimeSeconds</a> = 0.1f;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        [Tooltip(<span class="stringliteral">&quot;Minimum time to queue audio data before processing&quot;</span>)]</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a032b638f666cdaad05ad25005dce8899">   62</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a032b638f666cdaad05ad25005dce8899">MinQueueingTimeSeconds</a> = 0.05f;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        [Header(<span class="stringliteral">&quot;Detection&quot;</span>)]</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        [Tooltip(<span class="stringliteral">&quot;Volume threshold for voice activity detection&quot;</span>)]</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        [Range(0f, 1f)]</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a9aaf3bdbb5df9c9bc80b4432b8761f48">   76</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a9aaf3bdbb5df9c9bc80b4432b8761f48">ActiveVolumeThreshold</a> = 0.1f;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        [Tooltip(<span class="stringliteral">&quot;Rate threshold for activation&quot;</span>)]</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        [Range(0f, 1f)]</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a9063d3e1dbaefc3c0e322f90f1d9e1dd">   88</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a9063d3e1dbaefc3c0e322f90f1d9e1dd">ActivationRateThreshold</a> = 0.6f;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        [Tooltip(<span class="stringliteral">&quot;Rate threshold for inactivation&quot;</span>)]</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        [Range(0f, 1f)]</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#ac14bc9fe71dd1c4191cfb25509ae89b1">  100</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#ac14bc9fe71dd1c4191cfb25509ae89b1">InactivationRateThreshold</a> = 0.4f;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        [Header(<span class="stringliteral">&quot;Intervals&quot;</span>)]</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        [Tooltip(<span class="stringliteral">&quot;Time interval for activation check&quot;</span>)]</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a04f3b0989da0209bf64adb785a90adc8">  111</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a04f3b0989da0209bf64adb785a90adc8">ActivationIntervalSeconds</a> = 0.1f;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        [Tooltip(<span class="stringliteral">&quot;Time interval for inactivation check&quot;</span>)]</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a4b76517d3aa003512c1173cc2582071b">  122</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a4b76517d3aa003512c1173cc2582071b">InactivationIntervalSeconds</a> = 0.3f;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>} </div>
+</div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_html"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html">CurseVR.VoiceControl.Models.VADParameters</a></div><div class="ttdoc">Parameters for the Voice Activity Detection (VAD) system.</div><div class="ttdef"><b>Определения</b> <a href="#l00016">VADParameters.cs:17</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_html_a032b638f666cdaad05ad25005dce8899"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a032b638f666cdaad05ad25005dce8899">CurseVR.VoiceControl.Models.VADParameters.MinQueueingTimeSeconds</a></div><div class="ttdeci">float MinQueueingTimeSeconds</div><div class="ttdoc">Minimum time to queue audio data before processing in seconds.</div><div class="ttdef"><b>Определения</b> <a href="#l00062">VADParameters.cs:62</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_html_a04f3b0989da0209bf64adb785a90adc8"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a04f3b0989da0209bf64adb785a90adc8">CurseVR.VoiceControl.Models.VADParameters.ActivationIntervalSeconds</a></div><div class="ttdeci">float ActivationIntervalSeconds</div><div class="ttdoc">Time interval for activation check in seconds.</div><div class="ttdef"><b>Определения</b> <a href="#l00111">VADParameters.cs:111</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_html_a0bfb942b71b8de13aca8dfeb770bed99"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a0bfb942b71b8de13aca8dfeb770bed99">CurseVR.VoiceControl.Models.VADParameters.BufferSize</a></div><div class="ttdeci">int BufferSize</div><div class="ttdoc">Size of the audio buffer in samples.</div><div class="ttdef"><b>Определения</b> <a href="#l00028">VADParameters.cs:28</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_html_a4b76517d3aa003512c1173cc2582071b"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a4b76517d3aa003512c1173cc2582071b">CurseVR.VoiceControl.Models.VADParameters.InactivationIntervalSeconds</a></div><div class="ttdeci">float InactivationIntervalSeconds</div><div class="ttdoc">Time interval for inactivation check in seconds.</div><div class="ttdef"><b>Определения</b> <a href="#l00122">VADParameters.cs:122</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_html_a9063d3e1dbaefc3c0e322f90f1d9e1dd"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a9063d3e1dbaefc3c0e322f90f1d9e1dd">CurseVR.VoiceControl.Models.VADParameters.ActivationRateThreshold</a></div><div class="ttdeci">float ActivationRateThreshold</div><div class="ttdoc">Rate threshold for activation.</div><div class="ttdef"><b>Определения</b> <a href="#l00088">VADParameters.cs:88</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_html_a9aaf3bdbb5df9c9bc80b4432b8761f48"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#a9aaf3bdbb5df9c9bc80b4432b8761f48">CurseVR.VoiceControl.Models.VADParameters.ActiveVolumeThreshold</a></div><div class="ttdeci">float ActiveVolumeThreshold</div><div class="ttdoc">Volume threshold for voice activity detection.</div><div class="ttdef"><b>Определения</b> <a href="#l00076">VADParameters.cs:76</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_html_ab99b48a19d6cc1503a1ba86eb6c0f0fa"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#ab99b48a19d6cc1503a1ba86eb6c0f0fa">CurseVR.VoiceControl.Models.VADParameters.MaxQueueingTimeSeconds</a></div><div class="ttdeci">float MaxQueueingTimeSeconds</div><div class="ttdoc">Maximum time to queue audio data before processing in seconds.</div><div class="ttdef"><b>Определения</b> <a href="#l00051">VADParameters.cs:51</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_html_ac14bc9fe71dd1c4191cfb25509ae89b1"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#ac14bc9fe71dd1c4191cfb25509ae89b1">CurseVR.VoiceControl.Models.VADParameters.InactivationRateThreshold</a></div><div class="ttdeci">float InactivationRateThreshold</div><div class="ttdoc">Rate threshold for inactivation.</div><div class="ttdef"><b>Определения</b> <a href="#l00100">VADParameters.cs:100</a></div></div>
+<div class="ttc" id="aclass_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters_html_ad9e02bb5ee9c60b1136b6b88844b22e0"><div class="ttname"><a href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters.html#ad9e02bb5ee9c60b1136b6b88844b22e0">CurseVR.VoiceControl.Models.VADParameters.MaxActiveDurationSeconds</a></div><div class="ttdeci">float MaxActiveDurationSeconds</div><div class="ttdoc">Maximum duration of continuous voice activity in seconds.</div><div class="ttdef"><b>Определения</b> <a href="#l00040">VADParameters.cs:40</a></div></div>
+<div class="ttc" id="anamespace_curse_v_r_1_1_voice_control_1_1_models_html"><div class="ttname"><a href="namespace_curse_v_r_1_1_voice_control_1_1_models.html">CurseVR.VoiceControl.Models</a></div><div class="ttdef"><b>Определения</b> <a href="#l00003">VADParameters.cs:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_84bbf7b3c7f28a5a18725745e1505219.html">Assets</a></li><li class="navelem"><a class="el" href="dir_f13b41af88cf68434578284aaf699e39.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_a828ca451fcb4c74efeb238708675644.html">VoiceControl</a></li><li class="navelem"><a class="el" href="dir_13af0fef57d892912cfc1c823d558e1d.html">Models</a></li><li class="navelem"><a class="el" href="_v_a_d_parameters_8cs.html">VADParameters.cs</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

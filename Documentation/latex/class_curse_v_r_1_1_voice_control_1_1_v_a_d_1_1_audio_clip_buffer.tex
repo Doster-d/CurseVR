@@ -1,0 +1,247 @@
+\doxysection{Класс Curse\+VR.\+Voice\+Control.\+VAD.\+Audio\+Clip\+Buffer}
+\hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}{}\label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}\index{CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}}
+
+
+Buffers audio samples and creates Audio\+Clips when the buffer is filled or flushed.  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a6b7110b2ddf99b3359a1b2c937dc1dea}{Audio\+Clip\+Buffer}} (int max\+Sample\+Length, int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a261f9ff98e86b606ab36efcd7c7beb69}{frequency}}, int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a5e769d8f546290f2509315e5208e501a}{channels}}=1)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}{Audio\+Clip\+Buffer} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_ae3d622240bb62c6db6de961a11b030b4}{Add\+Samples}} (float\mbox{[}$\,$\mbox{]} samples)
+\begin{DoxyCompactList}\small\item\em Adds audio samples to the buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a3570be297bce8e0f00f5836547d0bc94}{Flush}} ()
+\begin{DoxyCompactList}\small\item\em Flushes the buffer, creating an Audio\+Clip with current data regardless of buffer fullness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{События}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ Audio\+Clip $>$ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a423b59e3afd64d9b664b06887d140bbb}{On\+Buffer\+Filled}}
+\begin{DoxyCompactList}\small\item\em Event triggered when the buffer is filled or flushed with sufficient data to create an Audio\+Clip. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a2e6288cd22f41f93a7c7fb5a629661eb}{Create\+And\+Emit\+Audio\+Clip}} ()
+\begin{DoxyCompactList}\small\item\em Creates an Audio\+Clip from the current buffer content and triggers the On\+Buffer\+Filled event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a97439caa1755ec5c0a77b1dbd6c86bcf}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the buffer to its initial empty state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+readonly float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_aff39fe5a4ce82bf898e08a802afb0699}{buffer}}
+\item 
+readonly int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a5e769d8f546290f2509315e5208e501a}{channels}}
+\item 
+readonly int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a261f9ff98e86b606ab36efcd7c7beb69}{frequency}}
+\item 
+int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a87bc99587cd04eb37f8d04a6bfff79be}{write\+Position}}
+\item 
+bool \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a4ad9b2df2ff5395cb0e3b12e3030db5e}{is\+Full}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Buffers audio samples and creates Audio\+Clips when the buffer is filled or flushed. 
+
+This class provides a mechanism to collect audio samples over time and create Audio\+Clip instances when specific conditions are met (buffer full or manually flushed). It\textquotesingle{}s primarily used to collect voice data detected by the voice activity detection system for further processing. 
+
+См. определение в файле \mbox{\hyperlink{_audio_clip_buffer_8cs_source}{Audio\+Clip\+Buffer.\+cs}} строка \mbox{\hyperlink{_audio_clip_buffer_8cs_source_l00015}{15}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a6b7110b2ddf99b3359a1b2c937dc1dea}\index{CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}!AudioClipBuffer@{AudioClipBuffer}}
+\index{AudioClipBuffer@{AudioClipBuffer}!CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}}
+\doxysubsubsection{\texorpdfstring{AudioClipBuffer()}{AudioClipBuffer()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a6b7110b2ddf99b3359a1b2c937dc1dea} 
+Curse\+VR.\+Voice\+Control.\+VAD.\+Audio\+Clip\+Buffer.\+Audio\+Clip\+Buffer (\begin{DoxyParamCaption}\item[{int}]{max\+Sample\+Length}{, }\item[{int}]{frequency}{, }\item[{int}]{channels}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxylink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}{Audio\+Clip\+Buffer} class. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em max\+Sample\+Length} & Maximum number of samples (per channel) to buffer\\
+\hline
+{\em frequency} & Sample rate in Hz (e.\+g., 16000 for 16k\+Hz audio)\\
+\hline
+{\em channels} & Number of audio channels (1 for mono, 2 for stereo)\\
+\hline
+\end{DoxyParams}
+
+
+The total buffer size will be max\+Sample\+Length \texorpdfstring{$\ast$}{*} channels floating-\/point values. For voice recognition, typical values might be 16000 samples at 16k\+Hz for 1 second of audio. 
+
+См. определение в файле \mbox{\hyperlink{_audio_clip_buffer_8cs_source}{Audio\+Clip\+Buffer.\+cs}} строка \mbox{\hyperlink{_audio_clip_buffer_8cs_source_l00042}{42}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_ae3d622240bb62c6db6de961a11b030b4}\index{CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}!AddSamples@{AddSamples}}
+\index{AddSamples@{AddSamples}!CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}}
+\doxysubsubsection{\texorpdfstring{AddSamples()}{AddSamples()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_ae3d622240bb62c6db6de961a11b030b4} 
+void Curse\+VR.\+Voice\+Control.\+VAD.\+Audio\+Clip\+Buffer.\+Add\+Samples (\begin{DoxyParamCaption}\item[{float\mbox{[}$\,$\mbox{]}}]{samples}{}\end{DoxyParamCaption})}
+
+
+
+Adds audio samples to the buffer. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em samples} & Array of audio samples to add\\
+\hline
+\end{DoxyParams}
+
+
+This method adds audio data to the internal buffer. If the buffer becomes full, it automatically creates an Audio\+Clip, fires the On\+Buffer\+Filled event, and resets the buffer. The samples should be in the correct format (interleaved if multi-\/channel) matching the buffer\textquotesingle{}s configuration. 
+
+См. определение в файле \mbox{\hyperlink{_audio_clip_buffer_8cs_source}{Audio\+Clip\+Buffer.\+cs}} строка \mbox{\hyperlink{_audio_clip_buffer_8cs_source_l00061}{61}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_ae3d622240bb62c6db6de961a11b030b4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a2e6288cd22f41f93a7c7fb5a629661eb}\index{CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}!CreateAndEmitAudioClip@{CreateAndEmitAudioClip}}
+\index{CreateAndEmitAudioClip@{CreateAndEmitAudioClip}!CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}}
+\doxysubsubsection{\texorpdfstring{CreateAndEmitAudioClip()}{CreateAndEmitAudioClip()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a2e6288cd22f41f93a7c7fb5a629661eb} 
+void Curse\+VR.\+Voice\+Control.\+VAD.\+Audio\+Clip\+Buffer.\+Create\+And\+Emit\+Audio\+Clip (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates an Audio\+Clip from the current buffer content and triggers the On\+Buffer\+Filled event. 
+
+Creates a new Unity Audio\+Clip with the appropriate sample rate and channel count, copies the buffered data to it, and notifies subscribers via the On\+Buffer\+Filled event. 
+
+См. определение в файле \mbox{\hyperlink{_audio_clip_buffer_8cs_source}{Audio\+Clip\+Buffer.\+cs}} строка \mbox{\hyperlink{_audio_clip_buffer_8cs_source_l00102}{102}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a2e6288cd22f41f93a7c7fb5a629661eb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a3570be297bce8e0f00f5836547d0bc94}\index{CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}!Flush@{Flush}}
+\index{Flush@{Flush}!CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}}
+\doxysubsubsection{\texorpdfstring{Flush()}{Flush()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a3570be297bce8e0f00f5836547d0bc94} 
+void Curse\+VR.\+Voice\+Control.\+VAD.\+Audio\+Clip\+Buffer.\+Flush (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Flushes the buffer, creating an Audio\+Clip with current data regardless of buffer fullness. 
+
+This is typically called when voice activity ends to process any remaining audio that hasn\textquotesingle{}t filled the buffer yet. If the buffer is empty (write\+Position == 0), no Audio\+Clip will be created. 
+
+См. определение в файле \mbox{\hyperlink{_audio_clip_buffer_8cs_source}{Audio\+Clip\+Buffer.\+cs}} строка \mbox{\hyperlink{_audio_clip_buffer_8cs_source_l00086}{86}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a3570be297bce8e0f00f5836547d0bc94_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a97439caa1755ec5c0a77b1dbd6c86bcf}\index{CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}!Reset@{Reset}}
+\index{Reset@{Reset}!CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a97439caa1755ec5c0a77b1dbd6c86bcf} 
+void Curse\+VR.\+Voice\+Control.\+VAD.\+Audio\+Clip\+Buffer.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Resets the buffer to its initial empty state. 
+
+Clears all data in the buffer, resets the write position, and marks the buffer as not full. Called automatically after an Audio\+Clip is created and the On\+Buffer\+Filled event is triggered. 
+
+См. определение в файле \mbox{\hyperlink{_audio_clip_buffer_8cs_source}{Audio\+Clip\+Buffer.\+cs}} строка \mbox{\hyperlink{_audio_clip_buffer_8cs_source_l00128}{128}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a97439caa1755ec5c0a77b1dbd6c86bcf_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_aff39fe5a4ce82bf898e08a802afb0699}\index{CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}!buffer@{buffer}}
+\index{buffer@{buffer}!CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_aff39fe5a4ce82bf898e08a802afb0699} 
+readonly float \mbox{[}$\,$\mbox{]} Curse\+VR.\+Voice\+Control.\+VAD.\+Audio\+Clip\+Buffer.\+buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_audio_clip_buffer_8cs_source}{Audio\+Clip\+Buffer.\+cs}} строка \mbox{\hyperlink{_audio_clip_buffer_8cs_source_l00017}{17}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a5e769d8f546290f2509315e5208e501a}\index{CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}!channels@{channels}}
+\index{channels@{channels}!CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}}
+\doxysubsubsection{\texorpdfstring{channels}{channels}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a5e769d8f546290f2509315e5208e501a} 
+readonly int Curse\+VR.\+Voice\+Control.\+VAD.\+Audio\+Clip\+Buffer.\+channels\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_audio_clip_buffer_8cs_source}{Audio\+Clip\+Buffer.\+cs}} строка \mbox{\hyperlink{_audio_clip_buffer_8cs_source_l00018}{18}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a261f9ff98e86b606ab36efcd7c7beb69}\index{CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}!frequency@{frequency}}
+\index{frequency@{frequency}!CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}}
+\doxysubsubsection{\texorpdfstring{frequency}{frequency}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a261f9ff98e86b606ab36efcd7c7beb69} 
+readonly int Curse\+VR.\+Voice\+Control.\+VAD.\+Audio\+Clip\+Buffer.\+frequency\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_audio_clip_buffer_8cs_source}{Audio\+Clip\+Buffer.\+cs}} строка \mbox{\hyperlink{_audio_clip_buffer_8cs_source_l00019}{19}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a4ad9b2df2ff5395cb0e3b12e3030db5e}\index{CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}!isFull@{isFull}}
+\index{isFull@{isFull}!CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}}
+\doxysubsubsection{\texorpdfstring{isFull}{isFull}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a4ad9b2df2ff5395cb0e3b12e3030db5e} 
+bool Curse\+VR.\+Voice\+Control.\+VAD.\+Audio\+Clip\+Buffer.\+is\+Full\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_audio_clip_buffer_8cs_source}{Audio\+Clip\+Buffer.\+cs}} строка \mbox{\hyperlink{_audio_clip_buffer_8cs_source_l00021}{21}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a87bc99587cd04eb37f8d04a6bfff79be}\index{CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}!writePosition@{writePosition}}
+\index{writePosition@{writePosition}!CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}}
+\doxysubsubsection{\texorpdfstring{writePosition}{writePosition}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a87bc99587cd04eb37f8d04a6bfff79be} 
+int Curse\+VR.\+Voice\+Control.\+VAD.\+Audio\+Clip\+Buffer.\+write\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_audio_clip_buffer_8cs_source}{Audio\+Clip\+Buffer.\+cs}} строка \mbox{\hyperlink{_audio_clip_buffer_8cs_source_l00020}{20}}
+
+
+
+\doxysubsection{Cобытия}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a423b59e3afd64d9b664b06887d140bbb}\index{CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}!OnBufferFilled@{OnBufferFilled}}
+\index{OnBufferFilled@{OnBufferFilled}!CurseVR.VoiceControl.VAD.AudioClipBuffer@{CurseVR.VoiceControl.VAD.AudioClipBuffer}}
+\doxysubsubsection{\texorpdfstring{OnBufferFilled}{OnBufferFilled}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer_a423b59e3afd64d9b664b06887d140bbb} 
+Action$<$Audio\+Clip$>$ Curse\+VR.\+Voice\+Control.\+VAD.\+Audio\+Clip\+Buffer.\+On\+Buffer\+Filled}
+
+
+
+Event triggered when the buffer is filled or flushed with sufficient data to create an Audio\+Clip. 
+
+Subscribers will receive the newly created Audio\+Clip containing the buffered audio data. This is typically used to process voice data for recognition or transmission. 
+
+См. определение в файле \mbox{\hyperlink{_audio_clip_buffer_8cs_source}{Audio\+Clip\+Buffer.\+cs}} строка \mbox{\hyperlink{_audio_clip_buffer_8cs_source_l00030}{30}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Voice\+Control/\+VAD/\mbox{\hyperlink{_audio_clip_buffer_8cs}{Audio\+Clip\+Buffer.\+cs}}\end{DoxyCompactItemize}

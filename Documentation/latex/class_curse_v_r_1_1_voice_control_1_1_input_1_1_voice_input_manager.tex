@@ -1,0 +1,366 @@
+\doxysection{Класс Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager}
+\hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager}{}\label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+
+
+Manages voice input and integrates with Unity\textquotesingle{}s \doxylink{namespace_curse_v_r_1_1_voice_control_1_1_input}{Input} System.  
+
+
+
+
+Граф наследования\+:Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a7851da47a53fd2c22dc0cf7dacbc32f4}{Start}} ()
+\item 
+async void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f}{Initialize\+Voice\+Service}} ()
+\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f}{Initialize\+VAD}} ()
+\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a07ae0ff24ee97dfc3afedba48042fb54}{Initialize\+Input\+Actions}} ()
+\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e1ed176c785124f130398775b549f81}{Handle\+Voice\+Inactive}} (Audio\+Clip clip)
+\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a}{Handle\+Voice\+Command}} (\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data}{Voice\+Command\+Data}} command\+Data)
+\item 
+System.\+Collections.\+IEnumerator \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a52bed871e3469c5de2b0183a1c840768}{Toggle\+Action}} (Input\+Action action)
+\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aa552ce4cdaade1bd3bc43cc8540f7e14}{Handle\+Connection\+Status}} (bool is\+Connected)
+\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a9e6e497d828dcda31ade84854eafa523}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a354993c2e76a0a84c8097c6eb162ae1f}{On\+Destroy}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+Input\+Action\+Asset \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a2fd64dfc34d79375438bb1e69204d230}{input\+Actions}}
+\item 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters}{VADParameters}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_af760e2fd7caf8ef507b5e3b9f3d65092}{vad\+Parameters}}
+\item 
+Audio\+Source \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ae9cb5abbc7bf028f3ac2d88d2362a3e5}{debug\+Audio\+Source}}
+\item 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config}{Voice\+Service\+Config}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a88df95baf900cb468478134c2c6dee22}{service\+Config}}
+\item 
+\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector}{IVoice\+Activity\+Detector}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aeb30bb0b4e374e60c3b9bdc3ef5141d5}{vad}}
+\item 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy}{Unity\+Microphone\+Proxy}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ad5eaebfd4dc463e08f42811af81071b9}{mic\+Proxy}}
+\item 
+\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service}{IVoice\+Command\+Service}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aac3cfae0318051d3c9e58a358716e866}{voice\+Service}}
+\item 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}{Audio\+Clip\+Buffer}} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aba0bb45936346d007c3bc47ac2aa76e6}{audio\+Buffer}}
+\item 
+bool \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e0e4ba62d8fb26849b5acc2c198c8e0}{is\+Processing\+Voice}}
+\item 
+Dictionary$<$ string, Input\+Action\+Reference $>$ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ace3f3994e62ba3b841a6ff82fd90c82c}{action\+References}} = new Dictionary$<$string, Input\+Action\+Reference$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Manages voice input and integrates with Unity\textquotesingle{}s \doxylink{namespace_curse_v_r_1_1_voice_control_1_1_input}{Input} System. 
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00016}{16}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aa552ce4cdaade1bd3bc43cc8540f7e14}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!HandleConnectionStatus@{HandleConnectionStatus}}
+\index{HandleConnectionStatus@{HandleConnectionStatus}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{HandleConnectionStatus()}{HandleConnectionStatus()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aa552ce4cdaade1bd3bc43cc8540f7e14} 
+void Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+Handle\+Connection\+Status (\begin{DoxyParamCaption}\item[{bool}]{is\+Connected}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00152}{152}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aa552ce4cdaade1bd3bc43cc8540f7e14_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!HandleVoiceCommand@{HandleVoiceCommand}}
+\index{HandleVoiceCommand@{HandleVoiceCommand}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{HandleVoiceCommand()}{HandleVoiceCommand()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a} 
+void Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+Handle\+Voice\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data}{Voice\+Command\+Data}}}]{command\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00114}{114}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e1ed176c785124f130398775b549f81}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!HandleVoiceInactive@{HandleVoiceInactive}}
+\index{HandleVoiceInactive@{HandleVoiceInactive}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{HandleVoiceInactive()}{HandleVoiceInactive()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e1ed176c785124f130398775b549f81} 
+void Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+Handle\+Voice\+Inactive (\begin{DoxyParamCaption}\item[{Audio\+Clip}]{clip}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00086}{86}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e1ed176c785124f130398775b549f81_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a07ae0ff24ee97dfc3afedba48042fb54}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!InitializeInputActions@{InitializeInputActions}}
+\index{InitializeInputActions@{InitializeInputActions}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{InitializeInputActions()}{InitializeInputActions()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a07ae0ff24ee97dfc3afedba48042fb54} 
+void Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+Initialize\+Input\+Actions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00069}{69}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a07ae0ff24ee97dfc3afedba48042fb54_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!InitializeVAD@{InitializeVAD}}
+\index{InitializeVAD@{InitializeVAD}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{InitializeVAD()}{InitializeVAD()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f} 
+void Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+Initialize\+VAD (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00049}{49}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!InitializeVoiceService@{InitializeVoiceService}}
+\index{InitializeVoiceService@{InitializeVoiceService}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{InitializeVoiceService()}{InitializeVoiceService()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f} 
+async void Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+Initialize\+Voice\+Service (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00039}{39}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a354993c2e76a0a84c8097c6eb162ae1f}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a354993c2e76a0a84c8097c6eb162ae1f} 
+void Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00163}{163}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a7851da47a53fd2c22dc0cf7dacbc32f4}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!Start@{Start}}
+\index{Start@{Start}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a7851da47a53fd2c22dc0cf7dacbc32f4} 
+void Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00032}{32}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a7851da47a53fd2c22dc0cf7dacbc32f4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a52bed871e3469c5de2b0183a1c840768}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!ToggleAction@{ToggleAction}}
+\index{ToggleAction@{ToggleAction}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{ToggleAction()}{ToggleAction()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a52bed871e3469c5de2b0183a1c840768} 
+System.\+Collections.\+IEnumerator Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+Toggle\+Action (\begin{DoxyParamCaption}\item[{Input\+Action}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00141}{141}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a52bed871e3469c5de2b0183a1c840768_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a9e6e497d828dcda31ade84854eafa523}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!Update@{Update}}
+\index{Update@{Update}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a9e6e497d828dcda31ade84854eafa523} 
+void Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00158}{158}}
+
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ace3f3994e62ba3b841a6ff82fd90c82c}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!actionReferences@{actionReferences}}
+\index{actionReferences@{actionReferences}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{actionReferences}{actionReferences}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ace3f3994e62ba3b841a6ff82fd90c82c} 
+Dictionary$<$string, Input\+Action\+Reference$>$ Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+action\+References = new Dictionary$<$string, Input\+Action\+Reference$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00030}{30}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aba0bb45936346d007c3bc47ac2aa76e6}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!audioBuffer@{audioBuffer}}
+\index{audioBuffer@{audioBuffer}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{audioBuffer}{audioBuffer}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aba0bb45936346d007c3bc47ac2aa76e6} 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}{Audio\+Clip\+Buffer}} Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+audio\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00026}{26}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ae9cb5abbc7bf028f3ac2d88d2362a3e5}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!debugAudioSource@{debugAudioSource}}
+\index{debugAudioSource@{debugAudioSource}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{debugAudioSource}{debugAudioSource}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ae9cb5abbc7bf028f3ac2d88d2362a3e5} 
+Audio\+Source Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+debug\+Audio\+Source\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00020}{20}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a2fd64dfc34d79375438bb1e69204d230}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!inputActions@{inputActions}}
+\index{inputActions@{inputActions}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{inputActions}{inputActions}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a2fd64dfc34d79375438bb1e69204d230} 
+Input\+Action\+Asset Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+input\+Actions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00018}{18}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e0e4ba62d8fb26849b5acc2c198c8e0}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!isProcessingVoice@{isProcessingVoice}}
+\index{isProcessingVoice@{isProcessingVoice}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{isProcessingVoice}{isProcessingVoice}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e0e4ba62d8fb26849b5acc2c198c8e0} 
+bool Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+is\+Processing\+Voice\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00027}{27}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ad5eaebfd4dc463e08f42811af81071b9}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!micProxy@{micProxy}}
+\index{micProxy@{micProxy}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{micProxy}{micProxy}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ad5eaebfd4dc463e08f42811af81071b9} 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy}{Unity\+Microphone\+Proxy}} Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+mic\+Proxy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00024}{24}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a88df95baf900cb468478134c2c6dee22}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!serviceConfig@{serviceConfig}}
+\index{serviceConfig@{serviceConfig}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{serviceConfig}{serviceConfig}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a88df95baf900cb468478134c2c6dee22} 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config}{Voice\+Service\+Config}} Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+service\+Config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00021}{21}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aeb30bb0b4e374e60c3b9bdc3ef5141d5}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!vad@{vad}}
+\index{vad@{vad}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{vad}{vad}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aeb30bb0b4e374e60c3b9bdc3ef5141d5} 
+\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector}{IVoice\+Activity\+Detector}} Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+vad\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00023}{23}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_af760e2fd7caf8ef507b5e3b9f3d65092}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!vadParameters@{vadParameters}}
+\index{vadParameters@{vadParameters}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{vadParameters}{vadParameters}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_af760e2fd7caf8ef507b5e3b9f3d65092} 
+\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters}{VADParameters}} Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+vad\+Parameters\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00019}{19}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aac3cfae0318051d3c9e58a358716e866}\index{CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}!voiceService@{voiceService}}
+\index{voiceService@{voiceService}!CurseVR.VoiceControl.Input.VoiceInputManager@{CurseVR.VoiceControl.Input.VoiceInputManager}}
+\doxysubsubsection{\texorpdfstring{voiceService}{voiceService}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aac3cfae0318051d3c9e58a358716e866} 
+\mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service}{IVoice\+Command\+Service}} Curse\+VR.\+Voice\+Control.\+Input.\+Voice\+Input\+Manager.\+voice\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+См. определение в файле \mbox{\hyperlink{_voice_input_manager_8cs_source}{Voice\+Input\+Manager.\+cs}} строка \mbox{\hyperlink{_voice_input_manager_8cs_source_l00025}{25}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Voice\+Control/\+Input/\mbox{\hyperlink{_voice_input_manager_8cs}{Voice\+Input\+Manager.\+cs}}\end{DoxyCompactItemize}

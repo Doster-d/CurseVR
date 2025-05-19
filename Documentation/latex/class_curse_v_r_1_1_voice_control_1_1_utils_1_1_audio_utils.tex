@@ -1,0 +1,89 @@
+\doxysection{Класс Curse\+VR.\+Voice\+Control.\+Utils.\+Audio\+Utils}
+\hypertarget{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils}{}\label{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils}\index{CurseVR.VoiceControl.Utils.AudioUtils@{CurseVR.VoiceControl.Utils.AudioUtils}}
+
+
+Utility class for audio processing operations.  
+
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a1789d131b00cc2ea1ef1b312f930eb1e}{Audio\+Clip\+To\+Bytes}} (Audio\+Clip clip)
+\begin{DoxyCompactList}\small\item\em Converts an Audio\+Clip to a byte array in 16-\/bit PCM format. \end{DoxyCompactList}\item 
+static Audio\+Clip \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a01a54473f017fc3b01ad157aeae17d56}{Bytes\+To\+Audio\+Clip}} (byte\mbox{[}$\,$\mbox{]} audio\+Data, int channels, int frequency)
+\begin{DoxyCompactList}\small\item\em Converts raw PCM data to an Audio\+Clip. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a60c1f2a818caa6758c381cba5f9d36d1}{Calculate\+RMSVolume}} (float\mbox{[}$\,$\mbox{]} samples)
+\begin{DoxyCompactList}\small\item\em Calculates the RMS volume of an audio buffer. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_acee025d745f78135d3432c2ba9e6c13a}{Apply\+Noise\+Gate}} (float\mbox{[}$\,$\mbox{]} samples, float threshold)
+\begin{DoxyCompactList}\small\item\em Applies a simple noise gate to the audio data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Utility class for audio processing operations. 
+
+См. определение в файле \mbox{\hyperlink{_audio_utils_8cs_source}{Audio\+Utils.\+cs}} строка \mbox{\hyperlink{_audio_utils_8cs_source_l00008}{8}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_acee025d745f78135d3432c2ba9e6c13a}\index{CurseVR.VoiceControl.Utils.AudioUtils@{CurseVR.VoiceControl.Utils.AudioUtils}!ApplyNoiseGate@{ApplyNoiseGate}}
+\index{ApplyNoiseGate@{ApplyNoiseGate}!CurseVR.VoiceControl.Utils.AudioUtils@{CurseVR.VoiceControl.Utils.AudioUtils}}
+\doxysubsubsection{\texorpdfstring{ApplyNoiseGate()}{ApplyNoiseGate()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_acee025d745f78135d3432c2ba9e6c13a} 
+static void Curse\+VR.\+Voice\+Control.\+Utils.\+Audio\+Utils.\+Apply\+Noise\+Gate (\begin{DoxyParamCaption}\item[{float\mbox{[}$\,$\mbox{]}}]{samples}{, }\item[{float}]{threshold}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Applies a simple noise gate to the audio data. 
+
+
+
+См. определение в файле \mbox{\hyperlink{_audio_utils_8cs_source}{Audio\+Utils.\+cs}} строка \mbox{\hyperlink{_audio_utils_8cs_source_l00068}{68}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a1789d131b00cc2ea1ef1b312f930eb1e}\index{CurseVR.VoiceControl.Utils.AudioUtils@{CurseVR.VoiceControl.Utils.AudioUtils}!AudioClipToBytes@{AudioClipToBytes}}
+\index{AudioClipToBytes@{AudioClipToBytes}!CurseVR.VoiceControl.Utils.AudioUtils@{CurseVR.VoiceControl.Utils.AudioUtils}}
+\doxysubsubsection{\texorpdfstring{AudioClipToBytes()}{AudioClipToBytes()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a1789d131b00cc2ea1ef1b312f930eb1e} 
+static byte\mbox{[}$\,$\mbox{]} Curse\+VR.\+Voice\+Control.\+Utils.\+Audio\+Utils.\+Audio\+Clip\+To\+Bytes (\begin{DoxyParamCaption}\item[{Audio\+Clip}]{clip}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts an Audio\+Clip to a byte array in 16-\/bit PCM format. 
+
+
+
+См. определение в файле \mbox{\hyperlink{_audio_utils_8cs_source}{Audio\+Utils.\+cs}} строка \mbox{\hyperlink{_audio_utils_8cs_source_l00013}{13}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a01a54473f017fc3b01ad157aeae17d56}\index{CurseVR.VoiceControl.Utils.AudioUtils@{CurseVR.VoiceControl.Utils.AudioUtils}!BytesToAudioClip@{BytesToAudioClip}}
+\index{BytesToAudioClip@{BytesToAudioClip}!CurseVR.VoiceControl.Utils.AudioUtils@{CurseVR.VoiceControl.Utils.AudioUtils}}
+\doxysubsubsection{\texorpdfstring{BytesToAudioClip()}{BytesToAudioClip()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a01a54473f017fc3b01ad157aeae17d56} 
+static Audio\+Clip Curse\+VR.\+Voice\+Control.\+Utils.\+Audio\+Utils.\+Bytes\+To\+Audio\+Clip (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{audio\+Data}{, }\item[{int}]{channels}{, }\item[{int}]{frequency}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts raw PCM data to an Audio\+Clip. 
+
+
+
+См. определение в файле \mbox{\hyperlink{_audio_utils_8cs_source}{Audio\+Utils.\+cs}} строка \mbox{\hyperlink{_audio_utils_8cs_source_l00034}{34}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a60c1f2a818caa6758c381cba5f9d36d1}\index{CurseVR.VoiceControl.Utils.AudioUtils@{CurseVR.VoiceControl.Utils.AudioUtils}!CalculateRMSVolume@{CalculateRMSVolume}}
+\index{CalculateRMSVolume@{CalculateRMSVolume}!CurseVR.VoiceControl.Utils.AudioUtils@{CurseVR.VoiceControl.Utils.AudioUtils}}
+\doxysubsubsection{\texorpdfstring{CalculateRMSVolume()}{CalculateRMSVolume()}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_utils_1_1_audio_utils_a60c1f2a818caa6758c381cba5f9d36d1} 
+static float Curse\+VR.\+Voice\+Control.\+Utils.\+Audio\+Utils.\+Calculate\+RMSVolume (\begin{DoxyParamCaption}\item[{float\mbox{[}$\,$\mbox{]}}]{samples}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates the RMS volume of an audio buffer. 
+
+
+
+См. определение в файле \mbox{\hyperlink{_audio_utils_8cs_source}{Audio\+Utils.\+cs}} строка \mbox{\hyperlink{_audio_utils_8cs_source_l00054}{54}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Voice\+Control/\+Utils/\mbox{\hyperlink{_audio_utils_8cs}{Audio\+Utils.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="CurseVR.VoiceControl.VAD.VoiceActivityDetector.Update" name="CurseVR.VoiceControl.VAD.VoiceActivityDetector.Update">
+<area shape="rect" id="Node000001" title="Updates the voice activity detection state.This method should be called regularly (typically once per..." alt="" coords="5,51,196,93"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector.html#af6f095bf284464666a17901eb4808ceb" title="Calculates how many new audio samples should be read from the microphone." alt="" coords="262,5,483,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,56,246,49,247,55,196,62"/>
+<area shape="rect" id="Node000003" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector.html#a63dac2cc33a0dc7ba77f744e9c21f8de" title="Processes a batch of audio data to detect voice activity." alt="" coords="244,88,501,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,82,229,87,228,92,196,88"/>
+<area shape="rect" id="Node000004" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector.html#a55afa36e452f899cd00ee7bf5ca05cfd" title="Calculates the Root Mean Square (RMS) volume level of an audio sample batch." alt="" coords="549,80,752,139"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="501,107,533,107,533,112,501,112"/>
+</map>

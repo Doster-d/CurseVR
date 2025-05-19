@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CourseVR: Интерфейс CurseVR.VoiceControl.Core.IVoiceCommandService</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">CourseVR<span id="projectnumber">&#160;0.1.0</span>
+   </div>
+   <div id="projectbrief">Voice Controlled VR System</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#properties">Свойства</a> &#124;
+<a href="#events">События</a> &#124;
+<a href="interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Интерфейс CurseVR.VoiceControl.Core.IVoiceCommandService</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Interface for the voice command service that handles communication with the ASR API.  
+ <a href="#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:CurseVR.VoiceControl.Core.IVoiceCommandService:</div>
+<div class="dyncontent">
+<div class="center"><img src="interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service__inherit__graph.png" border="0" usemap="#a_curse_v_r_8_voice_control_8_core_8_i_voice_command_service_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_curse_v_r_8_voice_control_8_core_8_i_voice_command_service_inherit__map" id="a_curse_v_r_8_voice_control_8_core_8_i_voice_command_service_inherit__map">
+<area shape="rect" title="Interface for the voice command service that handles communication with the ASR API." alt="" coords="16,5,203,48"/>
+<area shape="rect" href="class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service.html" title="Implementation of the voice command service using WebSocket communication." alt="" coords="5,96,214,139"/>
+<area shape="poly" title=" " alt="" coords="112,64,112,96,107,96,107,64"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a0221f4905643e44be550094718c04da3" id="r_a0221f4905643e44be550094718c04da3"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0221f4905643e44be550094718c04da3">InitializeAsync</a> (<a class="el" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config.html">VoiceServiceConfig</a> config)</td></tr>
+<tr class="memdesc:a0221f4905643e44be550094718c04da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the voice command service with the provided configuration.  <br /></td></tr>
+<tr class="separator:a0221f4905643e44be550094718c04da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48f8081e7a229bccbf9754121f897b3" id="r_af48f8081e7a229bccbf9754121f897b3"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af48f8081e7a229bccbf9754121f897b3">SendAudioDataAsync</a> (byte[] audioData)</td></tr>
+<tr class="memdesc:af48f8081e7a229bccbf9754121f897b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends audio data to the ASR service for processing.  <br /></td></tr>
+<tr class="separator:af48f8081e7a229bccbf9754121f897b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aade3ada212e9186ccf705cd2fe3466de" id="r_aade3ada212e9186ccf705cd2fe3466de"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aade3ada212e9186ccf705cd2fe3466de">ConnectAsync</a> ()</td></tr>
+<tr class="memdesc:aade3ada212e9186ccf705cd2fe3466de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes a connection to the voice recognition service.  <br /></td></tr>
+<tr class="separator:aade3ada212e9186ccf705cd2fe3466de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45cd69b61ab9734443b10ca4d421b10a" id="r_a45cd69b61ab9734443b10ca4d421b10a"><td class="memItemLeft" align="right" valign="top">Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45cd69b61ab9734443b10ca4d421b10a">DisconnectAsync</a> ()</td></tr>
+<tr class="memdesc:a45cd69b61ab9734443b10ca4d421b10a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminates the connection to the voice recognition service.  <br /></td></tr>
+<tr class="separator:a45cd69b61ab9734443b10ca4d421b10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Свойства</h2></td></tr>
+<tr class="memitem:a749565509d576006b81c61b6dc8e1273" id="r_a749565509d576006b81c61b6dc8e1273"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a749565509d576006b81c61b6dc8e1273">IsConnected</a><code> [get]</code></td></tr>
+<tr class="memdesc:a749565509d576006b81c61b6dc8e1273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a value indicating whether the service is currently connected to the ASR endpoint.  <br /></td></tr>
+<tr class="separator:a749565509d576006b81c61b6dc8e1273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
+События</h2></td></tr>
+<tr class="memitem:a1a8ee4676a6a8d4bd0b9f2f9acce9e7c" id="r_a1a8ee4676a6a8d4bd0b9f2f9acce9e7c"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html">VoiceCommandData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a8ee4676a6a8d4bd0b9f2f9acce9e7c">OnCommandRecognized</a></td></tr>
+<tr class="memdesc:a1a8ee4676a6a8d4bd0b9f2f9acce9e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event triggered when a voice command is recognized by the ASR service.  <br /></td></tr>
+<tr class="separator:a1a8ee4676a6a8d4bd0b9f2f9acce9e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab04876bd796cfcf91988814e46b246a6" id="r_ab04876bd796cfcf91988814e46b246a6"><td class="memItemLeft" align="right" valign="top">Action&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab04876bd796cfcf91988814e46b246a6">OnConnectionStatusChanged</a></td></tr>
+<tr class="memdesc:ab04876bd796cfcf91988814e46b246a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event triggered when the connection status with the ASR service changes.  <br /></td></tr>
+<tr class="separator:ab04876bd796cfcf91988814e46b246a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Interface for the voice command service that handles communication with the ASR API. </p>
+<p>This interface defines the contract for communicating with an Automatic Speech Recognition (ASR) service over WebSockets. It handles initialization, connection management, and data transmission. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_i_voice_command_service_8cs_source.html">IVoiceCommandService.cs</a> строка <a class="el" href="_i_voice_command_service_8cs_source.html#l00015">15</a></p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="aade3ada212e9186ccf705cd2fe3466de" name="aade3ada212e9186ccf705cd2fe3466de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aade3ada212e9186ccf705cd2fe3466de">&#9670;&#160;</a></span>ConnectAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task CurseVR.VoiceControl.Core.IVoiceCommandService.ConnectAsync </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Establishes a connection to the voice recognition service. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>A task representing the asynchronous connection operation</dd></dl>
+<p>This method should be called after initialization and before sending audio data. It establishes a WebSocket connection to the ASR service endpoint specified in the configuration. </p>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidOperationException</td><td>Thrown when service is not initialized</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service.html#ac13c8c871659407e6037c2f98528e035">CurseVR.VoiceControl.Services.VoiceCommandService</a>.</p>
+
+</div>
+</div>
+<a id="a45cd69b61ab9734443b10ca4d421b10a" name="a45cd69b61ab9734443b10ca4d421b10a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45cd69b61ab9734443b10ca4d421b10a">&#9670;&#160;</a></span>DisconnectAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task CurseVR.VoiceControl.Core.IVoiceCommandService.DisconnectAsync </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Terminates the connection to the voice recognition service. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>A task representing the asynchronous disconnection operation</dd></dl>
+<p>This method should be called when the application no longer needs to process voice commands, such as during application shutdown or when switching scenes. </p>
+
+<p>Замещается в <a class="el" href="class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service.html#a235185bf9909723b49f19c94eae51660">CurseVR.VoiceControl.Services.VoiceCommandService</a>.</p>
+
+</div>
+</div>
+<a id="a0221f4905643e44be550094718c04da3" name="a0221f4905643e44be550094718c04da3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0221f4905643e44be550094718c04da3">&#9670;&#160;</a></span>InitializeAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task CurseVR.VoiceControl.Core.IVoiceCommandService.InitializeAsync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config.html">VoiceServiceConfig</a></td>          <td class="paramname"><span class="paramname"><em>config</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the voice command service with the provided configuration. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>Configuration parameters for the voice service connection</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>A task representing the asynchronous initialization operation</dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentNullException</td><td>Thrown when config is null</td></tr>
+    <tr><td class="paramname">InvalidOperationException</td><td>Thrown when initialization fails</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service.html#aff6040d2ba6ac9a306fa4fd5263d9f4f">CurseVR.VoiceControl.Services.VoiceCommandService</a>.</p>
+
+</div>
+</div>
+<a id="af48f8081e7a229bccbf9754121f897b3" name="af48f8081e7a229bccbf9754121f897b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48f8081e7a229bccbf9754121f897b3">&#9670;&#160;</a></span>SendAudioDataAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task CurseVR.VoiceControl.Core.IVoiceCommandService.SendAudioDataAsync </td>
+          <td>(</td>
+          <td class="paramtype">byte[]</td>          <td class="paramname"><span class="paramname"><em>audioData</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends audio data to the ASR service for processing. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">audioData</td><td>Raw audio data bytes to be sent for recognition</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>A task representing the asynchronous send operation</dd></dl>
+<p>The audio data should be in the format specified in the <a class="el" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config.html" title="Configuration settings for the voice command service.">VoiceServiceConfig</a> (sample rate, channels, etc.). The data will be sent over WebSocket to the ASR service. </p>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">InvalidOperationException</td><td>Thrown when service is not connected</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service.html#a40a1f2590680cb821da105aaa7fe2125">CurseVR.VoiceControl.Services.VoiceCommandService</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Полный список свойств</h2>
+<a id="a749565509d576006b81c61b6dc8e1273" name="a749565509d576006b81c61b6dc8e1273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a749565509d576006b81c61b6dc8e1273">&#9670;&#160;</a></span>IsConnected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CurseVR.VoiceControl.Core.IVoiceCommandService.IsConnected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a value indicating whether the service is currently connected to the ASR endpoint. </p>
+<p>True if connected, false otherwise</p>
+<p>This property should be checked before attempting to send audio data to prevent errors. </p>
+
+<p>Замещается в <a class="el" href="class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service.html#a6926ad60ea404a944301d47d486224f9">CurseVR.VoiceControl.Services.VoiceCommandService</a>.</p>
+
+<p class="definition">См. определение в файле <a class="el" href="_i_voice_command_service_8cs_source.html">IVoiceCommandService.cs</a> строка <a class="el" href="_i_voice_command_service_8cs_source.html#l00084">84</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Cобытия</h2>
+<a id="a1a8ee4676a6a8d4bd0b9f2f9acce9e7c" name="a1a8ee4676a6a8d4bd0b9f2f9acce9e7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a8ee4676a6a8d4bd0b9f2f9acce9e7c">&#9670;&#160;</a></span>OnCommandRecognized</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;<a class="el" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html">VoiceCommandData</a>&gt; CurseVR.VoiceControl.Core.IVoiceCommandService.OnCommandRecognized</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event triggered when a voice command is recognized by the ASR service. </p>
+<p>Subscribers will receive a <a class="el" href="class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data.html" title="Data structure for voice commands received from the ASR service.">VoiceCommandData</a> object containing the recognized command details including the command text, confidence level, and any additional parameters. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_i_voice_command_service_8cs_source.html">IVoiceCommandService.cs</a> строка <a class="el" href="_i_voice_command_service_8cs_source.html#l00024">24</a></p>
+
+</div>
+</div>
+<a id="ab04876bd796cfcf91988814e46b246a6" name="ab04876bd796cfcf91988814e46b246a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab04876bd796cfcf91988814e46b246a6">&#9670;&#160;</a></span>OnConnectionStatusChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt;bool&gt; CurseVR.VoiceControl.Core.IVoiceCommandService.OnConnectionStatusChanged</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event triggered when the connection status with the ASR service changes. </p>
+<p>The boolean parameter indicates whether the connection is active (true) or inactive (false). This event should be used to update UI elements or system state based on connection status. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_i_voice_command_service_8cs_source.html">IVoiceCommandService.cs</a> строка <a class="el" href="_i_voice_command_service_8cs_source.html#l00033">33</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов интерфейса находятся в файле:<ul>
+<li>Assets/Scripts/VoiceControl/Core/<a class="el" href="_i_voice_command_service_8cs_source.html">IVoiceCommandService.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_curse_v_r.html">CurseVR</a></li><li class="navelem"><a class="el" href="namespace_curse_v_r_1_1_voice_control.html">VoiceControl</a></li><li class="navelem"><a class="el" href="namespace_curse_v_r_1_1_voice_control_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service.html">IVoiceCommandService</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

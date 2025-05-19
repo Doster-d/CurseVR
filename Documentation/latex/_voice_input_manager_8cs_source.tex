@@ -1,0 +1,183 @@
+\doxysection{Voice\+Input\+Manager.\+cs}
+\hypertarget{_voice_input_manager_8cs_source}{}\label{_voice_input_manager_8cs_source}\index{Assets/Scripts/VoiceControl/Input/VoiceInputManager.cs@{Assets/Scripts/VoiceControl/Input/VoiceInputManager.cs}}
+\mbox{\hyperlink{_voice_input_manager_8cs}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine.InputSystem;}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine.InputSystem.LowLevel;}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_curse_v_r_1_1_voice_control_1_1_core}{CurseVR.VoiceControl.Core}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_curse_v_r_1_1_voice_control_1_1_models}{CurseVR.VoiceControl.Models}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_curse_v_r_1_1_voice_control_1_1_services}{CurseVR.VoiceControl.Services}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_curse_v_r_1_1_voice_control_1_1_v_a_d}{CurseVR.VoiceControl.VAD}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00011}\mbox{\hyperlink{namespace_curse_v_r_1_1_voice_control_1_1_input}{00011}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_curse_v_r_1_1_voice_control_1_1_input}{CurseVR.VoiceControl.Input}}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00016}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager}{VoiceInputManager}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00018}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a2fd64dfc34d79375438bb1e69204d230}{00018}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ InputActionAsset\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a2fd64dfc34d79375438bb1e69204d230}{inputActions}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00019}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_af760e2fd7caf8ef507b5e3b9f3d65092}{00019}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_v_a_d_parameters}{VADParameters}}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_af760e2fd7caf8ef507b5e3b9f3d65092}{vadParameters}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00020}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ae9cb5abbc7bf028f3ac2d88d2362a3e5}{00020}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ AudioSource\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ae9cb5abbc7bf028f3ac2d88d2362a3e5}{debugAudioSource}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00021}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a88df95baf900cb468478134c2c6dee22}{00021}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config}{VoiceServiceConfig}}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a88df95baf900cb468478134c2c6dee22}{serviceConfig}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00023}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aeb30bb0b4e374e60c3b9bdc3ef5141d5}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_i_voice_activity_detector}{IVoiceActivityDetector}}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aeb30bb0b4e374e60c3b9bdc3ef5141d5}{vad}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00024}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ad5eaebfd4dc463e08f42811af81071b9}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy}{UnityMicrophoneProxy}}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ad5eaebfd4dc463e08f42811af81071b9}{micProxy}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00025}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aac3cfae0318051d3c9e58a358716e866}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interface_curse_v_r_1_1_voice_control_1_1_core_1_1_i_voice_command_service}{IVoiceCommandService}}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aac3cfae0318051d3c9e58a358716e866}{voiceService}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00026}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aba0bb45936346d007c3bc47ac2aa76e6}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}{AudioClipBuffer}}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aba0bb45936346d007c3bc47ac2aa76e6}{audioBuffer}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00027}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e0e4ba62d8fb26849b5acc2c198c8e0}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e0e4ba62d8fb26849b5acc2c198c8e0}{isProcessingVoice}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dictionary\ to\ store\ action\ references\ by\ command\ type}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00030}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ace3f3994e62ba3b841a6ff82fd90c82c}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Dictionary<string,\ InputActionReference>\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ace3f3994e62ba3b841a6ff82fd90c82c}{actionReferences}}\ =\ \textcolor{keyword}{new}\ Dictionary<string,\ InputActionReference>();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00032}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a7851da47a53fd2c22dc0cf7dacbc32f4}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a7851da47a53fd2c22dc0cf7dacbc32f4}{Start}}()}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f}{InitializeVoiceService}}();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f}{InitializeVAD}}();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a07ae0ff24ee97dfc3afedba48042fb54}{InitializeInputActions}}();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00039}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ async\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ab54635819786a6cf94e7e84abf70167f}{InitializeVoiceService}}()}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aac3cfae0318051d3c9e58a358716e866}{voiceService}}\ =\ gameObject.AddComponent<\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_services_1_1_voice_command_service}{VoiceCommandService}}>();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aac3cfae0318051d3c9e58a358716e866}{voiceService}}.InitializeAsync(\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a88df95baf900cb468478134c2c6dee22}{serviceConfig}});}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aac3cfae0318051d3c9e58a358716e866}{voiceService}}.ConnectAsync();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ voiceService.OnCommandRecognized\ +=\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a}{HandleVoiceCommand}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ voiceService.OnConnectionStatusChanged\ +=\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aa552ce4cdaade1bd3bc43cc8540f7e14}{HandleConnectionStatus}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00049}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f}{00049}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a93d366c9bd4832eb21847d3e85ed7e9f}{InitializeVAD}}()}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ad5eaebfd4dc463e08f42811af81071b9}{micProxy}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy}{UnityMicrophoneProxy}}();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aba0bb45936346d007c3bc47ac2aa76e6}{audioBuffer}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_audio_clip_buffer}{AudioClipBuffer}}(}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxSampleLength:\ (\textcolor{keywordtype}{int})(\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_af760e2fd7caf8ef507b5e3b9f3d65092}{vadParameters}}.MaxActiveDurationSeconds\ *\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ad5eaebfd4dc463e08f42811af81071b9}{micProxy}}.SampleRate),}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ frequency:\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ad5eaebfd4dc463e08f42811af81071b9}{micProxy}}.SampleRate);}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ audioBuffer.OnBufferFilled\ +=\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e1ed176c785124f130398775b549f81}{HandleVoiceInactive}};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aeb30bb0b4e374e60c3b9bdc3ef5141d5}{vad}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector}{VoiceActivityDetector}}(\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ad5eaebfd4dc463e08f42811af81071b9}{micProxy}},\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aba0bb45936346d007c3bc47ac2aa76e6}{audioBuffer}},\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_af760e2fd7caf8ef507b5e3b9f3d65092}{vadParameters}});}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ae9cb5abbc7bf028f3ac2d88d2362a3e5}{debugAudioSource}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ debugAudioSource.clip\ =\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ad5eaebfd4dc463e08f42811af81071b9}{micProxy}}.AudioClip;}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ debugAudioSource.loop\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ae9cb5abbc7bf028f3ac2d88d2362a3e5}{debugAudioSource}}.Play();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00069}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a07ae0ff24ee97dfc3afedba48042fb54}{00069}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a07ae0ff24ee97dfc3afedba48042fb54}{InitializeInputActions}}()}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ var\ voiceActionMap\ =\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a2fd64dfc34d79375438bb1e69204d230}{inputActions}}.FindActionMap(\textcolor{stringliteral}{"{}Voice"{}});}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (voiceActionMap\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ voiceActionMap.Enable();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ action\ references\ for\ all\ actions\ in\ the\ map}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ action\ \textcolor{keywordflow}{in}\ voiceActionMap)}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ actionRef\ =\ ScriptableObject.CreateInstance<InputActionReference>();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ actionRef.Set(action);}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ace3f3994e62ba3b841a6ff82fd90c82c}{actionReferences}}[action.name]\ =\ actionRef;}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00086}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e1ed176c785124f130398775b549f81}{00086}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e1ed176c785124f130398775b549f81}{HandleVoiceInactive}}(AudioClip\ clip)}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e0e4ba62d8fb26849b5acc2c198c8e0}{isProcessingVoice}}\ ||\ clip\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Convert\ AudioClip\ to\ byte\ array}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}[]\ samples\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[clip.samples\ *\ clip.channels];}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ clip.GetData(samples,\ 0);}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Convert\ to\ 16-\/bit\ PCM}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{byte}[]\ audioData\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{byte}[samples.Length\ *\ 2];}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ samples.Length;\ i++)}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{short}\ value\ =\ (short)(samples[i]\ *\ 32767f);}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ audioData[i\ *\ 2]\ =\ (byte)(value\ \&\ 0xff);}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ audioData[i\ *\ 2\ +\ 1]\ =\ (byte)((value\ >>\ 8)\ \&\ 0xff);}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Send\ to\ voice\ service}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ =\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aac3cfae0318051d3c9e58a358716e866}{voiceService}}.SendAudioDataAsync(audioData);}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Play\ debug\ audio\ if\ needed}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ae9cb5abbc7bf028f3ac2d88d2362a3e5}{debugAudioSource}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ debugAudioSource.clip\ =\ clip;}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ae9cb5abbc7bf028f3ac2d88d2362a3e5}{debugAudioSource}}.Play();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00114}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a}{00114}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a873fa9edee5669632e1bf555a975cc3a}{HandleVoiceCommand}}(\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data}{VoiceCommandData}}\ commandData)}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Voice\ command\ recognized:\ \{commandData.CommandType\}"{}});}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ace3f3994e62ba3b841a6ff82fd90c82c}{actionReferences}}.TryGetValue(commandData.\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_command_data_aac750f33c264cfc01f926c72f5f664b2}{CommandType}},\ out\ var\ actionRef))}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ action\ =\ actionRef.action;}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Triggering\ input\ action:\ \{action.name\}"{}});}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Simply\ enable\ the\ action\ -\/\ this\ will\ trigger\ any\ subscribers\ }}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ that\ are\ monitoring\ for\ this\ action's\ state\ changes}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ action.Enable();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ is\ a\ workaround\ -\/\ Unity's\ InputSystem\ doesn't\ provide\ }}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ a\ public\ API\ to\ directly\ trigger\ an\ action\ from\ code}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We're\ just\ toggling\ the\ action's\ state\ via\ enable/disable}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StartCoroutine(\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a52bed871e3469c5de2b0183a1c840768}{ToggleAction}}(action));}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}No\ action\ found\ for\ command\ type:\ \{commandData.CommandType\}"{}});}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00141}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a52bed871e3469c5de2b0183a1c840768}{00141}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ System.Collections.IEnumerator\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a52bed871e3469c5de2b0183a1c840768}{ToggleAction}}(InputAction\ action)}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Wait\ a\ frame\ to\ ensure\ the\ enable\ event\ is\ processed}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Disable\ and\ re-\/enable\ the\ action\ to\ trigger\ another\ change}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ action.Disable();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ action.Enable();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00152}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aa552ce4cdaade1bd3bc43cc8540f7e14}{00152}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aa552ce4cdaade1bd3bc43cc8540f7e14}{HandleConnectionStatus}}(\textcolor{keywordtype}{bool}\ isConnected)}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Voice\ service\ connection\ status:\ \{isConnected\}"{}});}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a0e0e4ba62d8fb26849b5acc2c198c8e0}{isProcessingVoice}}\ =\ isConnected;}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00158}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a9e6e497d828dcda31ade84854eafa523}{00158}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a9e6e497d828dcda31ade84854eafa523}{Update}}()}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aeb30bb0b4e374e60c3b9bdc3ef5141d5}{vad}}?.Update();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00163}\mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a354993c2e76a0a84c8097c6eb162ae1f}{00163}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_a354993c2e76a0a84c8097c6eb162ae1f}{OnDestroy}}()}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aeb30bb0b4e374e60c3b9bdc3ef5141d5}{vad}}?.Dispose();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ad5eaebfd4dc463e08f42811af81071b9}{micProxy}}?.Dispose();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \_\ =\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_aac3cfae0318051d3c9e58a358716e866}{voiceService}}?.DisconnectAsync();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clean\ up\ action\ references}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ actionRef\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ace3f3994e62ba3b841a6ff82fd90c82c}{actionReferences}}.Values)}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (actionRef\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(actionRef);}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager_ace3f3994e62ba3b841a6ff82fd90c82c}{actionReferences}}.Clear();}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00179}00179\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_voice_input_manager_8cs_source_l00180}00180\ \}}
+
+\end{DoxyCode}

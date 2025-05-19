@@ -1,0 +1,17 @@
+<map id="CurseVR.VoiceControl.Input.VoiceInputManager.Start" name="CurseVR.VoiceControl.Input.VoiceInputManager.Start">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,88,193,131"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a07ae0ff24ee97dfc3afedba48042fb54" title=" " alt="" coords="243,5,455,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,85,234,66,235,71,174,90"/>
+<area shape="rect" id="Node000003" href="$class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a93d366c9bd4832eb21847d3e85ed7e9f" title=" " alt="" coords="244,88,454,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,107,228,107,228,112,193,112"/>
+<area shape="rect" id="Node000005" href="$class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#ab54635819786a6cf94e7e84abf70167f" title=" " alt="" coords="241,155,457,213"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="174,129,235,147,234,152,172,134"/>
+<area shape="rect" id="Node000004" href="$class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a0e1ed176c785124f130398775b549f81" title=" " alt="" coords="513,88,765,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="454,107,497,107,497,112,454,112"/>
+<area shape="rect" id="Node000006" href="$class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#aa552ce4cdaade1bd3bc43cc8540f7e14" title=" " alt="" coords="519,155,760,213"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="457,181,503,181,503,187,457,187"/>
+<area shape="rect" id="Node000007" href="$class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a873fa9edee5669632e1bf555a975cc3a" title=" " alt="" coords="505,237,773,280"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="458,210,506,223,535,230,534,236,504,228,457,215"/>
+<area shape="rect" id="Node000008" href="$class_curse_v_r_1_1_voice_control_1_1_input_1_1_voice_input_manager.html#a52bed871e3469c5de2b0183a1c840768" title=" " alt="" coords="821,237,1033,280"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="774,256,806,256,806,261,774,261"/>
+</map>

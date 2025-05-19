@@ -1,0 +1,153 @@
+\doxysection{Класс Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Service\+Config}
+\hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config}{}\label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config}\index{CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}}
+
+
+Configuration settings for the voice command service.  
+
+
+\doxysubsubsection*{Свойства}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a69dbb09efd29b77845828e0f02f57bbe}{Web\+Socket\+Url}} = "{}ws\+://localhost\+:8000/ws/asr/"{}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the base URL for the ASR Web\+Socket service. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a0c8ade8cb79720907d46188098cfd7ae}{Client\+Id}} = "{}unity\+\_\+client"{}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the client identifier for this connection. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a4f8f45eb0fe701e6477ecbc9b22097f8}{Sample\+Rate}} = 16000\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the sample rate for audio recording. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_ae51a26956dd932383cbe7c3230ab63b5}{Channels}} = 1\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the number of audio channels. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a7f91ccbf06e062fe7ef2b9a7541ea94a}{Buffer\+Size}} = 2048\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the size of the audio buffer in samples. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_af6df105ae7a0dde3b99a5ad10aefedfe}{Max\+Reconnect\+Attempts}} = 3\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the maximum reconnection attempts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a8e16be36e2e86d642815b0c24ed8aa7c}{Reconnect\+Delay\+Ms}} = 1000\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the delay between reconnection attempts in milliseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Configuration settings for the voice command service. 
+
+This serializable class contains all the connection and audio parameters needed to establish and maintain a connection with an Automatic Speech Recognition (ASR) Web\+Socket service. It can be configured in the Unity Inspector and saved as a Scriptable\+Object or directly in a Mono\+Behaviour component. 
+
+См. определение в файле \mbox{\hyperlink{_voice_service_config_8cs_source}{Voice\+Service\+Config.\+cs}} строка \mbox{\hyperlink{_voice_service_config_8cs_source_l00016}{16}}
+
+
+
+\doxysubsection{Полный список свойств}
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a7f91ccbf06e062fe7ef2b9a7541ea94a}\index{CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}!BufferSize@{BufferSize}}
+\index{BufferSize@{BufferSize}!CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}}
+\doxysubsubsection{\texorpdfstring{BufferSize}{BufferSize}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a7f91ccbf06e062fe7ef2b9a7541ea94a} 
+int Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Service\+Config.\+Buffer\+Size = 2048\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the size of the audio buffer in samples. 
+
+Buffer size in samples (per channel)
+
+This determines how much audio data is collected before sending to the ASR service. Larger buffers introduce more latency but may improve recognition accuracy. A value of 2048 at 16 k\+Hz represents about 128ms of audio. 
+
+См. определение в файле \mbox{\hyperlink{_voice_service_config_8cs_source}{Voice\+Service\+Config.\+cs}} строка \mbox{\hyperlink{_voice_service_config_8cs_source_l00068}{68}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_ae51a26956dd932383cbe7c3230ab63b5}\index{CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}!Channels@{Channels}}
+\index{Channels@{Channels}!CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}}
+\doxysubsubsection{\texorpdfstring{Channels}{Channels}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_ae51a26956dd932383cbe7c3230ab63b5} 
+int Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Service\+Config.\+Channels = 1\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the number of audio channels. 
+
+1 for mono, 2 for stereo
+
+For voice recognition, mono (1 channel) is typically sufficient and reduces bandwidth requirements. The ASR service must support the specified channel count. 
+
+См. определение в файле \mbox{\hyperlink{_voice_service_config_8cs_source}{Voice\+Service\+Config.\+cs}} строка \mbox{\hyperlink{_voice_service_config_8cs_source_l00057}{57}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a0c8ade8cb79720907d46188098cfd7ae}\index{CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}!ClientId@{ClientId}}
+\index{ClientId@{ClientId}!CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}}
+\doxysubsubsection{\texorpdfstring{ClientId}{ClientId}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a0c8ade8cb79720907d46188098cfd7ae} 
+string Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Service\+Config.\+Client\+Id = "{}unity\+\_\+client"{}\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the client identifier for this connection. 
+
+A unique string identifying this client instance
+
+The client ID can be used by the server to track different connections and maintain session state. In multi-\/user environments, this should be unique per user. 
+
+См. определение в файле \mbox{\hyperlink{_voice_service_config_8cs_source}{Voice\+Service\+Config.\+cs}} строка \mbox{\hyperlink{_voice_service_config_8cs_source_l00037}{37}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_af6df105ae7a0dde3b99a5ad10aefedfe}\index{CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}!MaxReconnectAttempts@{MaxReconnectAttempts}}
+\index{MaxReconnectAttempts@{MaxReconnectAttempts}!CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}}
+\doxysubsubsection{\texorpdfstring{MaxReconnectAttempts}{MaxReconnectAttempts}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_af6df105ae7a0dde3b99a5ad10aefedfe} 
+int Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Service\+Config.\+Max\+Reconnect\+Attempts = 3\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the maximum reconnection attempts. 
+
+Number of reconnection attempts before giving up
+
+If the Web\+Socket connection is lost, the system will automatically attempt to reconnect this many times before requiring manual intervention. 
+
+См. определение в файле \mbox{\hyperlink{_voice_service_config_8cs_source}{Voice\+Service\+Config.\+cs}} строка \mbox{\hyperlink{_voice_service_config_8cs_source_l00078}{78}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a8e16be36e2e86d642815b0c24ed8aa7c}\index{CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}!ReconnectDelayMs@{ReconnectDelayMs}}
+\index{ReconnectDelayMs@{ReconnectDelayMs}!CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}}
+\doxysubsubsection{\texorpdfstring{ReconnectDelayMs}{ReconnectDelayMs}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a8e16be36e2e86d642815b0c24ed8aa7c} 
+int Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Service\+Config.\+Reconnect\+Delay\+Ms = 1000\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the delay between reconnection attempts in milliseconds. 
+
+Delay time in milliseconds
+
+After a failed connection attempt, the system will wait this many milliseconds before trying again. This helps prevent overloading the server with rapid connection requests. 
+
+См. определение в файле \mbox{\hyperlink{_voice_service_config_8cs_source}{Voice\+Service\+Config.\+cs}} строка \mbox{\hyperlink{_voice_service_config_8cs_source_l00089}{89}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a4f8f45eb0fe701e6477ecbc9b22097f8}\index{CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}!SampleRate@{SampleRate}}
+\index{SampleRate@{SampleRate}!CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}}
+\doxysubsubsection{\texorpdfstring{SampleRate}{SampleRate}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a4f8f45eb0fe701e6477ecbc9b22097f8} 
+int Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Service\+Config.\+Sample\+Rate = 16000\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the sample rate for audio recording. 
+
+Sample rate in Hz (samples per second)
+
+16000 Hz (16 k\+Hz) is a common sample rate for speech recognition systems. This must match the expected input format of the ASR service. 
+
+См. определение в файле \mbox{\hyperlink{_voice_service_config_8cs_source}{Voice\+Service\+Config.\+cs}} строка \mbox{\hyperlink{_voice_service_config_8cs_source_l00047}{47}}
+
+\Hypertarget{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a69dbb09efd29b77845828e0f02f57bbe}\index{CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}!WebSocketUrl@{WebSocketUrl}}
+\index{WebSocketUrl@{WebSocketUrl}!CurseVR.VoiceControl.Models.VoiceServiceConfig@{CurseVR.VoiceControl.Models.VoiceServiceConfig}}
+\doxysubsubsection{\texorpdfstring{WebSocketUrl}{WebSocketUrl}}
+{\footnotesize\ttfamily \label{class_curse_v_r_1_1_voice_control_1_1_models_1_1_voice_service_config_a69dbb09efd29b77845828e0f02f57bbe} 
+string Curse\+VR.\+Voice\+Control.\+Models.\+Voice\+Service\+Config.\+Web\+Socket\+Url = "{}ws\+://localhost\+:8000/ws/asr/"{}\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the base URL for the ASR Web\+Socket service. 
+
+Web\+Socket URL in the format "{}ws\+://hostname\+:port/path"{}
+
+For local development, the default "{}ws\+://localhost\+:8000/ws/asr/"{} connects to a service running on the same machine. For production, this should be changed to the actual server address. 
+
+См. определение в файле \mbox{\hyperlink{_voice_service_config_8cs_source}{Voice\+Service\+Config.\+cs}} строка \mbox{\hyperlink{_voice_service_config_8cs_source_l00027}{27}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Voice\+Control/\+Models/\mbox{\hyperlink{_voice_service_config_8cs}{Voice\+Service\+Config.\+cs}}\end{DoxyCompactItemize}

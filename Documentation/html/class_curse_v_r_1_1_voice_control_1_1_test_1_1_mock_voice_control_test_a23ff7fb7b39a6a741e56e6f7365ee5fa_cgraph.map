@@ -1,0 +1,9 @@
+<map id="CurseVR.VoiceControl.Test.MockVoiceControlTest.InitializeVoiceService" name="CurseVR.VoiceControl.Test.MockVoiceControlTest.InitializeVoiceService">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,209,64"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#a4b898eeceba47a3eca449da5a9e7a946" title=" " alt="" coords="257,5,486,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,32,241,32,241,37,209,37"/>
+<area shape="rect" id="Node000003" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#aeaadda9dff70da9971438ded532b0336" title=" " alt="" coords="534,13,788,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="487,32,519,32,519,37,487,37"/>
+<area shape="rect" id="Node000004" href="$class_curse_v_r_1_1_voice_control_1_1_test_1_1_mock_voice_control_test.html#a0ff5e3b1c3fd40ef81b5d6da46bc00fe" title=" " alt="" coords="836,13,1082,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="789,32,820,32,820,37,789,37"/>
+</map>

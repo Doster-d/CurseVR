@@ -1,0 +1,5 @@
+<map id="CurseVR.VoiceControl.VAD.VoiceActivityDetector.ProcessAudioData" name="CurseVR.VoiceControl.VAD.VoiceActivityDetector.ProcessAudioData">
+<area shape="rect" id="Node000001" title="Processes a batch of audio data to detect voice activity." alt="" coords="244,5,501,48"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_voice_activity_detector.html#a6bdb992a5b4a9b188e43bc67d19e89a7" title="Updates the voice activity detection state.This method should be called regularly (typically once per..." alt="" coords="5,5,196,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,29,196,29,196,24,228,24"/>
+</map>

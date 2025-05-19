@@ -1,0 +1,5 @@
+<map id="CurseVR.VoiceControl.VAD.UnityMicrophoneProxy.UnityMicrophoneProxy" name="CurseVR.VoiceControl.VAD.UnityMicrophoneProxy.UnityMicrophoneProxy">
+<area shape="rect" id="Node000001" title="Initializes a new instance of the UnityMicrophoneProxy class." alt="" coords="5,13,293,56"/>
+<area shape="rect" id="Node000002" href="$class_curse_v_r_1_1_voice_control_1_1_v_a_d_1_1_unity_microphone_proxy.html#a4c49945e2b1b5d2a0730d072bfba9007" title="Initializes the microphone and begins recording." alt="" coords="341,5,544,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="293,32,325,32,325,37,293,37"/>
+</map>
